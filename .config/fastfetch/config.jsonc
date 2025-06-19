@@ -1,0 +1,26 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "display": {
+      "separator": " :: ",
+      "color": { "keys": "red" },
+      "constants": [
+      ]
+  },
+  "modules": [
+    { "type": "title", "format": "• ──────── {#italic_green}{#91}Hardware Information{#} ──────── •" },
+    { "type": "Board", "key": "󰌢 ", "format": "{name}" },
+    { "type": "cpu", "key": " ", "format": "{name:5} {~18,26} ({cores-physical})" },
+    { "type": "gpu", "key": "󰧋 ", "format": "{vendor} {name}" }, //"hideType": "integrated"
+    { "type": "memory", "key": " " },
+    { "type": "display", "key": "󰍹 ", "format": "{~0,4}x{~0,4}" },
+
+    { "type": "title", "format": "• ──────── {#italic_red}{#91}Software Information{#} ──────── •"},
+    { "type": "os", "key": " ", "format": "{name}"},
+    { "type": "kernel", "key": " ", "format": "{release}" },
+    { "type": "wm", "key": " ", "format": "{~0,8}" },
+    { "type": "shell", "key": " " },
+    { "type": "custom", "key": " ", "format": "tmux" },
+    { "type": "title", "format": "• ───────────────────────────────────── •" },
+    { "type": "title", "format": "      {#37}󰹻   {#31}󰹻   {#32}󰹻   {#33}󰹻   {#34}󰹻   {#35}󰹻   {#36}󰹻   {#0}󰹻 " }
+  ]
+}

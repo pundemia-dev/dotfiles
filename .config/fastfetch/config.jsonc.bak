@@ -1,0 +1,62 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+        "source": "$HOME/.config/fastfetch/logo.txt",
+        "color": {
+            "1": "white"
+        },
+        "padding": {
+            "left": 4
+        }
+  },
+  "modules": [
+    {
+        "type": "users",
+        "compact": true,
+        "key": "",
+        "keyColor": "white"
+    },
+    {
+        "type": "os",
+        "key": "├─ Distro",
+        "keyColor": "red"
+    },
+    {
+        "type": "wm",
+        "key": "├─ WM",
+        "keyColor": "green"
+    },
+    {
+        "type": "cpu",
+        "key": "├─ CPU",
+        "keyColor": "yellow",
+        // "format": "AMD Ryzen 3 3200U" // remove this for your pc
+    },
+    {
+        "type": "gpu",
+        "hideType": "integrated",
+        "key": "├─ GPU",
+        "keyColor": "blue",
+        "format": "{vendor} {name}"
+    },
+    {
+        "type": "shell",
+        "key": "├─ Shell",
+        "keyColor": "magenta"
+    },
+    {
+        "type": "packages",
+        "key": "├─ Packages",
+        "keyColor": "cyan"
+    },
+    {
+        "type": "uptime",
+        "key": "├─ Uptime",
+        "keyColor": "white"
+    },
+    {
+        "type": "colors",
+        "symbol": "circle"
+    }
+  ]
+}
