@@ -11,6 +11,9 @@ end
 # TODO: Replace journal aliases after switching to OpenRC
 # thefuck --alias | source 
 alias mymicroscope="mpv av://v4l2:/dev/video2 --profile=low-latency --untimed"
+alias mydualcam="mpv av://v4l2:/dev/video2 --profile=low-latency --untimed --demuxer-lavf-o=video_size=2560x720,input_format=mjpeg"
+
+alias cat="bat --plain"
 
 alias ls="eza --color=always --icons=always -1"
 alias tree="eza -T"
@@ -48,7 +51,7 @@ alias vacuum_time="journalctl --vacuum-time=2weeks"
 
 set -U fish_greeting
 set fish_color_command green
-set -gx BROWSER /usr/bin/firefox
+set -gx BROWSER /usr/bin/zen-browser
 set -gx SSL_CERT_FILE /etc/ssl/certs/ca-certificates.crt
 
 
@@ -60,3 +63,6 @@ end
 set -gx PATH $PATH /home/pundemia/.lmstudio/bin
 
 zoxide init fish --cmd cd | source
+
+# uv
+fish_add_path "/home/pundemia/.local/bin"
