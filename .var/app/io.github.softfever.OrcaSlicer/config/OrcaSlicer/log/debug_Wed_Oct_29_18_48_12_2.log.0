@@ -1,0 +1,17 @@
+[error]	2025-10-29 18:48:14.562764[Thread 0x00007ff2d77fe6c0]:Unable to open connection to spacenavd
+[error]	2025-10-29 18:48:14.564990[Thread 0x00007ff2d67fc6c0]:DBus Request name Error: org.freedesktop.DBus.Error.ServiceUnknown
+[error]	2025-10-29 18:48:14.565020[Thread 0x00007ff2d67fc6c0]:Dbus Messages listening terminating.
+[error]	2025-10-29 18:48:15.789536[Thread 0x00007ff36fe503c0]:calc_exclude_triangles:Unable to create exclude triangles
+[warning]	2025-10-29 18:48:16.798533[Thread 0x00007ff36fe503c0]:06:48:16 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-10-29 18:48:16.806377[Thread 0x00007ff36fe503c0]:06:48:16 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-10-29 18:48:16.847417[Thread 0x00007ff36fe503c0]:06:48:16 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-10-29 18:48:16.995680[Thread 0x00007ff36fe503c0]:06:48:16 PM: Warning: Error running JavaScript: Unsupported result type
+[error]	2025-10-29 18:48:21.240414[Thread 0x00007ff36fe503c0]:calc_exclude_triangles:Unable to create exclude triangles
+[warning]	2025-10-29 18:48:21.410585[Thread 0x00007ff36fe503c0]:get_version, get_version not supported,return 00.00.00.00!
+[warning]	2025-10-29 18:48:25.517156[Thread 0x00007ff36fe503c0]:06:48:25 PM: Warning: Error running JavaScript: Unsupported result type
+[error]	2025-10-29 18:50:28.404342[Thread 0x00007ff36fe503c0]:tree_sel_change_delayedcan not find page with current selection 
+[error]	2025-10-29 18:51:28.106192[Thread 0x00007ff36fe503c0]:tree_sel_change_delayedcan not find page with current selection 
+[error]	2025-10-29 18:51:31.336487[Thread 0x00007ff36fe503c0]:tree_sel_change_delayedcan not find page with current selection 
+[error]	2025-10-29 18:54:49.941413[Thread 0x00007ff36fe503c0]:tree_sel_change_delayedcan not find page with current selection 
+[error]	2025-10-29 18:54:57.292017[Thread 0x00007ff36fe503c0]:tree_sel_change_delayedcan not find page with current selection 
+[error]	2025-10-29 18:55:01.158397[Thread 0x00007ff36fe503c0]:calc_exclude_triangles:Unable to create exclude triangles

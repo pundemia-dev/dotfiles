@@ -1,0 +1,13 @@
+[error]	2025-10-21 13:13:52.795944[Thread 0x00007fd204dfd6c0]:Unable to open connection to spacenavd
+[error]	2025-10-21 13:13:52.798256[Thread 0x00007fd1f77fe6c0]:DBus Request name Error: org.freedesktop.DBus.Error.ServiceUnknown
+[error]	2025-10-21 13:13:52.798286[Thread 0x00007fd1f77fe6c0]:Dbus Messages listening terminating.
+[error]	2025-10-21 13:13:53.969914[Thread 0x00007fd28c6353c0]:calc_exclude_triangles:Unable to create exclude triangles
+[warning]	2025-10-21 13:13:54.916634[Thread 0x00007fd28c6353c0]:01:13:54 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-10-21 13:13:54.940092[Thread 0x00007fd28c6353c0]:01:13:54 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-10-21 13:13:54.947047[Thread 0x00007fd28c6353c0]:01:13:54 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-10-21 13:13:55.034585[Thread 0x00007fd28c6353c0]:01:13:55 PM: Warning: Error running JavaScript: Unsupported result type
+[error]	2025-10-21 13:13:58.418689[Thread 0x00007fd28c6353c0]:calc_exclude_triangles:Unable to create exclude triangles
+[warning]	2025-10-21 13:13:58.489790[Thread 0x00007fd28c6353c0]:get_version, get_version not supported,return 00.00.00.00!
+[warning]	2025-10-21 13:14:00.357738[Thread 0x00007fd28c6353c0]:01:14:00 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-10-21 15:35:22.749237[Thread 0x00007fd255fff6c0]:Arrange full params: {"min_obj_distance":0,"accuracy":1.000000,"parallel":1,"allow_rotations":0,"do_final_align":1,"allow_multi_materials_on_same_plate":1,"avoid_extrusion_cali_region":1,"is_seq_print":0,"bed_shrink_x":1.000000,"bed_shrink_y":1.000000,"brim_skirt_distance":0.000000,"clearance_height_to_rod":27.000000,"clearance_height_to_lid":150.000000,"clearance_radius":76.000000,"printable_height":220.000000,
+[error]	2025-10-21 18:57:35.093417[Thread 0x00007fd28c6353c0]:calc_exclude_triangles:Unable to create exclude triangles

@@ -1,0 +1,11 @@
+{
+    "from": "User",
+    "inherits": "0.20mm Standard @Flashforge AD5M 0.4 Nozzle",
+    "is_custom_defined": "0",
+    "name": "0.20mm Standard @Flashforge AD5M 0.4 Nozzle - Copy",
+    "print_settings_id": "0.20mm Standard @Flashforge AD5M 0.4 Nozzle - Copy",
+    "support_on_build_plate_only": "1",
+    "support_type": "tree(auto)",
+    "version": "2.3.0.3",
+    "wall_generator": "arachne"
+}

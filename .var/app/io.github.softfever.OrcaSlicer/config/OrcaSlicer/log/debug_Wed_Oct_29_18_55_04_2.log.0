@@ -1,0 +1,24 @@
+[error]	2025-10-29 18:55:06.048594[Thread 0x00007ff465ffc6c0]:Unable to open connection to spacenavd
+[error]	2025-10-29 18:55:06.051015[Thread 0x00007ff464ffa6c0]:DBus Request name Error: org.freedesktop.DBus.Error.ServiceUnknown
+[error]	2025-10-29 18:55:06.051047[Thread 0x00007ff464ffa6c0]:Dbus Messages listening terminating.
+[error]	2025-10-29 18:55:07.099243[Thread 0x00007ff4f28283c0]:calc_exclude_triangles:Unable to create exclude triangles
+[warning]	2025-10-29 18:55:08.018041[Thread 0x00007ff4f28283c0]:06:55:08 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-10-29 18:55:08.062700[Thread 0x00007ff4f28283c0]:06:55:08 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-10-29 18:55:08.067661[Thread 0x00007ff4f28283c0]:06:55:08 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-10-29 18:55:08.097738[Thread 0x00007ff4f28283c0]:06:55:08 PM: Warning: Error running JavaScript: Unsupported result type
+[error]	2025-10-29 18:55:11.613455[Thread 0x00007ff4f28283c0]:calc_exclude_triangles:Unable to create exclude triangles
+[warning]	2025-10-29 18:55:11.705377[Thread 0x00007ff4f28283c0]:get_version, get_version not supported,return 00.00.00.00!
+[error]	2025-10-29 18:56:21.845265[Thread 0x00007ff4f28283c0]:tree_sel_change_delayedcan not find page with current selection 
+[error]	2025-10-29 18:57:39.691582[Thread 0x00007ff4f28283c0]:tree_sel_change_delayedcan not find page with current selection 
+[error]	2025-10-29 18:57:43.827301[Thread 0x00007ff4f28283c0]:tree_sel_change_delayedcan not find page with current selection 
+[error]	2025-10-29 18:57:50.991048[Thread 0x00007ff4f28283c0]:tree_sel_change_delayedcan not find page with current selection 
+[error]	2025-10-29 18:59:13.467804[Thread 0x00007ff4f28283c0]:tree_sel_change_delayedcan not find page with current selection 
+[error]	2025-10-29 19:21:14.628362[Thread 0x00007ff4f28283c0]:tree_sel_change_delayedcan not find page with current selection 
+[error]	2025-10-29 19:22:34.331118[Thread 0x00007ff4f28283c0]:tree_sel_change_delayedcan not find page with current selection 
+[error]	2025-10-29 19:25:18.063435[Thread 0x00007ff4f28283c0]:tree_sel_change_delayedcan not find page with current selection 
+[error]	2025-10-29 19:27:10.252522[Thread 0x00007ff4f28283c0]:tree_sel_change_delayedcan not find page with current selection 
+[error]	2025-10-29 19:27:27.903132[Thread 0x00007ff4f28283c0]:tree_sel_change_delayedcan not find page with current selection 
+[error]	2025-10-29 19:27:33.751913[Thread 0x00007ff4f28283c0]:tree_sel_change_delayedcan not find page with current selection 
+[error]	2025-10-29 19:27:37.804640[Thread 0x00007ff4f28283c0]:tree_sel_change_delayedcan not find page with current selection 
+[error]	2025-10-29 19:29:24.230259[Thread 0x00007ff4f28283c0]:calc_exclude_triangles:Unable to create exclude triangles
+[error]	2025-10-29 19:29:24.261492[Thread 0x00007ff4f28283c0]:tree_sel_change_delayedcan not find page with current selection 

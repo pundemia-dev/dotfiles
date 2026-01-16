@@ -1,0 +1,10 @@
+{
+    "from": "User",
+    "host_type": "flashforge",
+    "inherits": "Flashforge Adventurer 5M 0.4 Nozzle",
+    "is_custom_defined": "0",
+    "name": "Flashforge Adventurer 5M 0.4 Nozzle - Copy",
+    "print_host": "192.168.31.138",
+    "printer_settings_id": "Flashforge Adventurer 5M 0.4 Nozzle - Copy",
+    "version": "2.3.0.3"
+}

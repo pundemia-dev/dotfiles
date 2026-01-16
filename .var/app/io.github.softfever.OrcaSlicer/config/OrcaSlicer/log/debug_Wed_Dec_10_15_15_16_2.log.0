@@ -1,0 +1,12 @@
+[error]	2025-12-10 15:15:19.115915[Thread 0x00007f51ab7fe6c0]:Unable to open connection to spacenavd
+[error]	2025-12-10 15:15:19.118376[Thread 0x00007f51aa7fc6c0]:DBus Request name Error: org.freedesktop.DBus.Error.ServiceUnknown
+[error]	2025-12-10 15:15:19.118402[Thread 0x00007f51aa7fc6c0]:Dbus Messages listening terminating.
+[error]	2025-12-10 15:15:20.149085[Thread 0x00007f5238267400]:calc_exclude_triangles:Unable to create exclude triangles
+[warning]	2025-12-10 15:15:20.913834[Thread 0x00007f5238267400]:03:15:20 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-12-10 15:15:20.949939[Thread 0x00007f5238267400]:03:15:20 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-12-10 15:15:20.960771[Thread 0x00007f5238267400]:03:15:20 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-12-10 15:15:21.042358[Thread 0x00007f5238267400]:03:15:21 PM: Warning: Error running JavaScript: Unsupported result type
+[error]	2025-12-10 15:15:24.485889[Thread 0x00007f5238267400]:calc_exclude_triangles:Unable to create exclude triangles
+[warning]	2025-12-10 15:15:24.570119[Thread 0x00007f5238267400]:get_version, get_version not supported,return 00.00.00.00!
+[error]	2025-12-10 15:15:25.106664[Thread 0x00007f5194ff96c0]:Error getting: `check_new_version_sf`: HTTP 503, 
+[error]	2025-12-10 19:33:27.965228[Thread 0x00007f5238267400]:calc_exclude_triangles:Unable to create exclude triangles

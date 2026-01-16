@@ -1,0 +1,21 @@
+[error]	2025-12-09 18:37:47.089989[Thread 0x00007fb0867fd6c0]:Unable to open connection to spacenavd
+[error]	2025-12-09 18:37:47.092323[Thread 0x00007fb0857fb6c0]:DBus Request name Error: org.freedesktop.DBus.Error.ServiceUnknown
+[error]	2025-12-09 18:37:47.092356[Thread 0x00007fb0857fb6c0]:Dbus Messages listening terminating.
+[error]	2025-12-09 18:37:48.261665[Thread 0x00007fb10f47d400]:calc_exclude_triangles:Unable to create exclude triangles
+[warning]	2025-12-09 18:37:49.027565[Thread 0x00007fb10f47d400]:06:37:49 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-12-09 18:37:49.051829[Thread 0x00007fb10f47d400]:06:37:49 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-12-09 18:37:49.060865[Thread 0x00007fb10f47d400]:06:37:49 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-12-09 18:37:49.127716[Thread 0x00007fb10f47d400]:06:37:49 PM: Warning: Error running JavaScript: Unsupported result type
+[error]	2025-12-09 18:37:52.536589[Thread 0x00007fb10f47d400]:calc_exclude_triangles:Unable to create exclude triangles
+[warning]	2025-12-09 18:37:52.633131[Thread 0x00007fb10f47d400]:get_version, get_version not supported,return 00.00.00.00!
+[error]	2025-12-09 18:37:53.735329[Thread 0x00007fb03ff376c0]:Error getting: `check_new_version_sf`: HTTP 503, 
+[warning]	2025-12-09 18:40:43.072387[Thread 0x00007fb03ccfd6c0]:Detected non-planar Voronoi diagram, input polygons will be rotated back and forth.
+[warning]	2025-12-09 18:40:43.096042[Thread 0x00007fb03ccfd6c0]:Detected non-planar Voronoi diagram, input polygons will be rotated back and forth.
+[warning]	2025-12-09 18:40:43.119501[Thread 0x00007fb03ccfd6c0]:Detected non-planar Voronoi diagram, input polygons will be rotated back and forth.
+[warning]	2025-12-09 18:40:43.142862[Thread 0x00007fb03ccfd6c0]:Detected non-planar Voronoi diagram, input polygons will be rotated back and forth.
+[warning]	2025-12-09 18:40:43.166248[Thread 0x00007fb03ccfd6c0]:Detected non-planar Voronoi diagram, input polygons will be rotated back and forth.
+[warning]	2025-12-09 20:36:18.369124[Thread 0x00007fb03f7366c0]:Detected non-planar Voronoi diagram, input polygons will be rotated back and forth.
+[warning]	2025-12-09 20:36:18.392954[Thread 0x00007fb03f7366c0]:Detected non-planar Voronoi diagram, input polygons will be rotated back and forth.
+[warning]	2025-12-09 20:36:18.416410[Thread 0x00007fb03f7366c0]:Detected non-planar Voronoi diagram, input polygons will be rotated back and forth.
+[warning]	2025-12-09 20:36:18.439811[Thread 0x00007fb03f7366c0]:Detected non-planar Voronoi diagram, input polygons will be rotated back and forth.
+[error]	2025-12-10 07:18:04.076728[Thread 0x00007fb10f47d400]:calc_exclude_triangles:Unable to create exclude triangles

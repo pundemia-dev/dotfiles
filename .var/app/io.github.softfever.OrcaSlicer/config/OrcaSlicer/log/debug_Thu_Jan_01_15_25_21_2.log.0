@@ -1,0 +1,17 @@
+[error]	2026-01-01 15:25:24.213324[Thread 0x00007fcbe7fff6c0]:Unable to open connection to spacenavd
+[error]	2026-01-01 15:25:24.215751[Thread 0x00007fcbe6ffd6c0]:DBus Request name Error: org.freedesktop.DBus.Error.ServiceUnknown
+[error]	2026-01-01 15:25:24.215777[Thread 0x00007fcbe6ffd6c0]:Dbus Messages listening terminating.
+[error]	2026-01-01 15:25:25.402343[Thread 0x00007fcc77f7f400]:calc_exclude_triangles:Unable to create exclude triangles
+[warning]	2026-01-01 15:25:26.177930[Thread 0x00007fcc77f7f400]:03:25:26 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2026-01-01 15:25:26.195272[Thread 0x00007fcc77f7f400]:03:25:26 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2026-01-01 15:25:26.209649[Thread 0x00007fcc77f7f400]:03:25:26 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2026-01-01 15:25:26.306332[Thread 0x00007fcc77f7f400]:03:25:26 PM: Warning: Error running JavaScript: Unsupported result type
+[error]	2026-01-01 15:25:29.903582[Thread 0x00007fcc77f7f400]:calc_exclude_triangles:Unable to create exclude triangles
+[warning]	2026-01-01 15:25:30.002809[Thread 0x00007fcc77f7f400]:get_version, get_version not supported,return 00.00.00.00!
+[error]	2026-01-01 15:26:25.587453[Thread 0x00007fcc77f7f400]:calc_exclude_triangles:Unable to create exclude triangles
+[error]	2026-01-01 15:28:09.849894[Thread 0x00007fcb8b5fd6c0]:TCPConsole: Can't read from 192.168.31.138:8899: End of file
+[error]	2026-01-01 15:28:09.943658[Thread 0x00007fcb8b5fd6c0]:TCPConsole: Can't read from 192.168.31.138:8899: End of file
+[error]	2026-01-01 15:28:25.144338[Thread 0x00007fcb8b5fd6c0]:TCPConsole: Can't connect to 192.168.31.138:8899: Connection refused
+[error]	2026-01-01 15:28:25.156252[Thread 0x00007fcb8b5fd6c0]:TCPConsole: Can't connect to 192.168.31.138:8899: Connection refused
+[error]	2026-01-01 15:29:10.169183[Thread 0x00007fcc77f7f400]:TCPConsole: Can't connect to 192.168.31.138:8899: Connection refused
+[error]	2026-01-01 15:29:20.088245[Thread 0x00007fcc77f7f400]:calc_exclude_triangles:Unable to create exclude triangles

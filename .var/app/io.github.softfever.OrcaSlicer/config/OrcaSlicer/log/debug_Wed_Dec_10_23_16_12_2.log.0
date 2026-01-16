@@ -1,0 +1,14 @@
+[error]	2025-12-10 23:16:15.962520[Thread 0x00007f5a7effd6c0]:Unable to open connection to spacenavd
+[error]	2025-12-10 23:16:15.965318[Thread 0x00007f5a7dffb6c0]:DBus Request name Error: org.freedesktop.DBus.Error.ServiceUnknown
+[error]	2025-12-10 23:16:15.965417[Thread 0x00007f5a7dffb6c0]:Dbus Messages listening terminating.
+[error]	2025-12-10 23:16:17.015624[Thread 0x00007f5b091fe400]:calc_exclude_triangles:Unable to create exclude triangles
+[warning]	2025-12-10 23:16:17.741641[Thread 0x00007f5b091fe400]:11:16:17 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-12-10 23:16:17.756091[Thread 0x00007f5b091fe400]:11:16:17 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-12-10 23:16:17.787221[Thread 0x00007f5b091fe400]:11:16:17 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-12-10 23:16:17.894284[Thread 0x00007f5b091fe400]:11:16:17 PM: Warning: Error running JavaScript: Unsupported result type
+[error]	2025-12-10 23:16:21.359344[Thread 0x00007f5b091fe400]:calc_exclude_triangles:Unable to create exclude triangles
+[warning]	2025-12-10 23:16:21.450383[Thread 0x00007f5b091fe400]:get_version, get_version not supported,return 00.00.00.00!
+[error]	2025-12-10 23:16:21.891034[Thread 0x00007f5a4effd6c0]:Error getting: `check_new_version_sf`: HTTP 503, 
+[error]	2025-12-10 23:25:24.698203[Thread 0x00007f5a4dffb6c0]:TCPConsole: Can't connect to 192.168.31.138:8899: No route to host
+[error]	2025-12-10 23:25:27.770205[Thread 0x00007f5a4dffb6c0]:TCPConsole: Can't connect to 192.168.31.138:8899: No route to host
+[error]	2025-12-10 23:26:59.886580[Thread 0x00007f5b091fe400]:calc_exclude_triangles:Unable to create exclude triangles

@@ -1,0 +1,85 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  // "active_pane_modifiers": {
+  //   "border_size": 0.0,
+  //   "inactive_opacity": 0.0
+  // },
+  // "bottom_dock_layout": "full",
+  "agent": {
+    "default_profile": "write",
+    "default_model": {
+      "provider": "deepseek",
+      "model": "deepseek-chat",
+    },
+    "model_parameters": [],
+  },
+  "relative_line_numbers": "enabled",
+
+  "auto_install_extensions": {
+    "cattpuccin-blur": true,
+    "qml": true,
+    "material-icon-theme": true,
+  },
+  "autoscroll_on_clicks": true,
+  "auto_signature_help": true,
+  "ui_font_family": "Dank Mono",
+  "buffer_font_family": "Dank Mono",
+  // "buffer_font_features": {
+  //   ""
+  // },
+  "minimap": {
+    "show": "auto",
+    "thumb_border": "none",
+  },
+
+  "buffer_font_fallbacks": ["BlexMono Nerd Font Mono"],
+  "cursor_shape": "bar",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+  "vim_mode": true,
+  "icon_theme": {
+    "mode": "system",
+    "light": "Zed (Default)",
+    "dark": "Material Icon Theme",
+  },
+  "ui_font_size": 17.0,
+  "buffer_font_size": 15,
+  "theme": "Kanagawa Dragon",
+  "languages": {
+    "Python": {
+      "language_servers": ["pyright", "ruff"],
+      "format_on_save": "off",
+      "formatter": [
+        {
+          "language_server": { "name": "ruff" },
+        },
+      ],
+    },
+  },
+  "theme_overrides": {
+    "Kanagawa Dragon": {
+      "border.variant": "#181616",
+      "border": "#181616",
+      "panel.background": "#181616",
+      "title_bar.background": "#181616",
+      "syntax": {
+        "comment": {
+          "font_style": "italic",
+        },
+        "comment.doc": {
+          "font_style": "italic",
+        },
+      },
+    },
+  },
+  "which_key": { "enabled": true },
+}

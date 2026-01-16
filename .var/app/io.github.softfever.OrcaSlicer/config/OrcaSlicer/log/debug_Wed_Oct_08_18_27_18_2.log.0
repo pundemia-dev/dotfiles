@@ -1,0 +1,11 @@
+[error]	2025-10-08 18:27:22.022884[Thread 0x00007ff3327fd6c0]:Unable to open connection to spacenavd
+[error]	2025-10-08 18:27:22.026737[Thread 0x00007ff3317fb6c0]:DBus Request name Error: org.freedesktop.DBus.Error.ServiceUnknown
+[error]	2025-10-08 18:27:22.026776[Thread 0x00007ff3317fb6c0]:Dbus Messages listening terminating.
+[error]	2025-10-08 18:27:24.209290[Thread 0x00007ff3be3963c0]:calc_exclude_triangles:Unable to create exclude triangles
+[warning]	2025-10-08 18:27:25.933788[Thread 0x00007ff3be3963c0]:06:27:25 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-10-08 18:27:25.960804[Thread 0x00007ff3be3963c0]:06:27:25 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-10-08 18:27:25.992061[Thread 0x00007ff3be3963c0]:06:27:25 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-10-08 18:27:26.278039[Thread 0x00007ff3be3963c0]:06:27:26 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-10-08 18:27:33.518067[Thread 0x00007ff3be3963c0]:get_version, get_version not supported,return 00.00.00.00!
+[warning]	2025-10-08 18:27:36.552557[Thread 0x00007ff3be3963c0]:06:27:36 PM: Warning: Error running JavaScript: Unsupported result type
+[error]	2025-10-08 18:27:42.414568[Thread 0x00007ff3be3963c0]:calc_exclude_triangles:Unable to create exclude triangles

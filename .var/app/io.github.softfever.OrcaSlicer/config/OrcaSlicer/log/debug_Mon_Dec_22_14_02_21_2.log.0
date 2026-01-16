@@ -1,0 +1,14 @@
+[error]	2025-12-22 14:02:24.210712[Thread 0x00007f494d7fd6c0]:Unable to open connection to spacenavd
+[error]	2025-12-22 14:02:24.213354[Thread 0x00007f493ffff6c0]:DBus Request name Error: org.freedesktop.DBus.Error.ServiceUnknown
+[error]	2025-12-22 14:02:24.213385[Thread 0x00007f493ffff6c0]:Dbus Messages listening terminating.
+[error]	2025-12-22 14:02:25.593409[Thread 0x00007f49da267400]:calc_exclude_triangles:Unable to create exclude triangles
+[warning]	2025-12-22 14:02:26.496327[Thread 0x00007f49da267400]:02:02:26 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-12-22 14:02:26.513211[Thread 0x00007f49da267400]:02:02:26 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-12-22 14:02:26.528791[Thread 0x00007f49da267400]:02:02:26 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-12-22 14:02:26.610838[Thread 0x00007f49da267400]:02:02:26 PM: Warning: Error running JavaScript: Unsupported result type
+[error]	2025-12-22 14:02:30.364689[Thread 0x00007f49da267400]:calc_exclude_triangles:Unable to create exclude triangles
+[warning]	2025-12-22 14:02:30.467590[Thread 0x00007f49da267400]:get_version, get_version not supported,return 00.00.00.00!
+[warning]	2025-12-22 14:07:18.455086[Thread 0x00007f49094fe6c0]:Detected non-planar Voronoi diagram, input polygons will be rotated back and forth.
+[warning]	2025-12-22 14:07:20.681809[Thread 0x00007f49094fe6c0]:Detected non-planar Voronoi diagram, input polygons will be rotated back and forth.
+[warning]	2025-12-22 14:07:24.040367[Thread 0x00007f493e7fc6c0]:Detected non-planar Voronoi diagram, input polygons will be rotated back and forth.
+[error]	2025-12-22 15:25:44.724245[Thread 0x00007f49da267400]:calc_exclude_triangles:Unable to create exclude triangles

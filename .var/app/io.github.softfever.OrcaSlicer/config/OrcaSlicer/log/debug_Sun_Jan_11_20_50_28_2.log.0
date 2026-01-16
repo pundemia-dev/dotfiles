@@ -1,0 +1,30 @@
+[error]	2026-01-11 20:50:31.587029[Thread 0x00007f8d697fd6c0]:Unable to open connection to spacenavd
+[error]	2026-01-11 20:50:31.589255[Thread 0x00007f8d5bfff6c0]:DBus Request name Error: org.freedesktop.DBus.Error.ServiceUnknown
+[error]	2026-01-11 20:50:31.589280[Thread 0x00007f8d5bfff6c0]:Dbus Messages listening terminating.
+[error]	2026-01-11 20:50:32.905890[Thread 0x00007f8df7a66400]:calc_exclude_triangles:Unable to create exclude triangles
+[warning]	2026-01-11 20:50:33.868539[Thread 0x00007f8df7a66400]:08:50:33 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2026-01-11 20:50:33.899938[Thread 0x00007f8df7a66400]:08:50:33 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2026-01-11 20:50:33.938154[Thread 0x00007f8df7a66400]:08:50:33 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2026-01-11 20:50:34.097968[Thread 0x00007f8df7a66400]:08:50:34 PM: Warning: Error running JavaScript: Unsupported result type
+[error]	2026-01-11 20:50:38.922113[Thread 0x00007f8df7a66400]:calc_exclude_triangles:Unable to create exclude triangles
+[warning]	2026-01-11 20:50:39.126204[Thread 0x00007f8df7a66400]:get_version, get_version not supported,return 00.00.00.00!
+[error]	2026-01-11 20:50:49.184619[Thread 0x00007f8d4affd6c0]:Error getting: `check_new_version_sf`: HTTP 0, curl:Timeout was reached:
+Operation timed out after 10001 milliseconds with 23962 out of 145295 bytes received
+[Error 28]
+[error]	2026-01-11 20:51:05.038878[Thread 0x00007f8d157fa6c0]:TCPConsole: Can't read from 192.168.31.138:8899: End of file
+[error]	2026-01-11 20:51:41.846715[Thread 0x00007f8d157fa6c0]:TCPConsole: Can't read from 192.168.31.138:8899: End of file
+[error]	2026-01-11 23:28:51.509872[Thread 0x00007f8df7a66400]:tree_sel_change_delayedcan not find page with current selection 
+[error]	2026-01-11 23:29:23.098692[Thread 0x00007f8df7a66400]:tree_sel_change_delayedcan not find page with current selection 
+[error]	2026-01-11 23:29:24.519677[Thread 0x00007f8df7a66400]:tree_sel_change_delayedcan not find page with current selection 
+[error]	2026-01-11 23:29:30.842940[Thread 0x00007f8df7a66400]:tree_sel_change_delayedcan not find page with current selection 
+[error]	2026-01-11 23:29:44.966535[Thread 0x00007f8df7a66400]:tree_sel_change_delayedcan not find page with current selection 
+[error]	2026-01-11 23:29:52.375717[Thread 0x00007f8df7a66400]:tree_sel_change_delayedcan not find page with current selection 
+[error]	2026-01-11 23:31:55.634320[Thread 0x00007f8df7a66400]:tree_sel_change_delayedcan not find page with current selection 
+[error]	2026-01-11 23:32:00.685078[Thread 0x00007f8df7a66400]:tree_sel_change_delayedcan not find page with current selection 
+[error]	2026-01-11 23:32:01.311306[Thread 0x00007f8df7a66400]:tree_sel_change_delayedcan not find page with current selection 
+[error]	2026-01-11 23:32:06.711255[Thread 0x00007f8df7a66400]:tree_sel_change_delayedcan not find page with current selection 
+[error]	2026-01-11 23:32:07.402191[Thread 0x00007f8df7a66400]:tree_sel_change_delayedcan not find page with current selection 
+[error]	2026-01-11 23:32:09.769966[Thread 0x00007f8df7a66400]:tree_sel_change_delayedcan not find page with current selection 
+[error]	2026-01-11 23:32:11.083034[Thread 0x00007f8df7a66400]:tree_sel_change_delayedcan not find page with current selection 
+[error]	2026-01-11 23:50:13.988822[Thread 0x00007f8df7a66400]:tree_sel_change_delayedcan not find page with current selection 
+[error]	2026-01-12 15:19:17.067375[Thread 0x00007f8df7a66400]:calc_exclude_triangles:Unable to create exclude triangles

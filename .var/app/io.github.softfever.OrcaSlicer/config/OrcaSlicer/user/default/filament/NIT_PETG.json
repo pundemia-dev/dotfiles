@@ -1,0 +1,22 @@
+{
+    "default_filament_colour": [
+        "#C64600"
+    ],
+    "filament_flow_ratio": [
+        "0.991"
+    ],
+    "filament_max_volumetric_speed": [
+        "15"
+    ],
+    "filament_settings_id": [
+        "NIT_PETG"
+    ],
+    "from": "User",
+    "inherits": "Flashforge Generic PETG",
+    "is_custom_defined": "0",
+    "name": "NIT_PETG",
+    "pressure_advance": [
+        "0.064"
+    ],
+    "version": "2.3.0.3"
+}

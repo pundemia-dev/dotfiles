@@ -1,0 +1,18 @@
+[error]	2025-12-10 15:11:58.307188[Thread 0x00007f4054ffd6c0]:Unable to open connection to spacenavd
+[error]	2025-12-10 15:11:58.309378[Thread 0x00007f40477fe6c0]:DBus Request name Error: org.freedesktop.DBus.Error.ServiceUnknown
+[error]	2025-12-10 15:11:58.309403[Thread 0x00007f40477fe6c0]:Dbus Messages listening terminating.
+[error]	2025-12-10 15:11:59.494623[Thread 0x00007f40e0a34400]:calc_exclude_triangles:Unable to create exclude triangles
+[warning]	2025-12-10 15:12:00.303255[Thread 0x00007f40e0a34400]:03:12:00 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-12-10 15:12:00.333359[Thread 0x00007f40e0a34400]:03:12:00 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-12-10 15:12:00.341393[Thread 0x00007f40e0a34400]:03:12:00 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-12-10 15:12:00.410623[Thread 0x00007f40e0a34400]:03:12:00 PM: Warning: Error running JavaScript: Unsupported result type
+[error]	2025-12-10 15:12:04.047473[Thread 0x00007f40e0a34400]:calc_exclude_triangles:Unable to create exclude triangles
+[warning]	2025-12-10 15:12:04.158687[Thread 0x00007f40e0a34400]:get_version, get_version not supported,return 00.00.00.00!
+[error]	2025-12-10 15:12:05.259807[Thread 0x00007f400bfff6c0]:Error getting: `check_new_version_sf`: HTTP 503, 
+[error]	2025-12-10 15:12:27.724640[Thread 0x00007f40095fc6c0]:TCPConsole: Can't connect to 192.168.31.138:8899: No route to host
+[error]	2025-12-10 15:12:30.796704[Thread 0x00007f40095fc6c0]:TCPConsole: Can't connect to 192.168.31.138:8899: No route to host
+[error]	2025-12-10 15:12:45.773670[Thread 0x00007f40095fc6c0]:TCPConsole: Can't connect to 192.168.31.138:8899: No route to host
+[error]	2025-12-10 15:12:48.844639[Thread 0x00007f40095fc6c0]:TCPConsole: Can't connect to 192.168.31.138:8899: No route to host
+[error]	2025-12-10 15:13:19.052647[Thread 0x00007f40e0a34400]:TCPConsole: Can't connect to 192.168.31.138:8899: No route to host
+[error]	2025-12-10 15:15:04.205301[Thread 0x00007f40095fc6c0]:TCPConsole: Can't read from 192.168.31.138:8899: End of file
+[error]	2025-12-10 15:15:09.954777[Thread 0x00007f40e0a34400]:calc_exclude_triangles:Unable to create exclude triangles

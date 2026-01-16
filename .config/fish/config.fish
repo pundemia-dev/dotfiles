@@ -1,15 +1,145 @@
 
+
+alias pfetch='clear; printf "\n"; fastfetch --logo ~/Downloads/Untitled\ \(Copy\)@3x.png --logo-width 25 --logo-padding-top 1'
+alias pfetch-float='hyprctl dispatch setfloating; hyprctl dispatch resizeactive exact 687 416; hyprctl dispatch centerwindow; clear; printf "\n"; fastfetch --logo ~/Downloads/Untitled\ \(Copy\)@3x.png --logo-width 25 --logo-padding-top 1'
+alias clock-float='hyprctl dispatch setfloating; hyprctl dispatch resizeactive exact 334 183; hyprctl dispatch centerwindow; tty-clock'
+
 # Create aliases
 alias cls="clear"
 alias g="git"
 alias n="nvim"
 alias get_idf=". $HOME/esp_idf/esp-idf/export.fish"
+alias cr="cargo run"
+alias walltool="~/.config/quickshell/pShell/utils/scripts/walltool/target/debug/walltool" 
 function "uvpy"
     echo '{ "venvPath": ".", "venv": ".venv" }' > pyrightconfig.json
 end
 
 # TODO: Replace journal aliases after switching to OpenRC
 # thefuck --alias | source 
+function zed
+    # 1. Получаем адрес текущего окна терминала через hyprctl
+    set term_address (hyprctl activewindow -j | jq -r '.address')
+
+    # 2. Скрываем терминал (отправляем в специальный воркспейс "minimized")
+    hyprctl dispatch movetoworkspacesilent special:minimized,address:$term_address
+
+    # 3. Запускаем Zed с флагом --wait. 
+    # Он будет блокировать консоль, пока вы не закроете вкладку или окно Zed.
+    # Передаем все аргументы, которые ввели (например, путь к файлу)
+    zeditor --wait $argv
+
+    # 4. Когда Zed закрылся, возвращаем терминал на текущий активный воркспейс
+    hyprctl dispatch movetoworkspace (hyprctl monitors -j | jq -r '.[] | select(.focused==true) | .activeWorkspace.id'),address:$term_address
+    
+    # 5. Возвращаем фокус на терминал
+    hyprctl dispatch focuswindow address:$term_address
+end
+
+# VPN
+function vpn
+    if test (count $argv) -eq 0
+        echo "Usage: vpn <command> [args]"
+        echo "Commands: start, stop, restart, kill, autostart on|off, status, logs [new], update <json string>, help"
+        return 1
+    end
+
+    set cmd $argv[1]
+
+    switch $cmd
+        case start
+            sudo systemctl start sing-box
+
+        case stop
+            sudo systemctl stop sing-box
+
+        case restart
+            sudo systemctl restart sing-box
+
+        case kill
+            sudo systemctl kill sing-box
+
+        case autostart
+            if test (count $argv) -lt 2
+                echo "Usage: vpn autostart on|off"
+                return 1
+            end
+            switch $argv[2]
+                case on
+                    sudo systemctl enable sing-box
+                case off
+                    sudo systemctl disable sing-box
+                case '*'
+                    echo "Usage: vpn autostart on|off"
+            end
+
+        case logs
+            if test (count $argv) -ge 2 -a $argv[2] = "new"
+                sudo journalctl -u sing-box --output cat -f
+            else
+                sudo journalctl -u sing-box --output cat -e
+            end
+
+        case update
+            if test (count $argv) -lt 2
+                echo "Usage: vpn update '<json_string>'"
+                return 1
+            end
+            
+            if not type -q jq
+                echo (set_color red)"[ WARN ]"(set_color normal) - jq not found, install it: sudo pacman -S jq
+                return 1
+            end
+
+            echo "$argv[2..-1]" | jq . > /tmp/vpn_update_tmp.json
+
+            if test $status -ne 0
+                echo (set_color red)"[ WARN ]"(set_color normal) - JSON is not valid
+                rm -f /tmp/vpn_update_tmp.json
+                return 1
+            end
+
+            echo (set_color green)"[ INFO ]"(set_color normal) - Updating /etc/sing-box/config.json
+            sudo mv /tmp/vpn_update_tmp.json /etc/sing-box/config.json
+
+            if test $status -eq 0
+                echo (set_color green)"[ INFO ]"(set_color normal) - Config updated: /etc/sing-box/config.json
+                cat /etc/sing-box/config.json
+            else
+                echo (set_color red)"[ WARN ]"(set_color normal) - Error writing file
+            end
+
+        case status
+            set state (systemctl is-active sing-box)
+
+            if test $state = "active"
+                echo (set_color green)"[ INFO ]"(set_color normal) - sing-box is running
+            else if test $state = "inactive"
+                echo (set_color red)"[ WARN ]"(set_color normal) - sing-box is stopped
+            else
+                echo (set_color red)"[ WARN ]"(set_color normal) - sing-box state: $state
+            end
+
+        case help '-h' '--help'
+            echo "vpn <command> [args]"
+            echo "Commands:"
+            echo "  start                Start sing-box service"
+            echo "  stop                 Stop sing-box service"
+            echo "  restart              Restart sing-box service"
+            echo "  kill                 Kill sing-box service"
+            echo "  autostart on|off     Enable or disable autostart"
+            echo "  status               Show vpn status"
+            echo "  logs [new]           Show logs, 'new' for live"
+            echo "  update <json_string> Update /etc/sing-box/config.json with JSON"
+            echo "  help, -h, --help     Show this help message"
+
+        case '*'
+            echo "Unknown command: $cmd"
+            echo "Use 'vpn help' for usage"
+    end
+end
+
+
 alias mymicroscope="mpv av://v4l2:/dev/video2 --profile=low-latency --untimed"
 alias mydualcam="mpv av://v4l2:/dev/video2 --profile=low-latency --untimed --demuxer-lavf-o=video_size=2560x720,input_format=mjpeg"
 
@@ -66,3 +196,7 @@ zoxide init fish --cmd cd | source
 
 # uv
 fish_add_path "/home/pundemia/.local/bin"
+
+# ~/.config/fish/config.fish
+
+starship init fish | source

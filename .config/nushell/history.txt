@@ -1,0 +1,1228 @@
+ls
+la
+ls -a
+clear
+ls -a
+mv -h
+ls | sort-by size
+ls | sort-by size | reverse
+fastfetch
+ps | where status == Running
+pacman -Ss starship
+sudo pacman -S starship
+cd .config
+ls
+ls | where name =~ star
+ls | where name =~ fi
+ls | where name =~ star
+ls | where type == file
+mkdir starship
+cd starship
+ls
+n starship.toml
+nvim starship.toml
+mkdir ($nu.data-dir | path join "vendor/autoload")<\n>starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
+cd ..
+cp -p starship/starship.toml .
+exit
+clear
+ls
+cd dots
+cd dot
+cd .config/
+exit
+cd .config/
+exit
+cd .config/
+exit
+clear
+ls
+exit
+cd .config/
+exit
+cd .config
+ls
+cd fastfetch
+ls
+exit
+ls
+fastfetch
+ls
+cd .config
+exit
+ls
+clear
+ls
+ls | sort-by modified
+ls | sort-by modified | reverse
+ls -a | where type == file
+ls -a | where type == file | sort-by modified | reverse
+ls
+ls -a | where type == file | sort-by modified | reverse | get first
+ls -a | where type == file | sort-by modified | reverse | get name first
+ls -a | where type == file | sort-by modified | reverse | get name 
+ls -a | where type == file | sort-by modified | reverse | get name | get first
+ls -a | where type == file | sort-by modified | reverse | get name | get 0
+exit
+ls
+ls -a | where type == file | sort-by modified | reverse | get name | get 0
+ls -a | where type == file | sort-by modified | reverse | get name | get first
+ls -a | where type == file | sort-by modified | reverse | get name 
+exit
+ls -a | where type == file | sort-by modified | reverse | get name 
+ls -a | where type == file | sort-by modified | reverse
+ls -a | where type == file | sort-by modified | reverse | get name 
+exit
+ls -a | where type == file | sort-by modified | reverse | get name 
+nvim starship.toml
+ls -a | where type == file | sort-by modified | reverse | get first
+clear
+fastfetch --logo ~/.config/fastfetch/ax.png --logo-type kitty-direct --logo-width 25
+pacman -Ss szkawka
+pacman -Ss czkawka
+yay kawka
+clear
+cd Pictures/Wallpapers/
+kitten icat 2025-03-13-01-26-30-example-1.jpg
+kitten icat red-tattoo-girl.jpg
+rm 2025-03-13-01-26-30-example-1.jpg
+kitten icat red-dark-girl-evil.png
+kitten icat red-dark-girl.png
+rm red-dark-girl-evil.png
+kitten icat catgirl.png
+kitten icat a_cartoon_of_a_woman_in_a_maid_outfit.png
+rm a_cartoon_of_a_woman_in_a_maid_outfit.png
+kitten icat dark-circuit.png
+kitten icat tech.png
+rm tech.png
+kitten icat anime-anime-girl-white-hair-horn-red-background-tattoo.jpg
+rm anime-anime-girl-white-hair-horn-red-background-tattoo.jpg
+rm menhera.jpg
+kitten icat nasa.png
+kitten icat nasa.resized.png
+rm nasa.resized.png
+kitten icat miku-dark-red-guitar-balkon.jpg
+kitten icat wallhaven-7j3j13.jpg
+rm wallhaven-7j3j13.jpg
+kitten icat wallhaven-zmmkkv.png
+rm wallhaven-zmmkkv.png
+kitten icat a_pattern_of_wavy_lines.png
+rm a_pattern_of_wavy_lines.png
+kitten icat wallhaven-3lyrvy.png
+rm wallhaven-3lyrvy.png
+kitten icat samurai-mountains-sky-landskape.jpg
+rm samurai-mountains-sky-landskape.jpg
+kitten icat desk-electronics-computer.jpg
+kitten icat desk-electronics-computrer.jpg
+rm desk-electronics-computrer.jpg
+kitten icat window-samurai.jpg
+rm window-samurai.jpg
+kitten icat coke.jpg
+rm coke.jpg
+kitten icat nasa-jap.resized.png
+rm japan_anime_city.jpg
+kitten icat chillop-girl.png
+rm a_cartoon_of_a_girl_sitting_on_a_bed_with_a_guitar.png
+kitten icat wallhaven-qzppz5
+kitten icat wallhaven-qzppz5.png
+rm wallhaven-qzppz5.png
+kitten icat kisaki-footfetish.jpg
+kitten icat kisaki-legs-pink-feet.jpg
+kitten icat anime-girl-pink-legs-little-blue-labeled-kisaki.jpg
+rm anime-girl-pink-legs-little-blue-labeled-kisaki.jpg
+rm kisaki-legs-pink-feet.jpg
+kitten icat wallhaven-rrl8rw.png
+rm wallhaven-rrl8rw.png
+kitten icat windows-white.png
+rm windows-white.png
+kitten icat wallhaven-gp6pd3.png
+rm wallhaven-gp6pd3.png
+kitten icat skeleton-and-bird.png
+rm skeleton-and-bird.png
+rm nasa-jap.resized.png
+clear
+fastfetch --logo ~/.config/fastfetch/ax.png --logo-type kitty-direct --logo-width 25
+cd .config/kitty
+cat kitty.conf
+pacman -Q nerd
+pacman -Q | grep ners
+pacman -Q | grep nerd
+nvim kitty.conf
+fastfetch --logo ~/.config/fastfetch/ax.png --logo-type kitty-direct --logo-width 25
+clear
+fastfetch --logo ~/.config/fastfetch/ax.png --logo-type kitty-direct --logo-width 25
+clear
+fastfetch --logo ~/.config/fastfetch/ax.png --logo-type kitty-direct --logo-width 25
+clear
+fastfetch --logo ~/.config/fastfetch/ax.png --logo-type kitty-direct --logo-width 25
+cd .config/kitty
+cd .config/kitty
+clear
+fastfetch --logo ~/.config/fastfetch/ax.png --logo-type kitty-direct --logo-width 25
+cd .config/kitty
+ls
+ls
+ls
+fastfetch --logo ~/.config/fastfetch/ax.png --logo-type kitty-direct --logo-width 25
+cd .config/fastfetch
+fastfetch --logo ~/.config/fastfetch/ax.png --logo-type kitty-direct --logo-width 25
+clear
+cd .config/fastfetch
+fastfetch --logo ~/.config/fastfetch/ax.png --logo-type kitty-direct --logo-width 25
+exit
+ls
+cd .config/fastfetch
+exit
+ls
+cd .config/fastfetch
+ls
+cd .config/fastfetch
+zoxide init nushell
+cd nushell
+cd .config/nushell/
+ls
+nvim config.nu
+zoxide init nushell | save -f ~/.config/nushell/
+zoxide init nushell | save -f ~/.config/nushell/zoxide.nu
+cd nu
+cdi
+cd .config/fish
+ls
+n config.fish
+cd .config/fish
+cd
+cd fi
+cdi
+zoxide init nushell --cmd cd | save -f ~/.config/nushell/zoxide.nu
+cdi
+cd fi
+cd fis
+cd font
+config nu
+ls
+fastfetch --logo ~/.config/fastfetch/ax.png --logo-type kitty-direct --logo-width 25
+clear
+fastfetch --logo ~/.config/fastfetch/ax.png --logo-type kitty-direct --logo-width 25
+cd wall
+ls | sort-by size | reverse
+ls
+ls | sort-by size 
+ls | sort-by size | reverse | get 0-10
+ls | sort-by size | reverse
+cd
+ls
+ls -la
+ls -la | where type == file
+ls -la | where type == file | where name =~ bash
+ls -la | where type == file | where name =~ bash | sort-by modified
+ls -la | where type == file | where name =~ bash | sort-by modified | reverse
+ls -la | where type == file | where name =~ bash | sort-by modified | reverse | get 0
+ls
+ls -l
+pacman -Q
+pacman -Q | parse "{name} {version}"
+pacman -Q | first 10 | parse "{name} {version}"
+pacman -Q | parse "{name} {version}" | first 10
+checkupdates
+checkupdates | parse "{name} {from} {to}" | first 10
+checkupdates | parse "{name} {from}-> {to}" | first 10
+checkupdates | parse "{name} {from}->{to}" | first 10
+checkupdates | parse "{name} {from}->{to}"
+^pacman -Q | lines | split column " " package version
+checkupdates | lines | split column " " package from to
+checkupdates | lines | split column " " "->" package from to
+checkupdates | lines | split column " " package from to
+checkupdates | ansi strip | parse "{package} {from} -> {to}" | first 10
+checkupdates | parse "{name} {from}->{to}" | collect | first 10
+checkupdates | parse "{name} {from}->{to}" | collect && yay -Qua 
+checkupdates | parse "{name} {from}->{to}" | collect and yay -Qua 
+checkupdates | parse "{name} {from}->{to}" | collect ; yay -Qua 
+checkupdates | parse "{name} {from}->{to}" | collect | echo; yay -Qua 
+checkupdates | parse "{name} {from}->{to}" | collect
+yay -Qua
+yay -Qua | parse "{package} {from}->{to}"
+yay -Qua | parse "{package} {from}->{to}" | collect
+nvim .
+show_updates
+clear
+show_updates
+nvim arch.nu
+cd kit
+n .
+cat .bash_history
+cd pSh
+cat shell.qml
+cd
+tree
+tree -help
+which tree
+fish
+ls -r
+sudo pacman -S broot
+br
+broot
+br
+broot
+broot -w
+broot --help
+broot --tree
+tree
+eza --help
+tree
+cd pSh
+tree
+ls
+help tree
+tree -L2
+tree
+tree -L2
+tree -L 2
+tree -L2
+cd themes
+ls
+zeditor .
+n pShell.conf
+cd ..
+cd hypr
+ls
+cd scheme/
+update-kitty-theme
+kitten themes
+ls
+cd kitty
+;s
+ls
+update-kitty-theme
+kitten themes
+ls
+fastfetch --logo ~/.config/fastfetch/ax.png --logo-type kitty-direct --logo-width 25
+yazi
+ls
+tree -L2
+cd nu
+cd nushell
+cd
+cd .config/nushell/
+ls
+mkdir modules
+ls
+mv aliases.nu modules/
+mv arch.nu modules
+ls
+mv zoxide.nu modules/
+ls
+cat history.txt
+n config.nu
+cd modules/
+myip
+n net.nu
+n hypr.nu
+cd ..
+hyprctl clients
+hyprctl monitors
+hyprctl clients
+cd nushell
+hyprctl clients
+help table
+hyprctl clients
+hypr clients | do {<\n>    let data = $in<\n>    # Собираем имена колонок: Класс окна + ID (чтобы не путаться в двух kitty)<\n>    let headers = ($data | each {|row| $"($row.class) ($row.workspace.id)"})<\n>    <\n>    # Транспонируем и переименовываем<\n>    # "Параметр" — это имя для первого столбца с ключами<\n>    $data | transpose | rename "Параметр" ...$headers<\n>} | table -t psql
+hyprctl clients | do {<\n>    let data = $in<\n>    # Собираем имена колонок: Класс окна + ID (чтобы не путаться в двух kitty)<\n>    let headers = ($data | each {|row| $"($row.class) ($row.workspace.id)"})<\n>    <\n>    # Транспонируем и переименовываем<\n>    # "Параметр" — это имя для первого столбца с ключами<\n>    $data | transpose | rename "Параметр" ...$headers<\n>} | table -t psql
+hyprctl clients
+explore --help
+transpose --help
+hyprctl clients
+{c1: 1, c2: 2} | transpose | transpose --ignore-titles -r -d
+hyprctl clients -j
+hyprctl clients | from json | transpose | transpose --ignore-titles -r -d
+hyprctl clients -j | from json | transpose | transpose --ignore-titles -r -d
+hyprctl clients -j | from json | transpose --ignore-titles -r -d
+hyprctl clients -j | wl-copy
+hyprctl clients -j | from json | reduce --fold {} {|it, acc| $acc | insert $it.address $it }
+hyprctl clients -j | reduce --fold {} {|it, acc| $acc | insert $it.address $it }
+{c1: [1,2,3], c2: [1,2]} | transpose | transpose --ignore-titles -r -d
+{c1: 1,2,3, c2: [1,2]} | transpose | transpose --ignore-titles -r -d
+hyprctl clients -j | from json | transpose | headers
+headers --help
+hyprctl clients -j | from json | transpose | сщдгьты
+hyprctl clients -j | from json | transpose | columns
+hyprctla clients
+explore --help
+hyprctl monitors
+cd scripts
+cd nu
+cd modules/
+./screenrecord.sh
+explore --help
+hyprctl monitors
+explore --help
+record --help
+clear
+cd .config/
+cd calc
+ls
+cd lab2/
+ls
+zeditor .
+cd ../lab1
+cargo run
+cat src/main.rs
+bash
+clear
+cd conf
+hyprctl clients
+hyprctl monitors
+fastfetch --logo ~/.config/fastfetch/ax.png --logo-type kitty-direct --logo-width 25
+cd pShell
+ls
+cd modules/
+ls
+cd launcher/
+ls
+cat WallpaperList.qml
+nmcli device wifi connect "IPhone (2)"
+nmcli device wifi connect "iPhone (2)"
+nmcli device wifi rescan
+nmcli device wifi connect "iPhone (2)"
+fish
+cd lab1
+pwd
+blobdrop ЛР1.docx
+cd lab1
+ls
+cd cheet
+cd arduino
+ls
+cd arduino
+ls
+cd code
+cd arduino/
+ls
+cd cheet_sheet/
+ls
+git init
+git add .
+git commit -m "v1"
+git push
+git remote add origin git@github.com:pundemia-dev/cheet_sheet.git<\n>git branch -M main<\n>git push -u origin main
+cat cheet_sheet.ino
+cat cheet_sheet.ino | wl-copy
+n README.md
+git add .
+git commit -m "add readme"
+git push
+n README.md
+zeditor .
+n README.md
+git add .
+git commit -m "fix readme"
+git push
+clear
+fastfetch --logo `~/Downloads/Untitled (Copy).png` --logo-type kitty-direct --logo-width 25
+fastfetch --logo `~/Downloads/Untitled (Copy)@3x.png` --logo-type kitty-direct --logo-width 25
+fastfetch --logo `~/Downloads/Untitled (Copy)@3x.png` --logo-width 25
+fastfetch --logo "~/Downloads/Untitled (Copy)@3x.png" --logo-width 25 --logo-padding-top 2
+fastfetch --logo "~/Downloads/Untitled (Copy)@3x.png" --logo-width 25 
+fastfetch --logo `~/Downloads/Untitled (Copy)@3x.png` --logo-width 25
+fastfetch --logo `~/Downloads/Untitled (Copy)@3x.png` --logo-width 25 --logo-padding-top=2
+fastfetch --logo `~/Downloads/Untitled (Copy)@3x.png` --logo-width 25 --logo-padding-top 2
+fastfetch --logo `~/Downloads/Untitled (Copy)@3x.png` --logo-width 25 --logo-padding-top 1
+fastfetch 
+print "\n"; fastfetch --logo "~/Downloads/Untitled (Copy)@3x.png" --logo-width 25
+fastfetch --logo `~/Downloads/Untitled (Copy)@3x.png` --logo-width 25 --logo-padding-top 1
+clear;fastfetch --logo `~/Downloads/Untitled (Copy)@3x.png` --logo-width 25 --logo-padding-top 1
+cd
+clear;fastfetch --logo `~/Downloads/Untitled (Copy)@3x.png` --logo-width 25 --logo-padding-top 1
+cd nu
+ls
+pfetch
+fastfetch --logo `~/Downloads/Untitled (Copy)@3x.png` --logo-width 25 --logo-padding-top 1
+pfetch
+hyprctl clients
+cd nu
+n .
+hypr clients
+hyprctl clients
+cd nu\
+n .
+cd nu
+pfetch
+pfetch-float
+pfetch 
+pfetch-float
+clock-tty
+cd nu
+hyprctl clients
+clock-float
+btop
+btop --help
+btop
+ls
+pfetch-float
+fastfetch --logo `~/Downloads/Untitled (Copy)@3x.png` --logo-width 25 --logo-padding-top 1
+ды
+ls
+hypr clients
+hypr monitors
+cd test
+explore main.qml
+help --find
+help --find filesize
+ls
+shell.qml | explore
+ls *.qml
+ls **
+ls ""/*.py
+ls **/*.py
+cd ...
+cd test
+cd assets/
+cd ....
+cd -
+cd .....
+cd -
+ls
+cd ..
+start shell.qml
+pfetch-float
+nmcli device wifi connect "iPhone (2)"
+nmcli device wifi rescan
+nmcli device wifi connect "iPhone (2)"
+unimatrix -l=k
+pipies.sh
+pipes.sh
+nmcli device wifi connect "iPhone (2)"
+sudo pacman -Syu
+sudo pacman -Scc
+yay -Scc
+sudo pacman -Syu
+pass
+pass server_histeria
+pass temp/server_hysteria
+pass temp/server_histeria
+pass server_panel
+pass tempserver_panel
+pass temp/server_panel
+unimatrix -l=k
+pfetch-float
+cowsay "нахуй курсовую"
+unimatrix -l=k
+pipes.sh
+clock-float
+cd down
+file `SaveTwitter.Net_k0p6K7RT7DYhWp4X_(1920p).mp4`
+cd .cache/
+ls
+cd caelestia/
+ls
+cd wallpapers/
+ls
+cd 008f4cd6d99537e87aef980b4fb15044e6274b918e55d6cf196d0b3735e19d69/
+ls
+smart.json | from json
+cat smart.json | from json
+kitten icat thumbnail.jpg
+yazi
+cd yazi
+ls
+clear
+n yazi.toml
+cd hypr
+n modules/
+yazi
+reboot
+ls
+la
+ls
+ls -a
+cd hypr
+pass --insert temp/manj
+pass -insert temp/manj
+pass --help
+pass insert temp/manj
+pass -c  temp/manj
+pass insert temp/manj-pc
+pass -c temp/manj-pc
+pass insert temp/manj-root
+pass -c temp/manj-root
+kitten icat Downloads/Dao42-Miryoku-layout.png
+clear
+kitten icat Downloads/Dao42-Miryoku-layout.png
+clear
+cd wallp
+ls | length
+size --help
+size .
+filesize --help
+du --help
+du .
+ls | sort-by size | reverse
+ls | sort-by size 
+yay -S hypruler-bin
+sudo pacman -Syu
+yay
+sdo pacman -R yay-bin
+sudo pacman -R yay-bin
+cd yay
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+cd ..
+yay
+yay -S hypruler-bin
+hypruler 
+hypruler --help
+yay -R hypruler-bin
+cd wall
+yazi
+pavucontrol
+yay flameshot
+sudo pacman -S flameshot
+flameshot
+flameshot --help
+flameshot gui
+flameshot
+sudo pacman -R flameshot
+sudo pacman -S flameshot
+flameshot
+grim
+flameshot
+flameshot gui
+cd .config/flameshot
+ls
+cat flameshot.ini
+flameshot gui
+hyprpicker
+flameshot gui
+cat flameshot.ini
+matugen --help
+quickshell -c pShell
+transpose --help
+cd matugen
+ls
+cd templates
+ls
+bat kitty-colors.conf
+cd ..
+ls
+cat config.toml
+cat config.toml.bak
+pfetch-float
+cd .config
+ls
+cd flameshot
+ls
+cat flameshot.ini
+ls
+n custom.ini
+n colors.ini
+cat flameshot.ini
+n updater.nu
+n colors.ini
+n custom.ini
+n colors.ini
+n updater.nu
+mv flameshot.ini flameshot.ini.bak
+./updater.nu
+ls
+chmod +x updater.nu
+./updater.nu
+from --help
+cd anime
+n updater.py
+./updater.py
+chmod +x updater.py
+./updater.py
+./updater.py custom.ini colors.ini flameshot.ini
+cat flameshot.ini
+ls
+n updater.py
+rm updater.nu
+ls
+rm flameshot.ini.bak
+ls
+./updater.py custom.ini colors.ini flameshot.ini
+ls
+n updater.py
+ls
+cd matugen
+ls
+fish
+cd flameshot
+flameshot gui
+cd matugen
+cd templates/
+ls
+cat kitty-colors.conf
+matugen --help
+cd .local
+ls
+cd state/
+ls
+cd caelestia/
+ls
+cat wallpaper/
+tree
+matugen image ~/.current.wall
+n config.toml
+n .
+matugen image ~/.current.wall
+xs
+cd
+ls
+la
+ls -l
+ls -a
+kitten icat .current.wall
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png
+clear
+matugen --help
+matugen --import-json-string
+matugen --import-json-string {"name": "dynamic", "flavour": "default", "mode": "dark", "variant": "neutral", "colours": {"primary_paletteKeyColor": "777777", "secondary_paletteKeyColor": "777777", "tertiary_paletteKeyColor": "787677", "neutral_paletteKeyColor": "777777", "neutral_variant_paletteKeyColor": "777777", "background": "131313", "onBackground": "e2e2e2", "surface": "131313", "surfaceDim": "131313", "surfaceBright": "393939", "surfaceContainerLowest": "0e0e0e", "surfaceContainerLow": "1b1b1b", "surfaceContainer": "1f1f1f", "surfaceContainerHigh": "2a2a2a", "surfaceContainerHighest": "353535", "onSurface": "e2e2e2", "surfaceVariant": "474747", "onSurfaceVariant": "c6c6c6", "inverseSurface": "e2e2e2", "inverseOnSurface": "303030", "outline": "909090", "outlineVariant": "474747", "shadow": "000000", "scrim": "000000", "surfaceTint": "c6c6c6", "primary": "c6c6c6", "onPrimary": "303030", "primaryContainer": "464646", "onPrimaryContainer": "e2e2e2", "inversePrimary": "5e5e5e", "secondary": "c7c7c7", "onSecondary": "303030", "secondaryContainer": "474747", "onSecondaryContainer": "e2e2e2", "tertiary": "c8c5c6", "onTertiary": "303030", "tertiaryContainer": "929091", "onTertiaryContainer": "000000", "error": "e4beb9", "onError": "601410", "errorContainer": "891c18", "onErrorContainer": "e2e2e2", "primaryFixed": "e2e2e2", "primaryFixedDim": "c6c6c6", "onPrimaryFixed": "1b1b1b", "onPrimaryFixedVariant": "464646", "secondaryFixed": "e2e2e2", "secondaryFixedDim": "c7c7c7", "onSecondaryFixed": "1b1b1b", "onSecondaryFixedVariant": "474747", "tertiaryFixed": "e4e1e1", "tertiaryFixedDim": "c8c5c6", "onTertiaryFixed": "1b1b1c", "onTertiaryFixedVariant": "474747", "term0": "343434", "term1": "8888de", "term2": "88d8e7", "term3": "a6f5df", "term4": "9cacba", "term5": "9da9d2", "term6": "adcee0", "term7": "d8d8d8", "term8": "a3a3a3", "term9": "a5a2e1", "term10": "b3e6f1", "term11": "e7f8f3", "term12": "bec1c4", "term13": "b7bedc", "term14": "c8dfeb", "term15": "ffffff", "rosewater": "f2f2f2", "flamingo": "e1e1e1", "pink": "dbdce6", "mauve": "afc1e3", "red": "a6b2e1", "maroon": "b9bdd6", "peach": "d8c8e2", "yellow": "ecf2f0", "green": "d2e2eb", "teal": "d7e1ea", "sky": "d1dce8", "sapphire": "afcae6", "blue": "a2bfe4", "lavender": "bfcee5", "klink": "688ab1", "klinkSelection": "698ab2", "kvisited": "6480bd", "kvisitedSelection": "6680bd", "knegative": "7281dd", "knegativeSelection": "7480dd", "kneutral": "bf9ce4", "kneutralSelection": "bf9ce4", "kpositive": "65b1db", "kpositiveSelection": "65b2dd", "text": "e2e2e2", "subtext1": "c6c6c6", "subtext0": "909090", "overlay2": "7d7d7d", "overlay1": "6a6a6a", "overlay0": "595959", "surface2": "484848", "surface1": "373737", "surface0": "252525", "base": "131313", "mantle": "131313", "crust": "121212", "success": "B5CCBA", "onSuccess": "213528", "successContainer": "374B3E", "onSuccessContainer": "D1E9D6"}}
+matugen -j --import-json-string {"name": "dynamic", "flavour": "default", "mode": "dark", "variant": "neutral", "colours": {"primary_paletteKeyColor": "777777", "secondary_paletteKeyColor": "777777", "tertiary_paletteKeyColor": "787677", "neutral_paletteKeyColor": "777777", "neutral_variant_paletteKeyColor": "777777", "background": "131313", "onBackground": "e2e2e2", "surface": "131313", "surfaceDim": "131313", "surfaceBright": "393939", "surfaceContainerLowest": "0e0e0e", "surfaceContainerLow": "1b1b1b", "surfaceContainer": "1f1f1f", "surfaceContainerHigh": "2a2a2a", "surfaceContainerHighest": "353535", "onSurface": "e2e2e2", "surfaceVariant": "474747", "onSurfaceVariant": "c6c6c6", "inverseSurface": "e2e2e2", "inverseOnSurface": "303030", "outline": "909090", "outlineVariant": "474747", "shadow": "000000", "scrim": "000000", "surfaceTint": "c6c6c6", "primary": "c6c6c6", "onPrimary": "303030", "primaryContainer": "464646", "onPrimaryContainer": "e2e2e2", "inversePrimary": "5e5e5e", "secondary": "c7c7c7", "onSecondary": "303030", "secondaryContainer": "474747", "onSecondaryContainer": "e2e2e2", "tertiary": "c8c5c6", "onTertiary": "303030", "tertiaryContainer": "929091", "onTertiaryContainer": "000000", "error": "e4beb9", "onError": "601410", "errorContainer": "891c18", "onErrorContainer": "e2e2e2", "primaryFixed": "e2e2e2", "primaryFixedDim": "c6c6c6", "onPrimaryFixed": "1b1b1b", "onPrimaryFixedVariant": "464646", "secondaryFixed": "e2e2e2", "secondaryFixedDim": "c7c7c7", "onSecondaryFixed": "1b1b1b", "onSecondaryFixedVariant": "474747", "tertiaryFixed": "e4e1e1", "tertiaryFixedDim": "c8c5c6", "onTertiaryFixed": "1b1b1c", "onTertiaryFixedVariant": "474747", "term0": "343434", "term1": "8888de", "term2": "88d8e7", "term3": "a6f5df", "term4": "9cacba", "term5": "9da9d2", "term6": "adcee0", "term7": "d8d8d8", "term8": "a3a3a3", "term9": "a5a2e1", "term10": "b3e6f1", "term11": "e7f8f3", "term12": "bec1c4", "term13": "b7bedc", "term14": "c8dfeb", "term15": "ffffff", "rosewater": "f2f2f2", "flamingo": "e1e1e1", "pink": "dbdce6", "mauve": "afc1e3", "red": "a6b2e1", "maroon": "b9bdd6", "peach": "d8c8e2", "yellow": "ecf2f0", "green": "d2e2eb", "teal": "d7e1ea", "sky": "d1dce8", "sapphire": "afcae6", "blue": "a2bfe4", "lavender": "bfcee5", "klink": "688ab1", "klinkSelection": "698ab2", "kvisited": "6480bd", "kvisitedSelection": "6680bd", "knegative": "7281dd", "knegativeSelection": "7480dd", "kneutral": "bf9ce4", "kneutralSelection": "bf9ce4", "kpositive": "65b1db", "kpositiveSelection": "65b2dd", "text": "e2e2e2", "subtext1": "c6c6c6", "subtext0": "909090", "overlay2": "7d7d7d", "overlay1": "6a6a6a", "overlay0": "595959", "surface2": "484848", "surface1": "373737", "surface0": "252525", "base": "131313", "mantle": "131313", "crust": "121212", "success": "B5CCBA", "onSuccess": "213528", "successContainer": "374B3E", "onSuccessContainer": "D1E9D6"}}
+matugen json  --import-json-string {"name": "dynamic", "flavour": "default", "mode": "dark", "variant": "neutral", "colours": {"primary_paletteKeyColor": "777777", "secondary_paletteKeyColor": "777777", "tertiary_paletteKeyColor": "787677", "neutral_paletteKeyColor": "777777", "neutral_variant_paletteKeyColor": "777777", "background": "131313", "onBackground": "e2e2e2", "surface": "131313", "surfaceDim": "131313", "surfaceBright": "393939", "surfaceContainerLowest": "0e0e0e", "surfaceContainerLow": "1b1b1b", "surfaceContainer": "1f1f1f", "surfaceContainerHigh": "2a2a2a", "surfaceContainerHighest": "353535", "onSurface": "e2e2e2", "surfaceVariant": "474747", "onSurfaceVariant": "c6c6c6", "inverseSurface": "e2e2e2", "inverseOnSurface": "303030", "outline": "909090", "outlineVariant": "474747", "shadow": "000000", "scrim": "000000", "surfaceTint": "c6c6c6", "primary": "c6c6c6", "onPrimary": "303030", "primaryContainer": "464646", "onPrimaryContainer": "e2e2e2", "inversePrimary": "5e5e5e", "secondary": "c7c7c7", "onSecondary": "303030", "secondaryContainer": "474747", "onSecondaryContainer": "e2e2e2", "tertiary": "c8c5c6", "onTertiary": "303030", "tertiaryContainer": "929091", "onTertiaryContainer": "000000", "error": "e4beb9", "onError": "601410", "errorContainer": "891c18", "onErrorContainer": "e2e2e2", "primaryFixed": "e2e2e2", "primaryFixedDim": "c6c6c6", "onPrimaryFixed": "1b1b1b", "onPrimaryFixedVariant": "464646", "secondaryFixed": "e2e2e2", "secondaryFixedDim": "c7c7c7", "onSecondaryFixed": "1b1b1b", "onSecondaryFixedVariant": "474747", "tertiaryFixed": "e4e1e1", "tertiaryFixedDim": "c8c5c6", "onTertiaryFixed": "1b1b1c", "onTertiaryFixedVariant": "474747", "term0": "343434", "term1": "8888de", "term2": "88d8e7", "term3": "a6f5df", "term4": "9cacba", "term5": "9da9d2", "term6": "adcee0", "term7": "d8d8d8", "term8": "a3a3a3", "term9": "a5a2e1", "term10": "b3e6f1", "term11": "e7f8f3", "term12": "bec1c4", "term13": "b7bedc", "term14": "c8dfeb", "term15": "ffffff", "rosewater": "f2f2f2", "flamingo": "e1e1e1", "pink": "dbdce6", "mauve": "afc1e3", "red": "a6b2e1", "maroon": "b9bdd6", "peach": "d8c8e2", "yellow": "ecf2f0", "green": "d2e2eb", "teal": "d7e1ea", "sky": "d1dce8", "sapphire": "afcae6", "blue": "a2bfe4", "lavender": "bfcee5", "klink": "688ab1", "klinkSelection": "698ab2", "kvisited": "6480bd", "kvisitedSelection": "6680bd", "knegative": "7281dd", "knegativeSelection": "7480dd", "kneutral": "bf9ce4", "kneutralSelection": "bf9ce4", "kpositive": "65b1db", "kpositiveSelection": "65b2dd", "text": "e2e2e2", "subtext1": "c6c6c6", "subtext0": "909090", "overlay2": "7d7d7d", "overlay1": "6a6a6a", "overlay0": "595959", "surface2": "484848", "surface1": "373737", "surface0": "252525", "base": "131313", "mantle": "131313", "crust": "121212", "success": "B5CCBA", "onSuccess": "213528", "successContainer": "374B3E", "onSuccessContainer": "D1E9D6"}}
+matugen json  --import-json-string "{"name": "dynamic", "flavour": "default", "mode": "dark", "variant": "neutral", "colours": {"primary_paletteKeyColor": "777777", "secondary_paletteKeyColor": "777777", "tertiary_paletteKeyColor": "787677", "neutral_paletteKeyColor": "777777", "neutral_variant_paletteKeyColor": "777777", "background": "131313", "onBackground": "e2e2e2", "surface": "131313", "surfaceDim": "131313", "surfaceBright": "393939", "surfaceContainerLowest": "0e0e0e", "surfaceContainerLow": "1b1b1b", "surfaceContainer": "1f1f1f", "surfaceContainerHigh": "2a2a2a", "surfaceContainerHighest": "353535", "onSurface": "e2e2e2", "surfaceVariant": "474747", "onSurfaceVariant": "c6c6c6", "inverseSurface": "e2e2e2", "inverseOnSurface": "303030", "outline": "909090", "outlineVariant": "474747", "shadow": "000000", "scrim": "000000", "surfaceTint": "c6c6c6", "primary": "c6c6c6", "onPrimary": "303030", "primaryContainer": "464646", "onPrimaryContainer": "e2e2e2", "inversePrimary": "5e5e5e", "secondary": "c7c7c7", "onSecondary": "303030", "secondaryContainer": "474747", "onSecondaryContainer": "e2e2e2", "tertiary": "c8c5c6", "onTertiary": "303030", "tertiaryContainer": "929091", "onTertiaryContainer": "000000", "error": "e4beb9", "onError": "601410", "errorContainer": "891c18", "onErrorContainer": "e2e2e2", "primaryFixed": "e2e2e2", "primaryFixedDim": "c6c6c6", "onPrimaryFixed": "1b1b1b", "onPrimaryFixedVariant": "464646", "secondaryFixed": "e2e2e2", "secondaryFixedDim": "c7c7c7", "onSecondaryFixed": "1b1b1b", "onSecondaryFixedVariant": "474747", "tertiaryFixed": "e4e1e1", "tertiaryFixedDim": "c8c5c6", "onTertiaryFixed": "1b1b1c", "onTertiaryFixedVariant": "474747", "term0": "343434", "term1": "8888de", "term2": "88d8e7", "term3": "a6f5df", "term4": "9cacba", "term5": "9da9d2", "term6": "adcee0", "term7": "d8d8d8", "term8": "a3a3a3", "term9": "a5a2e1", "term10": "b3e6f1", "term11": "e7f8f3", "term12": "bec1c4", "term13": "b7bedc", "term14": "c8dfeb", "term15": "ffffff", "rosewater": "f2f2f2", "flamingo": "e1e1e1", "pink": "dbdce6", "mauve": "afc1e3", "red": "a6b2e1", "maroon": "b9bdd6", "peach": "d8c8e2", "yellow": "ecf2f0", "green": "d2e2eb", "teal": "d7e1ea", "sky": "d1dce8", "sapphire": "afcae6", "blue": "a2bfe4", "lavender": "bfcee5", "klink": "688ab1", "klinkSelection": "698ab2", "kvisited": "6480bd", "kvisitedSelection": "6680bd", "knegative": "7281dd", "knegativeSelection": "7480dd", "kneutral": "bf9ce4", "kneutralSelection": "bf9ce4", "kpositive": "65b1db", "kpositiveSelection": "65b2dd", "text": "e2e2e2", "subtext1": "c6c6c6", "subtext0": "909090", "overlay2": "7d7d7d", "overlay1": "6a6a6a", "overlay0": "595959", "surface2": "484848", "surface1": "373737", "surface0": "252525", "base": "131313", "mantle": "131313", "crust": "121212", "success": "B5CCBA", "onSuccess": "213528", "successContainer": "374B3E", "onSuccessContainer": "D1E9D6"}}"
+matugen json "{"name": "dynamic", "flavour": "default", "mode": "dark", "variant": "neutral", "colours": {"primary_paletteKeyColor": "777777", "secondary_paletteKeyColor": "777777", "tertiary_paletteKeyColor": "787677", "neutral_paletteKeyColor": "777777", "neutral_variant_paletteKeyColor": "777777", "background": "131313", "onBackground": "e2e2e2", "surface": "131313", "surfaceDim": "131313", "surfaceBright": "393939", "surfaceContainerLowest": "0e0e0e", "surfaceContainerLow": "1b1b1b", "surfaceContainer": "1f1f1f", "surfaceContainerHigh": "2a2a2a", "surfaceContainerHighest": "353535", "onSurface": "e2e2e2", "surfaceVariant": "474747", "onSurfaceVariant": "c6c6c6", "inverseSurface": "e2e2e2", "inverseOnSurface": "303030", "outline": "909090", "outlineVariant": "474747", "shadow": "000000", "scrim": "000000", "surfaceTint": "c6c6c6", "primary": "c6c6c6", "onPrimary": "303030", "primaryContainer": "464646", "onPrimaryContainer": "e2e2e2", "inversePrimary": "5e5e5e", "secondary": "c7c7c7", "onSecondary": "303030", "secondaryContainer": "474747", "onSecondaryContainer": "e2e2e2", "tertiary": "c8c5c6", "onTertiary": "303030", "tertiaryContainer": "929091", "onTertiaryContainer": "000000", "error": "e4beb9", "onError": "601410", "errorContainer": "891c18", "onErrorContainer": "e2e2e2", "primaryFixed": "e2e2e2", "primaryFixedDim": "c6c6c6", "onPrimaryFixed": "1b1b1b", "onPrimaryFixedVariant": "464646", "secondaryFixed": "e2e2e2", "secondaryFixedDim": "c7c7c7", "onSecondaryFixed": "1b1b1b", "onSecondaryFixedVariant": "474747", "tertiaryFixed": "e4e1e1", "tertiaryFixedDim": "c8c5c6", "onTertiaryFixed": "1b1b1c", "onTertiaryFixedVariant": "474747", "term0": "343434", "term1": "8888de", "term2": "88d8e7", "term3": "a6f5df", "term4": "9cacba", "term5": "9da9d2", "term6": "adcee0", "term7": "d8d8d8", "term8": "a3a3a3", "term9": "a5a2e1", "term10": "b3e6f1", "term11": "e7f8f3", "term12": "bec1c4", "term13": "b7bedc", "term14": "c8dfeb", "term15": "ffffff", "rosewater": "f2f2f2", "flamingo": "e1e1e1", "pink": "dbdce6", "mauve": "afc1e3", "red": "a6b2e1", "maroon": "b9bdd6", "peach": "d8c8e2", "yellow": "ecf2f0", "green": "d2e2eb", "teal": "d7e1ea", "sky": "d1dce8", "sapphire": "afcae6", "blue": "a2bfe4", "lavender": "bfcee5", "klink": "688ab1", "klinkSelection": "698ab2", "kvisited": "6480bd", "kvisitedSelection": "6680bd", "knegative": "7281dd", "knegativeSelection": "7480dd", "kneutral": "bf9ce4", "kneutralSelection": "bf9ce4", "kpositive": "65b1db", "kpositiveSelection": "65b2dd", "text": "e2e2e2", "subtext1": "c6c6c6", "subtext0": "909090", "overlay2": "7d7d7d", "overlay1": "6a6a6a", "overlay0": "595959", "surface2": "484848", "surface1": "373737", "surface0": "252525", "base": "131313", "mantle": "131313", "crust": "121212", "success": "B5CCBA", "onSuccess": "213528", "successContainer": "374B3E", "onSuccessContainer": "D1E9D6"}}"
+cd matugen
+ls
+n j.json
+matugen json j.json
+cd matugen
+matugen json j.json
+"{"name": "dynamic", "flavour": "default", "mode": "dark", "variant": "neutral", "colours": {"primary_paletteKeyColor": "777777", "secondary_paletteKeyColor": "777777", "tertiary_paletteKeyColor": "787677", "neutral_paletteKeyColor": "777777", "neutral_variant_paletteKeyColor": "777777", "background": "131313", "onBackground": "e2e2e2", "surface": "131313", "surfaceDim": "131313", "surfaceBright": "393939", "surfaceContainerLowest": "0e0e0e", "surfaceContainerLow": "1b1b1b", "surfaceContainer": "1f1f1f", "surfaceContainerHigh": "2a2a2a", "surfaceContainerHighest": "353535", "onSurface": "e2e2e2", "surfaceVariant": "474747", "onSurfaceVariant": "c6c6c6", "inverseSurface": "e2e2e2", "inverseOnSurface": "303030", "outline": "909090", "outlineVariant": "474747", "shadow": "000000", "scrim": "000000", "surfaceTint": "c6c6c6", "primary": "c6c6c6", "onPrimary": "303030", "primaryContainer": "464646", "onPrimaryContainer": "e2e2e2", "inversePrimary": "5e5e5e", "secondary": "c7c7c7", "onSecondary": "303030", "secondaryContainer": "474747", "onSecondaryContainer": "e2e2e2", "tertiary": "c8c5c6", "onTertiary": "303030", "tertiaryContainer": "929091", "onTertiaryContainer": "000000", "error": "e4beb9", "onError": "601410", "errorContainer": "891c18", "onErrorContainer": "e2e2e2", "primaryFixed": "e2e2e2", "primaryFixedDim": "c6c6c6", "onPrimaryFixed": "1b1b1b", "onPrimaryFixedVariant": "464646", "secondaryFixed": "e2e2e2", "secondaryFixedDim": "c7c7c7", "onSecondaryFixed": "1b1b1b", "onSecondaryFixedVariant": "474747", "tertiaryFixed": "e4e1e1", "tertiaryFixedDim": "c8c5c6", "onTertiaryFixed": "1b1b1c", "onTertiaryFixedVariant": "474747", "term0": "343434", "term1": "8888de", "term2": "88d8e7", "term3": "a6f5df", "term4": "9cacba", "term5": "9da9d2", "term6": "adcee0", "term7": "d8d8d8", "term8": "a3a3a3", "term9": "a5a2e1", "term10": "b3e6f1", "term11": "e7f8f3", "term12": "bec1c4", "term13": "b7bedc", "term14": "c8dfeb", "term15": "ffffff", "rosewater": "f2f2f2", "flamingo": "e1e1e1", "pink": "dbdce6", "mauve": "afc1e3", "red": "a6b2e1", "maroon": "b9bdd6", "peach": "d8c8e2", "yellow": "ecf2f0", "green": "d2e2eb", "teal": "d7e1ea", "sky": "d1dce8", "sapphire": "afcae6", "blue": "a2bfe4", "lavender": "bfcee5", "klink": "688ab1", "klinkSelection": "698ab2", "kvisited": "6480bd", "kvisitedSelection": "6680bd", "knegative": "7281dd", "knegativeSelection": "7480dd", "kneutral": "bf9ce4", "kneutralSelection": "bf9ce4", "kpositive": "65b1db", "kpositiveSelection": "65b2dd", "text": "e2e2e2", "subtext1": "c6c6c6", "subtext0": "909090", "overlay2": "7d7d7d", "overlay1": "6a6a6a", "overlay0": "595959", "surface2": "484848", "surface1": "373737", "surface0": "252525", "base": "131313", "mantle": "131313", "crust": "121212", "success": "B5CCBA", "onSuccess": "213528", "successContainer": "374B3E", "onSuccessContainer": "D1E9D6"}}"
+{"name": "dynamic", "flavour": "default", "mode": "dark", "variant": "neutral", "colours": {"primary_paletteKeyColor": "777777", "secondary_paletteKeyColor": "777777", "tertiary_paletteKeyColor": "787677", "neutral_paletteKeyColor": "777777", "neutral_variant_paletteKeyColor": "777777", "background": "131313", "onBackground": "e2e2e2", "surface": "131313", "surfaceDim": "131313", "surfaceBright": "393939", "surfaceContainerLowest": "0e0e0e", "surfaceContainerLow": "1b1b1b", "surfaceContainer": "1f1f1f", "surfaceContainerHigh": "2a2a2a", "surfaceContainerHighest": "353535", "onSurface": "e2e2e2", "surfaceVariant": "474747", "onSurfaceVariant": "c6c6c6", "inverseSurface": "e2e2e2", "inverseOnSurface": "303030", "outline": "909090", "outlineVariant": "474747", "shadow": "000000", "scrim": "000000", "surfaceTint": "c6c6c6", "primary": "c6c6c6", "onPrimary": "303030", "primaryContainer": "464646", "onPrimaryContainer": "e2e2e2", "inversePrimary": "5e5e5e", "secondary": "c7c7c7", "onSecondary": "303030", "secondaryContainer": "474747", "onSecondaryContainer": "e2e2e2", "tertiary": "c8c5c6", "onTertiary": "303030", "tertiaryContainer": "929091", "onTertiaryContainer": "000000", "error": "e4beb9", "onError": "601410", "errorContainer": "891c18", "onErrorContainer": "e2e2e2", "primaryFixed": "e2e2e2", "primaryFixedDim": "c6c6c6", "onPrimaryFixed": "1b1b1b", "onPrimaryFixedVariant": "464646", "secondaryFixed": "e2e2e2", "secondaryFixedDim": "c7c7c7", "onSecondaryFixed": "1b1b1b", "onSecondaryFixedVariant": "474747", "tertiaryFixed": "e4e1e1", "tertiaryFixedDim": "c8c5c6", "onTertiaryFixed": "1b1b1c", "onTertiaryFixedVariant": "474747", "term0": "343434", "term1": "8888de", "term2": "88d8e7", "term3": "a6f5df", "term4": "9cacba", "term5": "9da9d2", "term6": "adcee0", "term7": "d8d8d8", "term8": "a3a3a3", "term9": "a5a2e1", "term10": "b3e6f1", "term11": "e7f8f3", "term12": "bec1c4", "term13": "b7bedc", "term14": "c8dfeb", "term15": "ffffff", "rosewater": "f2f2f2", "flamingo": "e1e1e1", "pink": "dbdce6", "mauve": "afc1e3", "red": "a6b2e1", "maroon": "b9bdd6", "peach": "d8c8e2", "yellow": "ecf2f0", "green": "d2e2eb", "teal": "d7e1ea", "sky": "d1dce8", "sapphire": "afcae6", "blue": "a2bfe4", "lavender": "bfcee5", "klink": "688ab1", "klinkSelection": "698ab2", "kvisited": "6480bd", "kvisitedSelection": "6680bd", "knegative": "7281dd", "knegativeSelection": "7480dd", "kneutral": "bf9ce4", "kneutralSelection": "bf9ce4", "kpositive": "65b1db", "kpositiveSelection": "65b2dd", "text": "e2e2e2", "subtext1": "c6c6c6", "subtext0": "909090", "overlay2": "7d7d7d", "overlay1": "6a6a6a", "overlay0": "595959", "surface2": "484848", "surface1": "373737", "surface0": "252525", "base": "131313", "mantle": "131313", "crust": "121212", "success": "B5CCBA", "onSuccess": "213528", "successContainer": "374B3E", "onSuccessContainer": "D1E9D6"}}
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png
+cd matugen
+cat exampel_test.conf
+cat exampel_test.conf
+cat test.conf
+cat exampel_test.conf | from toml 
+cat exampel_test.conf | parse "{name}: {value}"
+cat exampel_test.conf | parse "{name}: {value};"
+compare 
+let a = (exampel_test.conf | parse "{name}: {value};")
+let a = (cat exampel_test.conf | parse "{name}: {value};")
+let b = (cat test.conf | parse "{name}: {value};")
+cat exampel_test.conf | parse "{name}: {value};"
+$a | where id not-in ($b | get id) <\n>
+$a | where id not-in ($b | get name) <\n>
+$a | where name not-in ($b | get name) <\n>
+cat exampel_test.conf 
+cat exampel_test.conf | pbcopy
+cat exampel_test.conf | wl-copy
+cd obs
+cd Programming/Linux/
+cd macOS/
+cd matugen
+cd .local/state
+ls
+cd caelestia/
+ls
+cat sequences.txt
+cat scheme.json
+cd wallpaper
+ls
+cat path.txt
+cd ..
+ls
+cat scheme.json | from json
+matugen --help
+matugen image --help
+cd matugen
+ls
+matugen image -t shceme-neutral ~/Pictures/Wallpapers/cat-leaves-11111111.png
+matugen image -t scheme-neutral ~/Pictures/Wallpapers/cat-leaves-11111111.png
+matugen --help
+matugen image -t scheme-neutral ~/Pictures/Wallpapers/cat-leaves-11111111.png -d
+matugen image -t scheme-neutral ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+caelestia wallaper -p ~/Pictures/Wallpapers/cat-leaves-11111111.png
+caelestia wallpaper -p ~/Pictures/Wallpapers/cat-leaves-11111111.png
+matugen --help
+matugen -j image ~/Pictures/Wallpapers/54839511_p0.png
+matugen -j 
+matugen --help
+matugen -j hex json
+matugen -v
+matugen -v image ~/Pictures/Wallpapers/cat-leaves-11111111.png
+matugen -j hex image ~/Pictures/Wallpapers/cat-leaves-11111111.png
+cat scheme.json
+cat scheme.json | from json
+matugen -j image ~/Pictures/Wallpapers/54839511_p0.png
+matugen image ~/Pictures/Wallpapers/54839511_p0.png
+cat scheme.json 
+matugen image -t scheme-neutral ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+ls
+cat sequences.txt
+cd wallpaper/
+ls
+cat path.txt
+ls -la
+cd pShell
+ls
+mkdir scripts
+cd scripts
+ls ..
+ls
+cat path.txt
+matugen image -t scheme-neutral ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+ls -la
+kitten icat thumbnail.jpg
+ln --help
+n wallSet_postHook.sh
+chmod +x wallSet_postHook.sh
+pwd
+qs -c pShell
+cd caelestia/
+ls
+cd ..
+cat scheme.json
+cat scheme.json | wl-copy
+cd matugen
+qs -c pShell
+cd state
+cd caelestia/
+ls
+matugen image -t scheme-neutral ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+qs -c pShell
+cat scheme.json
+cd matugen
+cd -
+cat scheme.json
+poweroff
+cd scripts
+./screenrecord.sh
+вныл
+dysk
+cd kitty
+ls
+n kitty.conf
+cd flameshot
+ls
+cat colors.ini
+flameshot gui
+n colors.ini
+n .
+./udater.sh custom.ini colors.ini
+./udater.py custom.ini colors.ini
+ls
+./updater.py custom.ini colors.ini
+./updater.py custom.ini colors.ini flameshot.ini
+ls
+pfetch
+flameshot gui
+n colors.ini
+ld
+ls
+n .
+rm flameshot.ini
+cd
+~/config/flameshot/updater.py ~/.config/flameshot/colors.ini ~/.config/flameshot/custom.ini ~/.config/flameshot/flameshot.ini
+flameshot gui
+cd flameshot
+cat flameshot.ini
+matugen image -t scheme-neutral ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+flameshot gui
+cd state
+ls
+cd caele
+ды
+ls
+cat scheme.json
+matugen image -t scheme-neutral ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+flameshot gui
+n .
+matugen image -t scheme-neutral ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+flameshot gui
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+flameshot gui\
+flameshot gui
+pfetch
+cd kitty
+ls
+kitten themes
+n .
+mv pShell.conf themes/
+kitten themes
+flameshot
+ls
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+ls
+cd kitty
+ls
+cd hypr
+cd scheme/
+ls
+fish
+ls
+cd themes
+ls
+cd nu
+cd nushell
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+ls
+pfetch
+ls
+cd cli
+cd matugen
+zeditor .
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+clear
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png | wl-copy
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+ls
+cd nu
+ls
+cd hypr
+ls
+cd scheme
+ls
+cd kitty
+yazi
+zeditor .
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+ls
+kitten themes
+cd kitty
+cd .cache
+ls
+cd caelestia/
+ls
+cd schemes/
+ls
+cd 001c62e07d651ec3db6b185ad671d99bed4c1894dce83f7eff35c38f20235ea0/
+ls
+cd content
+ls
+cat
+cat dark.json
+ls
+cd ..
+ls
+cat score.json
+cd ..
+ls
+let hex_codes = [<\n>    "343434" "8888de" "88d8e7" "a6f5df" "9cacba" "9da9d2" "adcee0" "d8d8d8"<\n>    "a3a3a3" "a5a2e1" "b3e6f1" "e7f8f3" "bec1c4" "b7bedc" "c8dfeb" "ffffff"<\n>];<\n><\n>glob **/* <\n>| where ($it | path type) == "file" <\n>| each { |file|<\n>    let content = (open --raw $file | str downcase)<\n>    let found_all = ($hex_codes | all { |code| $content | str contains ($code | str downcase) })<\n>    if $found_all { $file }<\n>} <\n>| filter { |it| $it != null }
+cd 48ccb00c7e5ec413f190a9a15676aeefc766c558fa74f8e8fd1b0f7513cd853f
+ls
+cd neutral/
+cat dark.json | wl-copy
+cd code
+cd temp
+n temp.txt
+n temp.conf
+cd -
+cd 48ccb00c7e5ec413f190a9a15676aeefc766c558fa74f8e8fd1b0f7513cd853f
+ls
+cd neutral
+ls
+cd -
+cd code
+cd temp
+which caelestia-cli
+which caelestia
+cd /usr
+cd bin/caelestia
+cd bin
+cd caelestia
+ls
+cd /usr/bin/caelestia
+file /usr/bin/caelestia
+cat /usr/bin/caelestia
+cd ~/.local/share/caelestia
+python -c "import caelestia; print(caelestia.__path__[0])"
+cd /usr/lib/python3.13/site-packages/caelestia
+ls
+zeditor .
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+cd kitty
+matugen -t scheme-neutral image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+cd caele
+ls
+cat scheme.json | wl-copy
+n current-theme.conf
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+matugen --help
+matugen -t scheme-neutral -m dark image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+matugen -t scheme-neutral -m light image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+matugen -m dark image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+matugen -t scheme-neutral -m light image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+matugen -t scheme-neutral -m dark image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+matugen -t scheme-neutral -m dark image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+kitten themes
+cd kitty
+n kitty.conf
+n current-theme.conf
+n current-theme.conf
+ls
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+ls
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+cd /dev
+cd pts/
+ld
+ls
+cat `0`
+kitty +kitten themes --reload-in=all Colors
+kitty +kitten themes --reload-in=all colors
+kitty +kitten themes --reload-in=all mat
+kitty +kitten themes --reload-in=all colors
+reboot
+pfetch-float
+cd kitty
+kitty +kitten themes --reload-in=all colors
+cd matugen
+n .
+cd kitty
+cd scripts
+n screenrecord.sh
+./screenrecord.sh
+poweroff
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+pfetch-float
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+cd temp
+cd caelestia
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png -t scheme-neutral
+cat scheme.json
+cd kitty
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png -t scheme-neutral
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+n .
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png -t scheme-neutral
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png -t scheme-neutral
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+pfetch
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+ls
+pfetch
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png -t scheme-neutral
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png \
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+ls
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png -t scheme-neutral
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+pfetch-float
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png -t scheme-neutral
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+ls sldlsd
+fuc
+matugen --help
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png -t scheme-neutral
+ls
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png -t scheme-expressive
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png -t scheme-rainbow
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png -t scheme-tonal-spot
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png -t scheme-vibrant
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png -t scheme-fidelity
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png -t scheme-content
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png -t scheme-monochrome
+pfetch-float
+cd pShell
+ls
+zeditor .
+pfetch-float
+cd
+pfetch-float
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png -t scheme-monochrome
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png -t scheme-neutral
+ls
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+pfetch-float
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+ls
+cd --
+which caelestia
+ls
+tree
+cd matugen
+ld
+ls
+tree
+pfetch-float
+ls
+pfetch-float
+ls
+matugen --hrlp
+matugen --help
+matugen image ~/Pictures/Wallpapers/wallhaven-6dm3gq.jpg -t scheme-expressive
+pfetch-float
+ls
+cd yazi
+n yazi.toml
+cd 
+yazi
+cd yazi
+n yazi.toml
+ls
+yazi
+cd wall
+yazi
+n yazi.toml
+cd wall
+n keymap.toml
+yazi
+pwd
+yazi
+n yazi.toml
+rm keymap.toml
+n yazi.toml
+pwd
+ls
+n yazi.toml
+yazi
+ls
+pfetch-float
+vpn update "{"certificate":{"store":"system"},"dns":{"rules":[{"action":"predefined","answer":"localhost. IN A 127.0.0.1","domain":"localhost","query_type":"A","rcode":"NOERROR"},{"action":"predefined","answer":"localhost. IN AAAA ::1","domain":"localhost","query_type":"AAAA","rcode":"NOERROR"}],"servers":[{"detour":"proxy","domain_resolver":"dns-local","server":"8.8.8.8","tag":"dns-remote","type":"tls"},{"domain_resolver":"dns-local","tag":"dns-direct","type":"local"},{"tag":"dns-local","type":"local"}]},"endpoints":[],"experimental":{"cache_file":{"enabled":true,"store_fakeip":true,"store_rdrc":true},"clash_api":{"default_mode":""}},"inbounds":[{"listen":"127.0.0.1","listen_port":2080,"tag":"mixed-in","type":"mixed"},{"address":["172.19.0.1/24"],"auto_redirect":true,"auto_route":true,"interface_name":"throne-tun","mtu":1500,"stack":"system","strict_route":true,"tag":"tun-in","type":"tun"}],"log":{"level":"info"},"outbounds":[{"obfs":{"password":"oz4yqXV35IaivYNPY8GFV7RBdKEcLO01","type":"salamander"},"password":"my_archie:a1b6i6VoacrhjQWffWxXc15FMIqToJVg","server":"185.58.204.24","server_port":443,"tag":"proxy","tls":{"enabled":true,"insecure":true,"server_name":"music.yandex.com"},"type":"hysteria2"},{"tag":"direct","type":"direct"}],"route":{"auto_detect_interface":true,"default_domain_resolver":{"server":"dns-direct","strategy":""},"final":"proxy","find_process":true,"rule_set":[],"rules":[{"action":"sniff","inbound":["mixed-in","tun-in"]},{"action":"hijack-dns","protocol":"dns"}]}}"
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+flameshot gui
+ls
+cd code
+cd scripts
+n ocr.sh
+./ocr.sh
+cd hypr
+ls
+reboot
+cd hypr
+cdi hypr
+n .
+cd pShell
+ls
+cd config/
+ls
+cd hypr
+ls
+n .
+cd testShell
+ls
+cdi hypr
+ls
+n hyprland.conf
+ls
+cd wall
+ls
+show_updates
+cd hypr
+yay xfreerdp
+yay freerdp
+sudo pacman -S freerdp
+freerdp /v:185.58.204.24 /u:RemoteDesk /p:fusion
+xfreerdp3 /v:185.58.204.24 /u:RemoteDesk /p:fusion
+hyprctla clients
+hyprctl clients
+cd hypr
+n hyprland.conf
+hyprctl clients
+n .
+xfreerdp3 /v:192.168.31.68 /u:RemoteDesk /p:fusion
+xfreerdp -h
+xfreerdp3 -h
+xfreerdp3 /v:192.168.31.68 /u:RemoteDesk /p:fusion /dynamic-resolution
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+pass ls
+pass insert local/archie
+pass gen local/archie
+pass generate local/archie
+pass local/archie
+pass local/archie -c
+ls
+mkdir .myScripts
+cd .myScripts/
+ssh
+pass local/archie -c
+ssh archie@192.168.31.254
+xfreerdp3 /v:192.168.31.68 /u:RemoteDesk /p:fusion /dynamic-resolution
+pass local/archie -c
+ls .ssh
+n ~/.ssh/config
+ssh home_archie
+n ~/.ssh/config
+ssh-copy-id home_archie
+ssh home_archie
+pass local/archie -c
+pass local/archie 
+pass local/hosts/homie
+pass local/archie -c
+ssh home_archie
+ssh-copy-id home_archie
+pass local/archie -c
+cd .ssh
+ls
+ssh-copy-id home_archie
+pass local/archie -c
+ssh-copy-id home_archie
+ssh home_archie
+ssh archie@192.168.31.254
+n win10.sh
+chmod +x win10.sh
+./win10.sh
+cd .local/share/applications/
+cd scripts
+n start-windows.desktop
+cd myS
+n win10.sh
+./win10.sh
+./screenrecord.sh
+pass local/homie
+pass ls
+pass local/hosts/homie -c
+pass ls
+pass -c local/hosts/homie_virtmonitors
+cd myS
+ls
+cat win10.sh
+cat win10.sh | wl-copy
+cd .ssh
+n config
+cd .local/share/applications/
+cd
+cd .local/share/applications/
+ls
+cat start-windows.desktop | wl-copy
+ssh virtMonitors
+ls
+pass -c local/hosts/homie_virtmonitors
+ssh homie
+yazi
+cd kitty
+n .
+ls
+cd fish
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png -t scheme-neutral
+cd 48ccb00c7e5ec413f190a9a15676aeefc766c558fa74f8e8fd1b0f7513cd853f
+ls
+cd neutral
+ls
+cat dark.json | wl-copy
+n .
+cd
+matugen image ~/Pictures/Wallpapers/cat-leaves-11111111.png 
+cd down
+kitten themes
+cd 48ccb00c7e5ec413f190a9a15676aeefc766c558fa74f8e8fd1b0f7513cd853f
+cd neutral/
+ls
+ls | last 10
+# Получаем данные обо всех JPG, парсим JSON и фильтруем те, где высота больше ширины<\n>exiftool -j -ImageWidth -ImageHeight *.jpg <\n>    | from json <\n>    | where ImageHeight > ImageWidth
+exiftool -j -ImageWidth -ImageHeight *.jpg | from json 
+exiftool -j -ImageWidth -ImageHeight *.jpg | from json | where ImageWidth < ImageHeight
+exiftool -j -ImageWidth -ImageHeight *.jpg <\n>| from json <\n>| where ($it.ImageWidth | into int) < ($it.ImageHeight | into int)
+exiftool -j -ImageWidth -ImageHeight *.jpg | from json | where ($it.ImageWidth | into int) < ($it.ImageHeight | into int) 
+yazi --help
+exiftool -n -j -ImageWidth -ImageHeight *.jpg <\n>| from json <\n>| where ImageWidth < ImageHeight <\n>| get SourceFile <\n>| each { |it| <\n>    print $"Файл: ($it)"<\n>    # --width 40 задает ширину в знакоместах (колонках терминала)<\n>    # Можно использовать --width 500px для пикселей<\n>    kitten icat --width 40 --align left $it <\n>}
+exiftool -n -j -ImageWidth -ImageHeight *.jpg <\n>| from json <\n>| where ($it.ImageWidth | into int) < ($it.ImageHeight | into int) <\n>| get SourceFile <\n>| each { |it| <\n>    print $"Файл: ($it)"<\n>    # --width 40 задает ширину в знакоместах (колонках терминала)<\n>    # Можно использовать --width 500px для пикселей<\n>    kitten icat --width 40 --align left $it <\n>}
+kitten icat --help
+exiftool -n -j -ImageWidth -ImageHeight *.jpg <\n>| from json <\n>| where ($it.ImageWidth | into int) < ($it.ImageHeight | into int) <\n>| get SourceFile <\n>| each { |it| <\n>    print $"Файл: ($it)"<\n>    # magick меняет размер до 400 пикселей по ширине и отдает в stdout<\n>    # kitten icat читает это из stdin и выводит в терминал<\n>    magick $it -resize 400 png:- | kitten icat --align left<\n>}
+exiftool -n -j -ImageWidth -ImageHeight *.jpg <\n>| from json <\n>| where ($it.ImageWidth | into int) < ($it.ImageHeight | into int) | first 85 <\n>| get SourceFile <\n>| each { |it| <\n>    print $"Файл: ($it)"<\n>    # magick меняет размер до 400 пикселей по ширине и отдает в stdout<\n>    # kitten icat читает это из stdin и выводит в терминал<\n>    magick $it -resize 400 png:- | kitten icat --align left<\n>}
+exiftool -n -j -ImageWidth -ImageHeight *.jpg <\n>| from json <\n>| where ($it.ImageWidth | into int) < ($it.ImageHeight | into int) | first 30 <\n>| get SourceFile <\n>| each { |it| <\n>    print $"Файл: ($it)"<\n>    # magick меняет размер до 400 пикселей по ширине и отдает в stdout<\n>    # kitten icat читает это из stdin и выводит в терминал<\n>    magick $it -resize 400 png:- | kitten icat --align left<\n>}
+exiftool -n -j -ImageWidth -ImageHeight *.jpg <\n>| from json <\n>| where ($it.ImageWidth | into int) = ($it.ImageHeight | into int) | first 30 <\n>| get SourceFile <\n>| each { |it| <\n>    print $"Файл: ($it)"<\n>    # magick меняет размер до 400 пикселей по ширине и отдает в stdout<\n>    # kitten icat читает это из stdin и выводит в терминал<\n>    magick $it -resize 400 png:- | kitten icat --align left<\n>}
+exiftool -n -j -ImageWidth -ImageHeight *.jpg <\n>| from json <\n>| where ($it.ImageWidth | into int) == ($it.ImageHeight | into int) | first 30 <\n>| get SourceFile <\n>| each { |it| <\n>    print $"Файл: ($it)"<\n>    # magick меняет размер до 400 пикселей по ширине и отдает в stdout<\n>    # kitten icat читает это из stdin и выводит в терминал<\n>    magick $it -resize 400 png:- | kitten icat --align left<\n>}
+exiftool -n -j -ImageWidth -ImageHeight *.jpg <\n>| from json <\n>| where ($it.ImageWidth | into int)*0.75 < ($it.ImageHeight | into int) | first 30 <\n>| get SourceFile <\n>| each { |it| <\n>    print $"Файл: ($it)"<\n>    # magick меняет размер до 400 пикселей по ширине и отдает в stdout<\n>    # kitten icat читает это из stdin и выводит в терминал<\n>    magick $it -resize 400 png:- | kitten icat --align left<\n>}
+exiftool -n -j -ImageWidth -ImageHeight *.jpg <\n>| from json <\n>| where (($it.ImageWidth | into int)*0.75) < ($it.ImageHeight | into int) | first 30 <\n>| get SourceFile <\n>| each { |it| <\n>    print $"Файл: ($it)"<\n>    # magick меняет размер до 400 пикселей по ширине и отдает в stdout<\n>    # kitten icat читает это из stdin и выводит в терминал<\n>    magick $it -resize 400 png:- | kitten icat --align left<\n>}
+exiftool -n -j -ImageWidth -ImageHeight *.jpg <\n>| from json <\n>| where ((($it.ImageWidth | into int)*0.75) | into int) < ($it.ImageHeight | into int) | first 30 <\n>| get SourceFile <\n>| each { |it| <\n>    print $"Файл: ($it)"<\n>    # magick меняет размер до 400 пикселей по ширине и отдает в stdout<\n>    # kitten icat читает это из stdin и выводит в терминал<\n>    magick $it -resize 400 png:- | kitten icat --align left<\n>}

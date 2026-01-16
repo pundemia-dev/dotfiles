@@ -1,0 +1,13 @@
+[error]	2025-11-18 14:35:14.986938[Thread 0x00007fcb41ffd6c0]:Unable to open connection to spacenavd
+[error]	2025-11-18 14:35:14.989898[Thread 0x00007fcb40ffb6c0]:DBus Request name Error: org.freedesktop.DBus.Error.ServiceUnknown
+[error]	2025-11-18 14:35:14.989937[Thread 0x00007fcb40ffb6c0]:Dbus Messages listening terminating.
+[error]	2025-11-18 14:35:16.588867[Thread 0x00007fcbc97fa400]:calc_exclude_triangles:Unable to create exclude triangles
+[warning]	2025-11-18 14:35:17.764625[Thread 0x00007fcbc97fa400]:02:35:17 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-11-18 14:35:17.781359[Thread 0x00007fcbc97fa400]:02:35:17 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-11-18 14:35:17.790553[Thread 0x00007fcbc97fa400]:02:35:17 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-11-18 14:35:17.885191[Thread 0x00007fcbc97fa400]:02:35:17 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-11-18 14:35:22.891106[Thread 0x00007fcbc97fa400]:get_version, get_version not supported,return 00.00.00.00!
+[error]	2025-11-18 14:35:24.465867[Thread 0x00007fc9f7fff6c0]:Error getting: `check_new_version_sf`: HTTP 503, 
+[warning]	2025-11-18 14:35:40.685101[Thread 0x00007fcb45ffd6c0]:Arrange full params: {"min_obj_distance":0,"accuracy":1.000000,"parallel":1,"allow_rotations":0,"do_final_align":1,"allow_multi_materials_on_same_plate":1,"avoid_extrusion_cali_region":1,"is_seq_print":0,"bed_shrink_x":1.000000,"bed_shrink_y":1.000000,"brim_skirt_distance":0.000000,"clearance_height_to_rod":27.000000,"clearance_height_to_lid":150.000000,"clearance_radius":76.000000,"printable_height":220.000000,
+[warning]	2025-11-18 14:36:45.855357[Thread 0x00007fcb45ffd6c0]:Arrange full params: {"min_obj_distance":0,"accuracy":1.000000,"parallel":1,"allow_rotations":0,"do_final_align":1,"allow_multi_materials_on_same_plate":1,"avoid_extrusion_cali_region":1,"is_seq_print":0,"bed_shrink_x":1.000000,"bed_shrink_y":1.000000,"brim_skirt_distance":0.000000,"clearance_height_to_rod":27.000000,"clearance_height_to_lid":150.000000,"clearance_radius":76.000000,"printable_height":220.000000,
+[error]	2025-11-18 14:40:02.740130[Thread 0x00007fcbc97fa400]:calc_exclude_triangles:Unable to create exclude triangles

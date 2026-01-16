@@ -1,0 +1,237 @@
+[config]
+reload_apps = true
+
+[templates.caelestia_scheme]
+pre_hook = "mkdir -p ~/.local/state/caelestia"
+input_path = "~/.config/matugen/templates/caelestia_scheme.conf"
+output_path = "~/.local/state/caelestia/scheme.json"
+
+[templates.caelestia_wallpaper]
+pre_hook = "mkdir -p ~/.local/state/caelestia/wallpaper"
+input_path = "~/.config/matugen/templates/caelestia_wallpaper.conf"
+output_path = "~/.local/state/caelestia/wallpaper/path.txt"
+post_hook = "~/.config/quickshell/pShell/scripts/wallSet_postHook.sh"
+
+
+# [templates.caelestia_wallpaper]
+# pre_hook = "mkdir -p ~/.local/state/caelestia/wallpaper"
+# input_path = "~/.config/matugen/templates/caelestia_wallpaper.conf"
+# output_path = "~/.config/matugen/path.txt"
+# post_hook = "mkdir -p ~/.local/state/caelestia/wallpaper && echo '' "
+# [templates.hyprland]
+# input_path = "~/.config/Ax-Shell/config/matugen/templates/hyprland-colors.conf"
+# output_path = "~/.config/Ax-Shell/config/hypr/colors.conf"
+
+[templates.kitty]
+input_path = "~/.config/matugen/templates/kitty-colors.conf"
+output_path = "~/.config/kitty/themes/colors.conf"
+# post_hook = "kitty @ set-colors -a ~/.config/kitty/themes/colors.conf"
+post_hook = "kitty +kitten themes --reload-in=all colors"
+
+# [templates.bat]
+# input_path = "~/.config/matugen/templates/kitty-colors.conf"
+# output_path = "~/.config/kitty/colors.conf"
+# post_hook = "killall -SIGUSR1 kitty &"
+
+[templates.flameshot]
+input_path = "~/.config/matugen/templates/flameshot-colors.conf"
+output_path = "~/.config/flameshot/colors.ini"
+post_hook = "~/.config/flameshot/updater.py ~/.config/flameshot/colors.ini ~/.config/flameshot/custom.ini ~/.config/flameshot/flameshot.ini"
+
+# [templates.btop]
+# input_path = "~/.config/matugen/templates/kitty-colors.conf"
+# output_path = "~/.config/kitty/colors.conf"
+# post_hook = "killall -SIGUSR1 kitty &"
+
+[config.custom_colors.red]
+color = "#FF0000"
+blend = true
+
+[config.custom_colors.green]
+color = "#00FF00"
+blend = true
+
+[config.custom_colors.yellow]
+color = "#FFFF00"
+blend = true
+
+[config.custom_colors.blue]
+color = "#0000FF"
+blend = true
+
+[config.custom_colors.magenta]
+color = "#FF00FF"
+blend = true
+
+[config.custom_colors.cyan]
+color = "#00FFFF"
+blend = true
+
+[config.custom_colors.white]
+color = "#FFFFFF"
+blend = true
+
+[config.custom_colors.dark_color0]
+color = "#282828"
+blend = false
+# saturate = true
+# harmonize = false
+
+[config.custom_colors.dark_color1]
+color = "#CC241D"
+blend = false
+
+[config.custom_colors.dark_color2]
+color = "#98971A"
+blend = false
+
+[config.custom_colors.dark_color3]
+color = "#D79921"
+blend = false
+
+[config.custom_colors.dark_color4]
+color = "#458588"
+blend = false
+
+[config.custom_colors.dark_color5]
+color = "#B16286"
+blend = false
+
+[config.custom_colors.dark_color6]
+color = "#689D6A"
+blend = false
+
+[config.custom_colors.dark_color7]
+color = "#A89984"
+blend = false
+
+[config.custom_colors.dark_color8]
+color = "#928374"
+blend = false
+
+[config.custom_colors.dark_color9]
+color = "#FB4934"
+blend = false
+
+[config.custom_colors.dark_color10]
+color = "#B8BB26"
+blend = false
+
+[config.custom_colors.dark_color11]
+color = "#FABD2F"
+blend = false
+
+[config.custom_colors.dark_color12]
+color = "#83A598"
+blend = false
+
+[config.custom_colors.dark_color13]
+color = "#D3869B"
+blend = false
+
+[config.custom_colors.dark_color14]
+color = "#8EC07C"
+blend = false
+
+[config.custom_colors.dark_color15]
+color = "#EBDBB2"
+blend = false
+
+[config.custom_colors.light_color0]
+color = "#FDF9F3"
+blend = false
+
+[config.custom_colors.light_color1]
+color = "#FF6188"
+blend = false
+
+[config.custom_colors.light_color2]
+color = "#A9DC76"
+blend = false
+
+[config.custom_colors.light_color3]
+color = "#FC9867"
+blend = false
+
+[config.custom_colors.light_color4]
+color = "#FFD866"
+blend = false
+
+[config.custom_colors.light_color5]
+color = "#F47FD4"
+blend = false
+
+[config.custom_colors.light_color6]
+color = "#78DCE8"
+blend = false
+
+[config.custom_colors.light_color7]
+color = "#333034"
+blend = false
+
+[config.custom_colors.light_color8]
+color = "#121212"
+blend = false
+
+[config.custom_colors.light_color9]
+color = "#FF6188"
+blend = false
+
+[config.custom_colors.light_color10]
+color = "#A9DC76"
+blend = false
+
+[config.custom_colors.light_color11]
+color = "#FC9867"
+blend = false
+
+[config.custom_colors.light_color12]
+color = "#FFD866"
+blend = false
+
+[config.custom_colors.light_color13]
+color = "#F47FD4"
+blend = false
+
+[config.custom_colors.light_color14]
+color = "#78DCE8"
+blend = false
+
+[config.custom_colors.light_color15]
+color = "#333034"
+blend = false
+
+# [config.custom_colors]
+# dark_color111 = {color="#282828", blend=true}
+# dark_color1 = { color = "CC241D", blend = false }
+# dark_color2 = { color = "98971A", blend = false }
+# dark_color3 = { color = "D79921", blend = false }
+# dark_color4 = { color = "458588", blend = false }
+# dark_color5 = { color = "B16286", blend = false }
+# dark_color6 = { color = "689D6A", blend = false }
+# dark_color7 = { color = "A89984", blend = false }
+# dark_color8 = { color = "928374", blend = false }
+# dark_color9 = { color = "FB4934", blend = false }
+# dark_color10 = { color = "B8BB26", blend = false }
+# dark_color11 = { color = "FABD2F", blend = false }
+# dark_color12 = { color = "83A598", blend = false }
+# dark_color13 = { color = "D3869B", blend = false }
+# dark_color14 = { color = "8EC07C", blend = false }
+# dark_color15 = { color = "EBDBB2", blend = false }
+
+# light_color0 = { color = "FDF9F3", blend = false }
+# light_color1 = { color = "FF6188", blend = false }
+# light_color2 = { color = "A9DC76", blend = false }
+# light_color3 = { color = "FC9867", blend = false }
+# light_color4 = { color = "FFD866", blend = false }
+# light_color5 = { color = "F47FD4", blend = false }
+# light_color6 = { color = "78DCE8", blend = false }
+# light_color7 = { color = "333034", blend = false }
+# light_color8 = { color = "121212", blend = false }
+# light_color9 = { color = "FF6188", blend = false }
+# light_color10 = { color = "A9DC76", blend = false }
+# light_color11 = { color = "FC9867", blend = false }
+# light_color12 = { color = "FFD866", blend = false }
+# light_color13 = { color = "F47FD4", blend = false }
+# light_color14 = { color = "78DCE8", blend = false }
+# light_color15 = { color = "333034", blend = false }

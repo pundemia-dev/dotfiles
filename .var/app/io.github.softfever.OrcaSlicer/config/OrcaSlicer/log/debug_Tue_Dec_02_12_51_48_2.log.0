@@ -1,0 +1,16 @@
+[error]	2025-12-02 12:51:51.080048[Thread 0x00007fd1a9ffd6c0]:Unable to open connection to spacenavd
+[error]	2025-12-02 12:51:51.083306[Thread 0x00007fd1a8ffb6c0]:DBus Request name Error: org.freedesktop.DBus.Error.ServiceUnknown
+[error]	2025-12-02 12:51:51.083331[Thread 0x00007fd1a8ffb6c0]:Dbus Messages listening terminating.
+[error]	2025-12-02 12:51:52.137973[Thread 0x00007fd23139f400]:calc_exclude_triangles:Unable to create exclude triangles
+[warning]	2025-12-02 12:51:52.857104[Thread 0x00007fd23139f400]:12:51:52 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-12-02 12:51:52.874267[Thread 0x00007fd23139f400]:12:51:52 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-12-02 12:51:52.887664[Thread 0x00007fd23139f400]:12:51:52 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2025-12-02 12:51:52.984566[Thread 0x00007fd23139f400]:12:51:52 PM: Warning: Error running JavaScript: Unsupported result type
+[error]	2025-12-02 12:51:56.384291[Thread 0x00007fd23139f400]:calc_exclude_triangles:Unable to create exclude triangles
+[warning]	2025-12-02 12:51:56.465313[Thread 0x00007fd23139f400]:get_version, get_version not supported,return 00.00.00.00!
+[error]	2025-12-02 12:51:57.107005[Thread 0x00007fd1877fe6c0]:Error getting: `check_new_version_sf`: HTTP 503, 
+[error]	2025-12-02 12:52:48.681756[Thread 0x00007fd1622046c0]:TCPConsole: Can't read from 192.168.31.138:8899: End of file
+[error]	2025-12-02 12:53:15.537646[Thread 0x00007fd1622046c0]:TCPConsole: Can't read from 192.168.31.138:8899: End of file
+[warning]	2025-12-02 14:51:14.320255[Thread 0x00007fd1b9d786c0]:Arrange full params: {"min_obj_distance":0,"accuracy":1.000000,"parallel":1,"allow_rotations":0,"do_final_align":1,"allow_multi_materials_on_same_plate":1,"avoid_extrusion_cali_region":1,"is_seq_print":0,"bed_shrink_x":1.000000,"bed_shrink_y":1.000000,"brim_skirt_distance":0.000000,"clearance_height_to_rod":27.000000,"clearance_height_to_lid":150.000000,"clearance_radius":76.000000,"printable_height":220.000000,
+[warning]	2025-12-02 14:51:32.605032[Thread 0x00007fd1b9d786c0]:Arrange full params: {"min_obj_distance":0,"accuracy":1.000000,"parallel":1,"allow_rotations":1,"do_final_align":1,"allow_multi_materials_on_same_plate":1,"avoid_extrusion_cali_region":0,"is_seq_print":0,"bed_shrink_x":1.000000,"bed_shrink_y":1.000000,"brim_skirt_distance":0.000000,"clearance_height_to_rod":27.000000,"clearance_height_to_lid":150.000000,"clearance_radius":76.000000,"printable_height":220.000000,
+[error]	2025-12-03 10:38:15.846755[Thread 0x00007fd23139f400]:calc_exclude_triangles:Unable to create exclude triangles
