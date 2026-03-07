@@ -1226,3 +1226,27 @@ exiftool -n -j -ImageWidth -ImageHeight *.jpg <\n>| from json <\n>| where ($it.I
 exiftool -n -j -ImageWidth -ImageHeight *.jpg <\n>| from json <\n>| where ($it.ImageWidth | into int)*0.75 < ($it.ImageHeight | into int) | first 30 <\n>| get SourceFile <\n>| each { |it| <\n>    print $"Файл: ($it)"<\n>    # magick меняет размер до 400 пикселей по ширине и отдает в stdout<\n>    # kitten icat читает это из stdin и выводит в терминал<\n>    magick $it -resize 400 png:- | kitten icat --align left<\n>}
 exiftool -n -j -ImageWidth -ImageHeight *.jpg <\n>| from json <\n>| where (($it.ImageWidth | into int)*0.75) < ($it.ImageHeight | into int) | first 30 <\n>| get SourceFile <\n>| each { |it| <\n>    print $"Файл: ($it)"<\n>    # magick меняет размер до 400 пикселей по ширине и отдает в stdout<\n>    # kitten icat читает это из stdin и выводит в терминал<\n>    magick $it -resize 400 png:- | kitten icat --align left<\n>}
 exiftool -n -j -ImageWidth -ImageHeight *.jpg <\n>| from json <\n>| where ((($it.ImageWidth | into int)*0.75) | into int) < ($it.ImageHeight | into int) | first 30 <\n>| get SourceFile <\n>| each { |it| <\n>    print $"Файл: ($it)"<\n>    # magick меняет размер до 400 пикселей по ширине и отдает в stdout<\n>    # kitten icat читает это из stdin и выводит в терминал<\n>    magick $it -resize 400 png:- | kitten icat --align left<\n>}
+ls ~/.local/share/Trash/files/ | sort-by modified
+ls ~/.local/share/Trash/files/ | sort-by modified | reverse | first 10
+lsblk
+ls | sort-by modified | reverse | first 10
+ls | sort-by modified | reverse | first 100
+ls | grep .rs
+exit
+cliphist list | first 10
+rofi -modi clipboard:/path/to/cliphist-rofi-img -show clipboard -show-icons
+sudo pacman -S rofi
+cliphist list | wofi -S dmenu | cliphist decode | wl-copy
+n .
+cliphist list | wofi -S dmenu | cliphist decode | wl-copy
+cliphist wipe
+cliphist list | wofi -S dmenu | cliphist decode | wl-copy
+cd launcher
+find . -type f -print0 | while read -z file<\n>    printf '%s\n' "$file"<\n>    cat -- "$file"<\n>end<\n>
+find --help
+ls | sort-by modified | reverse | first 10
+ls | sort-by modified | reverse | first 1
+mv Тестовое_задание_CIAO_02_2026.pdf ~/code/my_py/trajectory_optimization/
+hyprctl clients
+hyprctl clients | grep -A 10 "Save Image"
+hyprctl windowrules

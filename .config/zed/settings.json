@@ -13,10 +13,32 @@
   // },
   // "bottom_dock_layout": "full",
   "agent": {
+    "inline_assistant_model": {
+      "provider": "copilot_chat",
+      "model": "claude-sonnet-4.5",
+    },
+    "favorite_models": [
+      {
+        "provider": "copilot_chat",
+        "model": "claude-opus-4.5",
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "claude-sonnet-4.5",
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "gemini-3-pro-preview",
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "gemini-2.5-pro",
+      },
+    ],
     "default_profile": "write",
     "default_model": {
-      "provider": "deepseek",
-      "model": "deepseek-chat",
+      "provider": "copilot_chat",
+      "model": "claude-sonnet-4.6",
     },
     "model_parameters": [],
   },
@@ -82,4 +104,5 @@
     },
   },
   "which_key": { "enabled": true },
+  "lsp_document_colors": "background",
 }

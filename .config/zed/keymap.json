@@ -5,33 +5,39 @@
     "bindings": {
       // put key-bindings here if you want them to work in normal & visual mode
       // Git
-      "space g h d": "editor::ToggleSelectedDiffHunks",
-      "space g s": "git_panel::ToggleFocus",
+      "alt g h d": "editor::ToggleSelectedDiffHunks",
+      "alt g s": "git_panel::ToggleFocus",
 
       // Toggle inlay hints
-      "space t i": "editor::ToggleInlayHints",
+      // "alt t i": "editor::ToggleInlayHints",
+      "ctrl-space": "editor::ToggleInlayHints",
 
       // Toggle soft wrap
-      "space u w": "editor::ToggleSoftWrap",
+      "alt u w": "editor::ToggleSoftWrap",
 
       // NOTE: Toggle Zen mode, not fully working yet
-      "space c z": "workspace::ToggleCenteredLayout",
+      "alt c z": "workspace::ToggleCenteredLayout",
 
       // Open markdown preview
-      "space m p": "markdown::OpenPreview",
-      "space m P": "markdown::OpenPreviewToTheSide",
+      "alt m p": "markdown::OpenPreview",
+      "alt m P": "markdown::OpenPreviewToTheSide",
 
       // Open recent project
-      "space f p": "projects::OpenRecent",
+      "alt f p": "projects::OpenRecent",
       // Search word under cursor
-      "space f g": "pane::DeploySearch",
+      "alt f g": "pane::DeploySearch",
       // Current file search
-      "space f c": "buffer_search::Deploy",
+      "alt f c": "buffer_search::Deploy",
       // Current file search replace
-      "space f r": "buffer_search::DeployReplace",
+      "alt f r": "buffer_search::DeployReplace",
+      // Search TODO
+      // "alt f t": [
+      //   "pane::DeploySearch",
+      //   { "query": "TODO|FIXME|WARN", "regex": true },
+      // ],
 
       // Chat with AI
-      "space a": "assistant::ToggleFocus",
+      "alt a": "assistant::ToggleFocus",
       // Go to file with `gf`
       "g f": "editor::OpenExcerpts",
     },
@@ -48,9 +54,9 @@
       "ctrl-j": "workspace::ActivatePaneDown",
 
       // +LSP
-      "space c a": "editor::ToggleCodeActions",
-      "space .": "editor::ToggleCodeActions",
-      "space c r": "editor::Rename",
+      "alt c a": "editor::ToggleCodeActions",
+      "alt .": "editor::ToggleCodeActions",
+      "alt c r": "editor::Rename",
       "g d": "editor::GoToDefinition",
       "g D": "editor::GoToDefinitionSplit",
       "g i": "editor::GoToImplementation",
@@ -67,7 +73,7 @@
       "s s": "outline::Toggle",
       "s S": "project_symbols::Toggle",
       // Diagnostic
-      "space x x": "diagnostics::Deploy",
+      "alt x x": "diagnostics::Deploy",
 
       // +Git
       // Git prev/next hunk
@@ -83,26 +89,26 @@
       // Close active panel
       "shift-q": "pane::CloseActiveItem",
       "ctrl-q": "pane::CloseActiveItem",
-      "space b d": "pane::CloseActiveItem",
+      "alt b d": "pane::CloseActiveItem",
       // Close other items
-      "space b o": "pane::CloseInactiveItems",
+      "alt b o": "pane::CloseInactiveItems",
       // Save file
       "ctrl-s": "workspace::Save",
       // File finder
-      "space f f": "file_finder::Toggle",
+      "alt f f": "file_finder::Toggle",
       // Project search
-      "space f g": "pane::DeploySearch",
+      "alt f g": "pane::DeploySearch",
       // Current file search
-      "space f c": "buffer_search::Deploy",
+      "alt f c": "buffer_search::Deploy",
       // Current file search replace
-      "space f r": "buffer_search::DeployReplace",
+      "alt f r": "buffer_search::DeployReplace",
       // Change color scheme
-      "space s t": "theme_selector::Toggle",
+      "alt s t": "theme_selector::Toggle",
       // Change icon theme
-      "space s i": "icon_theme_selector::Toggle",
+      "alt s i": "icon_theme_selector::Toggle",
       // TODO: Open other files
       // Show project panel with current file
-      "space e": "pane::RevealInProjectPanel",
+      "alt e": "pane::RevealInProjectPanel",
     },
   },
   // Empty pane, set of keybindings that are available when there is no active editor
@@ -110,13 +116,13 @@
     "context": "EmptyPane || SharedScreen",
     "bindings": {
       // Open file finder
-      "space f f": "file_finder::Toggle",
+      "alt f f": "file_finder::Toggle",
       // Open recent project
-      "space f p": "projects::OpenRecent",
+      "alt f p": "projects::OpenRecent",
       // Current file search
-      "space f c": "buffer_search::Deploy",
+      "alt f c": "buffer_search::Deploy",
       // Current file search replace
-      "space f r": "buffer_search::DeployReplace",
+      "alt f r": "buffer_search::DeployReplace",
     },
   },
   // Comment code
@@ -139,7 +145,7 @@
   {
     "context": "Editor && vim_mode == insert && !menu",
     "bindings": {
-      "j j": "vim::NormalBefore", // remap jj in insert mode to escape
+      // "j j": "vim::NormalBefore", // remap jj in insert mode to escape
       "j k": "vim::NormalBefore", // remap jk in insert mode to escape
     },
   },
@@ -163,7 +169,7 @@
   {
     "context": "Workspace",
     "bindings": {
-      "space t": "terminal_panel::Toggle", //Focus",
+      "alt t": "terminal_panel::Toggle", //Focus",
     },
   },
   {
@@ -188,7 +194,7 @@
       "p": "project_panel::Paste",
       // Close project panel as project file panel on the right
       "q": "workspace::ToggleLeftDock",
-      "space e": "workspace::ToggleLeftDock",
+      "alt e": "workspace::ToggleLeftDock",
       // Navigate between panel
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-l": "workspace::ActivatePaneRight",
@@ -217,7 +223,7 @@
   {
     "context": "EmptyPane || SharedScreen || vim_mode == normal",
     "bindings": {
-      "space r t": ["editor::SpawnNearestTask", { "reveal": "no_focus" }],
+      "alt r t": ["editor::SpawnNearestTask", { "reveal": "no_focus" }],
     },
   },
   // Sneak motion, refer https://github.com/zed-industries/zed/pull/22793/files#diff-90c0cb07588e2f309c31f0bb17096728b8f4e0bad71f3152d4d81ca867321c68
@@ -231,13 +237,13 @@
   {
     "context": "AgentPanel",
     "bindings": {
-      "space a": "workspace::ToggleRightDock",
+      "alt a": "workspace::ToggleRightDock",
     },
   },
   {
     "context": "(VimControl && !menu)",
     "bindings": {
-      "space": null, // Disable the default action vim::WrappingRight
+      "alt": null, // Disable the default action vim::WrappingRight
     },
   },
   // Subword motion is not working really nice with `ciw`, disable for now
@@ -274,7 +280,7 @@
 //     },
 //   },
 //   {
-//     "context": "Workspace",
+//     "context": "workspace",
 //     "bindings": {
 //       "alt-s": "theme_selector::Toggle",
 //     },
@@ -284,13 +290,13 @@
 //     "bindings": {},
 //   },
 //   {
-//     "context": "Workspace",
+//     "context": "workspace",
 //     "bindings": {
 //       "alt-q": "terminal_panel::Toggle",
 //     },
 //   },
 //   {
-//     "context": "Workspace",
+//     "context": "workspace",
 //     "bindings": {
 //       "alt-e": "project_panel::ToggleFocus",
 //     },
@@ -302,7 +308,7 @@
 //     },
 //   },
 //   {
-//     "context": "Workspace",
+//     "context": "workspace",
 //     "bindings": {
 //       "alt-x": "agent::ToggleFocus",
 //     },

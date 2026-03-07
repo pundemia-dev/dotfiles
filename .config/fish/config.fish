@@ -5,6 +5,7 @@ alias pfetch-float='hyprctl dispatch setfloating; hyprctl dispatch resizeactive 
 alias clock-float='hyprctl dispatch setfloating; hyprctl dispatch resizeactive exact 334 183; hyprctl dispatch centerwindow; tty-clock'
 
 # Create aliases
+alias icat="kitten icat"
 alias cls="clear"
 alias g="git"
 alias n="nvim"
@@ -14,6 +15,56 @@ alias walltool="~/.config/quickshell/pShell/utils/scripts/walltool/target/debug/
 function "uvpy"
     echo '{ "venvPath": ".", "venv": ".venv" }' > pyrightconfig.json
 end
+
+function "catall"
+    find . -type f -print0 | while read -z file
+        printf '%s\n' "$file"
+        cat -- "$file"
+    end | wl-copy
+end
+
+# function "catcur"
+#     find . -maxdepth 1 -type f -print0 | while read -z file
+#         printf '%s\n' "$file"
+#         cat -- "$file"
+#     end | wl-copy
+# end
+
+
+function catcur
+    set -l exclude_patterns ()
+    set -l skip_next false
+    
+    # Парсим аргументы
+    for arg in $argv
+        if test "$skip_next" = true
+            set exclude_patterns $exclude_patterns "$arg"
+            set skip_next false
+        else if test "$arg" = --exclude
+            set skip_next true
+        end
+    end
+    
+    # Строим условие для find
+    set -l find_cmd "find . -maxdepth 1 -type f"
+    for pattern in $exclude_patterns
+        set find_cmd "$find_cmd ! -name '$pattern'"
+    end
+    
+    # Выполняем команду
+    eval $find_cmd -print0 | while read -z file
+        printf '%s\n' "$file"
+        cat -- "$file"
+    end | wl-copy
+end
+
+# function "catcur"
+#     eza --only-files --no-symlinks | while read -z file
+#         printf '%s\n' "$file"
+#         cat -- "$file"
+#     end | wl-copy
+# end
+
 
 # TODO: Replace journal aliases after switching to OpenRC
 # thefuck --alias | source 
@@ -35,7 +86,14 @@ function zed
     # 5. Возвращаем фокус на терминал
     hyprctl dispatch focuswindow address:$term_address
 end
-
+function sudo --description "Replacement for Bash 'sudo !!' command to run last command using sudo."
+    if test "$argv" = !!
+        echo sudo $history[1]
+        eval command sudo $history[1]
+    else
+        command sudo $argv
+    end
+end
 # VPN
 function vpn
     if test (count $argv) -eq 0
@@ -143,7 +201,7 @@ end
 alias mymicroscope="mpv av://v4l2:/dev/video2 --profile=low-latency --untimed"
 alias mydualcam="mpv av://v4l2:/dev/video2 --profile=low-latency --untimed --demuxer-lavf-o=video_size=2560x720,input_format=mjpeg"
 
-alias cat="bat --plain"
+# alias cat="bat --plain"
 
 alias ls="eza --color=always --icons=always -1"
 alias tree="eza -T"

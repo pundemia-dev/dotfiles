@@ -1,7 +1,7 @@
 # Don't print a new line at the start of the prompt
 add_newline = true
 # Pipes ╰─ ╭─
-# Powerline symbols                                     
+# Powerline symbols                                    
 # Wedges 🭧🭒 🭣🭧🭓
 # Random noise 🬖🬥🬔🬗
 # Cool stuff 󰜥   
@@ -16,8 +16,8 @@ $character"""
 
 # Replace the "❯" symbol in the prompt with "➜"
 [character]                            # The name of the module we are configuring is "character"
-success_symbol = "╰─[](bold fg:blue)"
-error_symbol = "╰─[](bold fg:red)"
+success_symbol = "[╰─](gray)[](bold fg:blue)"
+error_symbol = "[╰─](gray)[](bold fg:red)"
 
 # Disable the package module, hiding it from the prompt completely
 [package]
@@ -97,4 +97,4 @@ format = '[](bold fg:green)[$path]($style)[](bold fg:green)'
 
 [cmd_duration]
 min_time = 0
-format = '[╭─](white)[](bold fg:yellow)[$duration](bold bg:yellow fg:black)[](bold fg:yellow)'
+format = '[╭─](gray)[](bold fg:yellow)[$duration](bold bg:yellow fg:black)[](bold fg:yellow)'

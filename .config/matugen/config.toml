@@ -1,17 +1,91 @@
 [config]
 reload_apps = true
 
+[templates.caelestia_wallpaper]
+pre_hook = "mkdir -p ~/.local/state/caelestia/wallpaper" # && ~/.config/quickshell/pShell/scripts/wallSet_postHook.sh"
+input_path = "~/.config/matugen/templates/caelestia_wallpaper.conf"
+output_path = "~/.local/state/caelestia/wallpaper/path.txt"
+post_hook = "~/.config/quickshell/tempShell/scripts/wallSet_postHook.sh"
+
 [templates.caelestia_scheme]
 pre_hook = "mkdir -p ~/.local/state/caelestia"
 input_path = "~/.config/matugen/templates/caelestia_scheme.conf"
 output_path = "~/.local/state/caelestia/scheme.json"
 
-[templates.caelestia_wallpaper]
-pre_hook = "mkdir -p ~/.local/state/caelestia/wallpaper"
-input_path = "~/.config/matugen/templates/caelestia_wallpaper.conf"
-output_path = "~/.local/state/caelestia/wallpaper/path.txt"
-post_hook = "~/.config/quickshell/pShell/scripts/wallSet_postHook.sh"
+[templates.pshell_scheme]
+pre_hook = "mkdir -p ~/.local/state/pShell"
+input_path = "~/.config/matugen/templates/caelestia_scheme.conf"
+output_path = "~/.local/state/pShell/scheme.json"
 
+[templates.kitty]
+input_path = "~/.config/matugen/templates/kitty-colors.conf"
+output_path = "~/.config/kitty/themes/colors.conf"
+# post_hook = "kitty @ set-colors -a ~/.config/kitty/themes/colors.conf"
+post_hook = "kitty +kitten themes --reload-in=all colors"
+
+[templates.flameshot]
+input_path = "~/.config/matugen/templates/flameshot-colors.conf"
+output_path = "~/.config/flameshot/colors.ini"
+post_hook = "~/.config/flameshot/updater.py ~/.config/flameshot/colors.ini ~/.config/flameshot/custom.ini ~/.config/flameshot/flameshot.ini"
+
+[templates.zen-chrome]
+input_path = "~/.config/matugen/templates/userChrome.css.tpl"
+output_path = "/home/pundemia/.zen/77t23jgn.Default (release)/chrome/userChrome.css"
+
+[templates.zen-content]
+input_path = "~/.config/matugen/templates/userContent.css.tpl"
+output_path = "/home/pundemia/.zen/77t23jgn.Default (release)/chrome/userContent.css"
+# echo $HOME/.zen/*.Default\ \(release\)/chrome
+
+[templates.vencord]
+input_path = "~/.config/matugen/templates/discord.conf"
+output_path = "~/.config/vesktop/themes/pShell.theme.css"
+
+# [templates.gtk3]
+# input_path = "~/.config/matugen/templates/gtk.conf"
+# output_path = "~/.config/gtk-3.0/gtk.css"
+
+# [templates.gtk4]
+# input_path = "~/.config/matugen/templates/gtk.conf"
+# output_path = "~/.config/gtk-3.0/gtk.css"
+# # post_hook = "dconf write /org/gnome/desktop/interface/gtk-theme "'adw-gtk3-dark'""
+# post_hook = "gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3-dark'"
+# @define-color accent_color {{ colors.primary.default.hex }};
+# @define-color accent_fg_color {{ colors.on_primary.default.hex }};
+# @define-color accent_bg_color {{ colors.primary.default.hex }};
+# @define-color window_bg_color {{ colors.background.default.hex }};
+# @define-color window_fg_color {{ colors.on_background.default.hex }};
+# @define-color headerbar_bg_color {{ colors.surface_dim.default.hex }};
+# @define-color headerbar_fg_color {{ colors.on_surface.default.hex }};
+# @define-color popover_bg_color {{ colors.surface_dim.default.hex }};
+# @define-color popover_fg_color {{ colors.on_surface.default.hex }};
+# @define-color view_bg_color {{ colors.surface.default.hex }};
+# @define-color view_fg_color {{ colors.on_surface.default.hex }};
+# @define-color card_bg_color {{ colors.surface.default.hex }};
+# @define-color card_fg_color {{ colors.on_surface.default.hex }};
+# @define-color sidebar_bg_color @window_bg_color;
+# @define-color sidebar_fg_color @window_fg_color;
+# @define-color sidebar_border_color @window_bg_color;
+# @define-color sidebar_backdrop_color @window_bg_color;
+
+
+[templates.gtk3]
+# input_path = 'path/to/template'
+input_path = "~/.config/matugen/templates/gtk.conf"
+# output_path = '~/.config/gtk-3.0/colors.css'
+output_path = '~/.config/gtk-3.0/gtk.css'
+post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-{{mode}}'
+
+[templates.gtk4]
+# input_path = 'path/to/template'
+input_path = "~/.config/matugen/templates/gtk.conf"
+# output_path = '~/.config/gtk-4.0/colors.css'
+output_path = '~/.config/gtk-4.0/gtk.css'
+
+[templates.startpage]
+input_path = "~/.config/matugen/templates/startpage.conf"
+output_path = "~/.config/myZen/colors.css"
+post_hook = "ln -sfn {{image}} ~/.config/myZen/current"
 
 # [templates.caelestia_wallpaper]
 # pre_hook = "mkdir -p ~/.local/state/caelestia/wallpaper"
@@ -22,21 +96,12 @@ post_hook = "~/.config/quickshell/pShell/scripts/wallSet_postHook.sh"
 # input_path = "~/.config/Ax-Shell/config/matugen/templates/hyprland-colors.conf"
 # output_path = "~/.config/Ax-Shell/config/hypr/colors.conf"
 
-[templates.kitty]
-input_path = "~/.config/matugen/templates/kitty-colors.conf"
-output_path = "~/.config/kitty/themes/colors.conf"
-# post_hook = "kitty @ set-colors -a ~/.config/kitty/themes/colors.conf"
-post_hook = "kitty +kitten themes --reload-in=all colors"
 
 # [templates.bat]
 # input_path = "~/.config/matugen/templates/kitty-colors.conf"
 # output_path = "~/.config/kitty/colors.conf"
 # post_hook = "killall -SIGUSR1 kitty &"
 
-[templates.flameshot]
-input_path = "~/.config/matugen/templates/flameshot-colors.conf"
-output_path = "~/.config/flameshot/colors.ini"
-post_hook = "~/.config/flameshot/updater.py ~/.config/flameshot/colors.ini ~/.config/flameshot/custom.ini ~/.config/flameshot/flameshot.ini"
 
 # [templates.btop]
 # input_path = "~/.config/matugen/templates/kitty-colors.conf"
@@ -71,11 +136,126 @@ blend = true
 color = "#FFFFFF"
 blend = true
 
+# Catppuccin Light
+[config.custom_colors.rosewater_light]
+color = "#dc8a78"
+blend = true
+
+[config.custom_colors.flamingo_light]
+color = "#dd7878"
+blend = true
+
+[config.custom_colors.pink_light]
+color = "#ea76cb"
+blend = true
+
+[config.custom_colors.mauve_light]
+color = "#8839ef"
+blend = true
+
+[config.custom_colors.red_light]
+color = "#d20f39"
+blend = true
+
+[config.custom_colors.maroon_light]
+color = "#e64553"
+blend = true
+
+[config.custom_colors.peach_light]
+color = "#fe640b"
+blend = true
+
+[config.custom_colors.yellow_light]
+color = "#df8e1d"
+blend = true
+
+[config.custom_colors.green_light]
+color = "#40a02b"
+blend = true
+
+[config.custom_colors.teal_light]
+color = "#179299"
+blend = true
+
+[config.custom_colors.sky_light]
+color = "#04a5e5"
+blend = true
+
+[config.custom_colors.sapphire_light]
+color = "#209fb5"
+blend = true
+
+[config.custom_colors.blue_light]
+color = "#1e66f5"
+blend = true
+
+[config.custom_colors.lavender_light]
+color = "#7287fd"
+blend = true
+
+# Catppuccin Dark
+[config.custom_colors.rosewater_dark]
+color = "#f5e0dc"
+blend = true
+
+[config.custom_colors.flamingo_dark]
+color = "#f2cdcd"
+blend = true
+
+[config.custom_colors.pink_dark]
+color = "#f5c2e7"
+blend = true
+
+[config.custom_colors.mauve_dark]
+color = "#cba6f7"
+blend = true
+
+[config.custom_colors.red_dark]
+color = "#f38ba8"
+blend = true
+
+[config.custom_colors.maroon_dark]
+color = "#eba0ac"
+blend = true
+
+[config.custom_colors.peach_dark]
+color = "#fab387"
+blend = true
+
+[config.custom_colors.yellow_dark]
+color = "#f9e2af"
+blend = true
+
+[config.custom_colors.green_dark]
+color = "#a6e3a1"
+blend = true
+
+[config.custom_colors.teal_dark]
+color = "#94e2d5"
+blend = true
+
+[config.custom_colors.sky_dark]
+color = "#89dceb"
+blend = true
+
+[config.custom_colors.sapphire_dark]
+color = "#74c7ec"
+blend = true
+
+[config.custom_colors.blue_dark]
+color = "#89b4fa"
+blend = true
+
+[config.custom_colors.lavender_dark]
+color = "#b4befe"
+blend = true
+
+
+
+
 [config.custom_colors.dark_color0]
 color = "#282828"
 blend = false
-# saturate = true
-# harmonize = false
 
 [config.custom_colors.dark_color1]
 color = "#CC241D"
@@ -200,38 +380,3 @@ blend = false
 [config.custom_colors.light_color15]
 color = "#333034"
 blend = false
-
-# [config.custom_colors]
-# dark_color111 = {color="#282828", blend=true}
-# dark_color1 = { color = "CC241D", blend = false }
-# dark_color2 = { color = "98971A", blend = false }
-# dark_color3 = { color = "D79921", blend = false }
-# dark_color4 = { color = "458588", blend = false }
-# dark_color5 = { color = "B16286", blend = false }
-# dark_color6 = { color = "689D6A", blend = false }
-# dark_color7 = { color = "A89984", blend = false }
-# dark_color8 = { color = "928374", blend = false }
-# dark_color9 = { color = "FB4934", blend = false }
-# dark_color10 = { color = "B8BB26", blend = false }
-# dark_color11 = { color = "FABD2F", blend = false }
-# dark_color12 = { color = "83A598", blend = false }
-# dark_color13 = { color = "D3869B", blend = false }
-# dark_color14 = { color = "8EC07C", blend = false }
-# dark_color15 = { color = "EBDBB2", blend = false }
-
-# light_color0 = { color = "FDF9F3", blend = false }
-# light_color1 = { color = "FF6188", blend = false }
-# light_color2 = { color = "A9DC76", blend = false }
-# light_color3 = { color = "FC9867", blend = false }
-# light_color4 = { color = "FFD866", blend = false }
-# light_color5 = { color = "F47FD4", blend = false }
-# light_color6 = { color = "78DCE8", blend = false }
-# light_color7 = { color = "333034", blend = false }
-# light_color8 = { color = "121212", blend = false }
-# light_color9 = { color = "FF6188", blend = false }
-# light_color10 = { color = "A9DC76", blend = false }
-# light_color11 = { color = "FC9867", blend = false }
-# light_color12 = { color = "FFD866", blend = false }
-# light_color13 = { color = "F47FD4", blend = false }
-# light_color14 = { color = "78DCE8", blend = false }
-# light_color15 = { color = "333034", blend = false }

@@ -1,0 +1,16 @@
+[error]	2026-02-26 20:10:19.148616[Thread 0x00007f44caffd6c0]:Unable to open connection to spacenavd
+[error]	2026-02-26 20:10:19.155570[Thread 0x00007f44c9ffb6c0]:DBus Request name Error: org.freedesktop.DBus.Error.ServiceUnknown
+[error]	2026-02-26 20:10:19.155599[Thread 0x00007f44c9ffb6c0]:Dbus Messages listening terminating.
+[error]	2026-02-26 20:10:21.028582[Thread 0x00007f4552c32400]:calc_exclude_triangles:Unable to create exclude triangles
+[warning]	2026-02-26 20:10:22.507256[Thread 0x00007f4552c32400]:08:10:22 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2026-02-26 20:10:22.523899[Thread 0x00007f4552c32400]:08:10:22 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2026-02-26 20:10:22.535573[Thread 0x00007f4552c32400]:08:10:22 PM: Warning: Error running JavaScript: Unsupported result type
+[warning]	2026-02-26 20:10:22.600574[Thread 0x00007f4552c32400]:08:10:22 PM: Warning: Error running JavaScript: Unsupported result type
+[error]	2026-02-26 20:10:26.079608[Thread 0x00007f4552c32400]:calc_exclude_triangles:Unable to create exclude triangles
+[warning]	2026-02-26 20:10:26.155194[Thread 0x00007f4552c32400]:get_version, get_version not supported,return 00.00.00.00!
+[warning]	2026-02-26 20:10:27.479532[Thread 0x00007f4552c32400]:08:10:27 PM: Warning: Error running JavaScript: Unsupported result type
+[error]	2026-02-26 20:12:56.652755[Thread 0x00007f44555fe6c0]:TCPConsole: Can't read from 192.168.31.138:8899: End of file
+[error]	2026-02-26 20:12:56.791624[Thread 0x00007f44555fe6c0]:TCPConsole: Can't read from 192.168.31.138:8899: End of file
+[error]	2026-02-26 21:10:06.644349[Thread 0x00007f44555fe6c0]:TCPConsole: Can't read from 192.168.31.138:8899: End of file
+[error]	2026-02-26 21:10:06.779314[Thread 0x00007f44555fe6c0]:TCPConsole: Can't read from 192.168.31.138:8899: End of file
+[error]	2026-02-26 21:17:57.855068[Thread 0x00007f4552c32400]:calc_exclude_triangles:Unable to create exclude triangles
