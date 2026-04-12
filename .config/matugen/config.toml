@@ -1,17 +1,36 @@
 [config]
 reload_apps = true
 
-[templates.caelestia_wallpaper]
-pre_hook = "mkdir -p ~/.local/state/caelestia/wallpaper" # && ~/.config/quickshell/pShell/scripts/wallSet_postHook.sh"
-input_path = "~/.config/matugen/templates/caelestia_wallpaper.conf"
-output_path = "~/.local/state/caelestia/wallpaper/path.txt"
-post_hook = "~/.config/quickshell/tempShell/scripts/wallSet_postHook.sh"
+[config.wallpaper]
+command = "ln -sfn {{ image }} ~/.local/state/caelestia/wallpaper/current"
+# command = "awww img {{ image }} -t=any --transition-step=30 --transition-duration=2 && ln -sfn {{ image }} ~/.local/state/caelestia/wallpaper/current"
+set = true
+# post_hook = "echo {{ image }} >> /tmp/matugen_debug.log"
+# post_hook = "ln -sfn {{ image }} ~/.local/state/caelestia/wallpaper/current"
 
-[templates.caelestia_scheme]
-pre_hook = "mkdir -p ~/.local/state/caelestia"
-input_path = "~/.config/matugen/templates/caelestia_scheme.conf"
-output_path = "~/.local/state/caelestia/scheme.json"
 
+[templates.niri]
+input_path = '~/.config/matugen/templates/niri.conf'
+output_path = '~/.config/niri/colors.kdl'
+post_hook = 'niri msg action load-config-file || true'
+
+[templates.fuzzel]
+input_path = '~/.config/matugen/templates/fuzzel.conf'
+output_path = '~/.config/fuzzel/colors.ini'
+# ...
+# [templates.awww]
+# prehook = "awww img {image} -t=any --transition-step=30 --transition-duration=2"
+# [templates.caelestia_wallpaper]
+# pre_hook = "mkdir -p ~/.local/state/caelestia/wallpaper" # && ~/.config/quickshell/pShell/scripts/wallSet_postHook.sh"
+# input_path = "~/.config/matugen/templates/caelestia_wallpaper.conf"
+# output_path = "~/.local/state/caelestia/wallpaper/path.txt"
+# post_hook = "~/.config/quickshell/tempShell/scripts/wallSet_postHook.sh"
+#
+# [templates.caelestia_scheme]
+# pre_hook = "mkdir -p ~/.local/state/caelestia"
+# input_path = "~/.config/matugen/templates/caelestia_scheme.conf"
+# output_path = "~/.local/state/caelestia/scheme.json"
+#
 [templates.pshell_scheme]
 pre_hook = "mkdir -p ~/.local/state/pShell"
 input_path = "~/.config/matugen/templates/caelestia_scheme.conf"
@@ -22,6 +41,12 @@ input_path = "~/.config/matugen/templates/kitty-colors.conf"
 output_path = "~/.config/kitty/themes/colors.conf"
 # post_hook = "kitty @ set-colors -a ~/.config/kitty/themes/colors.conf"
 post_hook = "kitty +kitten themes --reload-in=all colors"
+
+[templates.waybar]
+input_path = "~/.config/matugen/templates/waybar.conf"
+output_path = "~/.config/waybar/colors/colors.css"
+post_hook = "pkill -SIGUSR2 waybar || true"
+
 
 [templates.flameshot]
 input_path = "~/.config/matugen/templates/flameshot-colors.conf"

@@ -4,7 +4,45 @@ alias pfetch='clear; printf "\n"; fastfetch --logo ~/Downloads/Untitled\ \(Copy\
 alias pfetch-float='hyprctl dispatch setfloating; hyprctl dispatch resizeactive exact 687 416; hyprctl dispatch centerwindow; clear; printf "\n"; fastfetch --logo ~/Downloads/Untitled\ \(Copy\)@3x.png --logo-width 25 --logo-padding-top 1'
 alias clock-float='hyprctl dispatch setfloating; hyprctl dispatch resizeactive exact 334 183; hyprctl dispatch centerwindow; tty-clock'
 
-# Create aliases
+# function cpv
+#     cp $argv &
+#     set pid (jobs --last --pid)
+#     pv -d $pid 2>&1 | grep (basename $argv[-1])
+#     wait $pid
+# end
+
+# function cpv
+#     cp $argv &
+#     set pid (jobs --last --pid)
+#     pv -d $pid -p
+#     wait $pid
+# end
+function cpv
+    cp $argv &
+    set pid (jobs --last --pid)
+    pv -d $pid -i 0.05 -p -u block
+    wait $pid
+end
+
+function h1
+    figlet -f starwars $argv | tee /dev/tty | fish_clipboard_copy
+end
+
+function h2
+    figlet -f standard $argv | tee /dev/tty | fish_clipboard_copy
+end
+
+function h3
+    figlet -f small $argv | tee /dev/tty | fish_clipboard_copy
+end
+
+function h4
+    figlet -f straight $argv | tee /dev/tty | fish_clipboard_copy
+end
+
+function h5
+    figlet -f short $argv | tee /dev/tty | fish_clipboard_copy
+end
 alias icat="kitten icat"
 alias cls="clear"
 alias g="git"
@@ -201,7 +239,7 @@ end
 alias mymicroscope="mpv av://v4l2:/dev/video2 --profile=low-latency --untimed"
 alias mydualcam="mpv av://v4l2:/dev/video2 --profile=low-latency --untimed --demuxer-lavf-o=video_size=2560x720,input_format=mjpeg"
 
-# alias cat="bat --plain"
+alias cat="bat --plain --color=always --theme='Catppuccin Macchiato'"
 
 alias ls="eza --color=always --icons=always -1"
 alias tree="eza -T"

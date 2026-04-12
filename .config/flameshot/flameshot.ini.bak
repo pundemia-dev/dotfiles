@@ -1,8 +1,8 @@
 [General]
-contrastUiColor=#bcc8d3
-drawColor=#bcc8d3
-uiColor=#39393a
-userColors=#debfc1, #bbcabc, #c4c9b1, #c2c6d6, #d1c2d2, #b8cacd, #b8cacd
+contrastUiColor=#dfbfbe
+drawColor=#dfbfbe
+uiColor=#3c3838
+userColors=#dfbfbc, #c4c9b2, #d0c6ab, #cac3d5, #dac0ca, #b8cac5, #b8cacd
 contrastOpacity=188
 savePath=/home/pundemia/Pictures/Screenshots
 useGrimAdapter=true

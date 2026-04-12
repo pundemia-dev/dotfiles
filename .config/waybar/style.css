@@ -1,0 +1,163 @@
+@import "colors/colors.css";
+
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 13px;
+    min-height: 0;
+    min-width: 0;
+    border: none;
+}
+
+/* ── Окно — прозрачное, скругление делаем сами ─────────────── */
+window#waybar {
+    background:    transparent;
+    color:         @color1;
+}
+
+/* ── Внутренний бокс — единый фон бара ──────────────────────── */
+window#waybar > box {
+    background:    @bg;
+    border-radius: 12px;
+}
+
+/* ── Три секции прозрачные ───────────────────────────────────── */
+.modules-left {
+    background:    transparent;
+    border-radius: 12px 12px 0 0;
+    padding:       6px 0 0;
+    margin:        0;
+}
+
+.modules-center {
+    background: transparent;
+    padding:    0;
+    margin:     0;
+}
+
+.modules-right {
+    background:    transparent;
+    border-radius: 0 0 12px 12px;
+    padding:       0 0 6px;
+    margin:        0;
+}
+
+button {
+    background: transparent;
+    box-shadow: none;
+    border:     none;
+}
+
+/* ── Арч + Expand — без подложки ───────────────────────────── */
+#custom-arch,
+#custom-expand {
+    min-width:  30px;
+    min-height: 30px;
+    padding:    0;
+    margin:     3px 7px;
+    background: transparent;
+    color:      @color1;
+    font-size:  16px;
+}
+
+#custom-arch:hover,
+#custom-expand:hover {
+    background:    @hover;
+    border-radius: 9999px;
+}
+
+/* ── Power — без подложки ───────────────────────────────────── */
+#custom-power {
+    min-width:  30px;
+    min-height: 30px;
+    padding:    0;
+    margin:     3px 7px;
+    background: transparent;
+    color:      @color2;
+    font-size:  16px;
+}
+
+#custom-power:hover {
+    background:    @hover;
+    border-radius: 9999px;
+}
+
+/* ── Трей — подложка, 36px через margin ─────────────────────── */
+#tray {
+    background:    @surface_solid;
+    border-radius: 12px;
+    padding:       8px 0;
+    margin:        4px 4px;
+}
+
+#tray > .passive         { -gtk-icon-effect: dim; }
+#tray > .needs-attention { color: @color2_err;    }
+
+/* ── Воркспейсы — подложка 36px ────────────────────────────── */
+#workspaces {
+    background:    @surface_solid;
+    border-radius: 12px;
+    padding:       4px 0;
+    margin:        4px 4px;
+}
+
+#workspaces button {
+    min-width:     30px;
+    min-height:    30px;
+    border-radius: 9999px;
+    margin:        2px 3px;
+    padding:       0;
+    color:         @ws_inactive;
+    font-size:     14px;
+    background:    transparent;
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+    color:         @ws_active;
+    background:    @color2_dim;
+    border-radius: 9999px;
+}
+
+#workspaces button:hover {
+    background:    @hover;
+    border-radius: 9999px;
+    color:         @ws_active;
+}
+
+#workspaces button.urgent {
+    color: @color2_err;
+}
+
+/* ── Группа system — подложка 36px ─────────────────────────── */
+#system {
+    background:    @surface_solid;
+    border-radius: 12px;
+    padding:       4px 0;
+    margin:        4px 4px;
+}
+
+#battery,
+#network,
+#bluetooth {
+    min-width:  28px;
+    min-height: 36px;
+    padding:    0;
+    margin:     2px 0;
+    color:      @color2;
+    font-size:  15px;
+    background: transparent;
+}
+
+#battery.warning  { color: @color1;     }
+#battery.critical { color: @color2_err; }
+
+/* ── Часы — подложка 36px ───────────────────────────────────── */
+#clock {
+    background:    @surface_solid;
+    border-radius: 12px;
+    color:         @color1;
+    font-size:     13px;
+    font-weight:   bold;
+    padding:       10px 0;
+    margin:        4px 4px;
+}

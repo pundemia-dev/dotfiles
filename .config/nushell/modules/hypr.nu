@@ -15,3 +15,22 @@ def --wrapped hypr [
     ^hyprctl -j $subcommand ...$rest | from json | transpose index | explore -i --head false
 }
 
+def pfetch [] {
+    clear
+    print "\n" # Дополнительный отступ, чтобы точно не наезжало
+    fastfetch --logo `~/Downloads/Untitled (Copy)@3x.png` --logo-width 25 --logo-padding-top 1
+}
+def pfetch-float [] {
+    hyprctl dispatch setfloating
+    hyprctl dispatch resizeactive exact 687 416
+    hyprctl dispatch centerwindow
+    clear
+    print "\n" # Дополнительный отступ, чтобы точно не наезжало
+    fastfetch --logo `~/Downloads/Untitled (Copy)@3x.png` --logo-width 25 --logo-padding-top 1
+}
+def clock-float [] {
+    hyprctl dispatch setfloating
+    hyprctl dispatch resizeactive exact 334 183
+    hyprctl dispatch centerwindow
+    tty-clock
+}

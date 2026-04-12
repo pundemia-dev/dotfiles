@@ -1,0 +1,117 @@
+{
+    "layer": "top",
+    "position": "left",
+    "margin-left": 7,
+    "margin-top": 7,
+    "margin-bottom": 7,
+    "width": 44,
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "reload_style_on_change": true,
+
+    "modules-left":   ["custom/arch", "tray", "custom/expand"],
+    "modules-center": ["niri/workspaces"],
+    "modules-right":  ["clock", "group/system", "custom/power"],
+
+    // ── Верх ────────────────────────────────────────────────────
+    "custom/arch": {
+        "format": "󰣇",
+        "tooltip": false,
+        "on-click": "fuzzel"
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 4,
+        "show-passive-items": true
+    },
+
+    "custom/expand": {
+        "format": "󰅀",
+        "tooltip": false,
+        "on-click": ""
+    },
+
+    // ── Середина ────────────────────────────────────────────────
+    "niri/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1":  "ア",
+            "2":  "イ",
+            "3":  "ウ",
+            "4":  "エ",
+            "5":  "オ",
+            "6":  "カ",
+            "7":  "キ",
+            "8":  "ク",
+            "9":  "ケ",
+            "10": "コ",
+            "default": "·",
+            "urgent":  "!"
+        },
+        "persistent-workspaces": {
+            "*": 5
+        },
+        "on-scroll-down": "niri msg action focus-workspace-down",
+        "on-scroll-up":   "niri msg action focus-workspace-up"
+    },
+
+    // ── Низ ─────────────────────────────────────────────────────
+    "custom/power": {
+        "format": "󰐥",
+        "tooltip": false,
+        "on-click": "fuzzel"
+    },
+
+    "group/system": {
+        "orientation": "inherit",
+        "modules": ["bluetooth", "network", "battery"]
+    },
+
+    "battery": {
+        "states": {
+            "warning":  30,
+            "critical": 10
+        },
+        "format": "{icon}",
+        "format-charging": "󱐋",
+        "format-plugged":  "󰂄",
+        "format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"],
+        "tooltip-format": "{capacity}% · {timeTo}"
+    },
+
+    "network": {
+        "format-wifi":         "{icon}",
+        "format-ethernet":     "󰈀",
+        "format-disconnected": "󰤭",
+        "format-icons": ["󰤯 ","󰤟 ","󰤢 ","󰤥 ","󰤨 "],
+        "on-click":       "kitty --hold impala",
+        "on-click-right": "nm-connection-editor",
+        "tooltip-format": "{essid}  {signalStrength}%",
+        "tooltip-format-disconnected": "Нет подключения",
+        "interval": 2
+    },
+
+    "bluetooth": {
+        "format":           "󰂯",
+        "format-connected": "󰂱",
+        "format-disabled":  "󰂲",
+        "on-click":       "kitty --hold bluetuith",
+        "on-click-right": "blueman-manager",
+        "tooltip-format": "{controller_alias}",
+        "tooltip-format-connected": "Подключено: {device_alias}"
+    },
+
+    "clock": {
+        "format": "{:%H\n%M}",
+        "interval": 1,
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "calendar": {
+            "format": {
+                "today": "<span color='#9D7FEA'><b>{}</b></span>"
+            }
+        }
+    }
+}
+

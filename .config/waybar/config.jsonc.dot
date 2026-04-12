@@ -1,0 +1,275 @@
+{
+  "position": "top",
+  "margin-top": 7,
+
+  // Возвращаем единый Dynamic Island
+  "modules-center":[
+    "clock",
+    "mpris",          // Заменили custom/media на компактный нативный
+    "niri/workspaces",
+    "pulseaudio",
+    "tray",
+    // "bluetooth",      // Добавили модуль блютуза рядом с сетью
+    // "network",
+    "battery"
+  ],
+
+  "niri/submap": {
+    "format": "{}",
+    "tooltip": false
+  },
+
+  "niri/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "10",
+      "default": "",
+      "urgent": ""
+    },
+    "persistent-workspaces": {
+      "*": 5
+    },
+    "on-click": "activate",
+    "on-scroll-down": "niri msg action focus-workspace-down",
+    "on-scroll-up": "niri msg action focus-workspace-up"
+  },
+
+  // Нативный модуль медиа (компактный)
+  "mpris": {
+    "format": "{player_icon} {title}",
+    "format-paused": "{status_icon} <i>{title}</i>",
+    "player-icons": {
+      "default": "▶",
+      "spotify": "",
+      "firefox": ""
+    },
+    "status-icons": {
+      "paused": "⏸"
+    },
+    "max-length": 30, // Ограничиваем длину, чтобы остров не разъезжался
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl stop",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
+  },
+
+  "battery": {
+    "states": {
+      "warning": 30,  // Желтый при < 30%
+      "critical": 10  // Красный и моргает при < 10%
+    },
+    "format": "{icon}",
+    "format-charging": " {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "tooltip-format": "Battery is at {capacity}%"
+  },
+
+  "pulseaudio": {
+    "format": "{icon}",
+    "format-bluetooth": "󰂱 {volume}%",
+    "format-muted": "󰖁",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "phone-muted": "",
+      "portable": "",
+      "car": "",
+      "default": ["", ""]
+    },
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+    "ignored-sinks": ["Easy Effects Sink"]
+  },
+
+  // Новый модуль Bluetooth (вместо иконки в трее)
+  "bluetooth": {
+    "format": "",
+    "format-disabled": "󰂲",
+    "format-connected": "󰂱",
+    "tooltip-format": "{controller_alias}\t{controller_address}",
+    "tooltip-format-connected": "Connected: {device_alias}",
+    "on-click": "kitty --hold bluetuith", // Или другая консольная утилита
+    "on-click-right": "blueman-manager"   // ПКМ открывает графическое меню
+  },
+
+  "network": {
+    "interface": "wlp3s0",
+    "format": "{ifname}",
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰈀 {ipaddr}/{cidr}",
+    "format-disconnected": "󰤭",
+    "on-click": "kitty --hold impala",
+    "on-click-right": "nm-connection-editor", // ПКМ открывает графическое окно сети
+    "max-length": 50,
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "tooltip-format": "Connected: {essid}"
+  },
+
+  "clock": {
+    "format": "{:%H:%M}",
+    "interval": 1,
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "calendar": {
+      "format": {
+        "today": "<span color='#ff0000'><b>{}</b></span>"
+      }
+    },
+    "actions": {
+      "on-click-right": "shift_down",
+      "on-click": "shift_up"
+    }
+  },
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 10,
+    "icons": {
+      "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
+    }
+  }
+}
+// {
+//   "position": "top",
+//   "margin-top": 7, //18
+
+//   "modules-center": [
+//     "tray", //
+//     "clock", //
+//     "custom/media", // no script
+//     "niri/workspaces", //
+//     "pulseaudio", //
+//     "network", //
+//     "battery" //
+//   ],
+
+//   "niri/submap": {
+//     "format": "{}",
+//     "tooltip": false,
+//   },
+
+//   "niri/workspaces": {
+//     "format": "{icon}",
+//     "format-icons": {
+//       "1": "1",
+//       "2": "2",
+//       "3": "3",
+//       "4": "4",
+//       "5": "5",
+//       "6": "6",
+//       "7": "7",
+//       "8": "8",
+//       "9": "9",
+//       "10": "10",
+//       "default": "",
+//       "urgent": "",
+//     },
+//     "persistent-workspaces": {
+//       "*": 5,
+//     },
+//     "on-click": "activate",
+//     "on-scroll-down": "niri msg action focus-workspace-down",
+//     "on-scroll-up": "niri msg action foucs-workspace-up",
+//   },
+
+//   // "custom/weather": {
+//   //   "exec": "~/.config/waybar/scripts/get-weather.sh 2>/dev/null",
+//   //   "return-type": "json",
+//   //   "interval": 1800,
+//   //   "fromat": "{}"
+//   // },
+
+//   "custom/media": {
+//     "format": "{}",
+//     "escape": true,
+//     "return-type": "json",
+//     "max-length": 40,
+//     "on-click": "playerctl play-pause",
+//     "on-click-right": "playerctl stop",
+//     "smooth-scrolling-threshold": 1,
+//     "on-scroll-up": "playerctl next",
+//     "on-scroll-down": "playerctl previous",
+//     "exec": "~/.config/waybar/scripts/mediaplayer.py 2> /dev/null",
+//   },
+
+//   "custom/pacman": {
+//     "format": "pacman {}",
+//     "interval": "once",
+//     "exec": "checkupdates | wc -l",
+//     "on-click": "kitty --hold yay -Syu",
+//     "signal": 8,
+//     "tooltip-format": "{} updates available",
+//   },
+
+//   "battery": {
+//     "format": "{icon}",
+//     "format-charging": " {capacity}%",
+//     "format-icons": ["", "", "", "", ""],
+//     "tooltip-format": "Battery is at {capacity}%",
+//   },
+
+//   "pulseaudio": {
+//     "format": "{icon}",
+//     "format-bluetooth": "󰂱 {volume}%",
+//     "format-muted": "󰖁",
+//     "format-icons": {
+//       "headphone": "",
+//       "hands-free": "",
+//       "headset": "",
+//       "phone": "",
+//       "phone-muted": "",
+//       "portable": "",
+//       "car": "",
+//       "default": ["", ""],
+//     },
+//     "scroll-step": 1,
+//     "on-click": "pavucontrol",
+//     "ignored-sinks": ["Easy Effects Sink"],
+//   },
+
+//   "network": {
+//     "interface": "wlp3s0",
+//     "format": "{ifname}",
+//     "format-wifi": "{icon}",
+//     "format-ethernet": "󰈀 {ipaddr}/{cidr}",
+//     "format-disconnected": "󰤭", //An empty format will hide the module.
+//     "on-click": "kitty --hold impala",
+//     "max-length": 50,
+//     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+//     "tooltip-format": "Connected: {essid}",
+//   },
+
+//   "clock": {
+//     "format": "{:%H:%M}",
+//     "interval": 1,
+//     "tooltip-format": "<tt>{calendar}</tt>",
+//     "calendar": {
+//       "format": {
+//         "today": "<span color='#ff0000'><b>{}</b></span>",
+//       },
+//     },
+//     "actions": {
+//       "on-click-right": "shift_down",
+//       "on-click": "shift_up",
+//     },
+//   },
+
+//   "tray": {
+//     "icon-size": 16,
+//     "spacing": 10,
+//     "icons": {
+//       "blueman": "bluetooth",
+//       "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png",
+//     },
+//   },
+// }

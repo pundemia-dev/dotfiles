@@ -1250,3 +1250,161 @@ mv Тестовое_задание_CIAO_02_2026.pdf ~/code/my_py/trajectory_opti
 hyprctl clients
 hyprctl clients | grep -A 10 "Save Image"
 hyprctl windowrules
+учше
+exit
+ls | where type != png
+ls
+ls | where name !~ '\.(jpg|jpeg|png|gif|bmp|webp|heic|raw|tiff)$'<\n>
+ls | where name !~ '\.(jpg|jpeg|png)$'<\n>
+ls | where name =~ '\.(gif|webp|apng|mp4|webm|mkv|avi|mov|flv|wmv|m4v)$'<\n>
+ls | each {|it| <\n>  let file_info = (file $it.name | str downcase)<\n>  if $file_info =~ "animated|video" {<\n>    {name: $it.name, type: "animated"}<\n>  }<\n>} | compact<\n>
+ls | par-each {|it|<\n>  let file_type = (file -b $it.name | str downcase)<\n>  if $file_type =~ "animated|video" {<\n>    $it.name<\n>  }<\n>}<\n>
+ls | where name =~ '\.(gif|webp|apng|mp4|webm|mkv|avi|mov|flv|wmv|m4v)$' | each {|it|<\n>  let file_type = (file -b $it.name | str downcase)<\n>  {<\n>    name: $it.name,<\n>    extension: ($it.name | str split '.' | last),<\n>    file_type: $file_type,<\n>    is_animated: ($file_type =~ "animated|video")<\n>  }<\n>}<\n>
+exit
+ls | where name =~ '\.(gif|webp|apng|mp4|webm|mkv|avi|mov|flv|wmv|m4v)$' | each {|it|<\n>  let file_type = (file -b $it.name | str downcase)<\n>  {<\n>    name: $it.name,<\n>    extension: ($it.name | str split '.' | last),<\n>    file_type: $file_type,<\n>    is_animated: ($file_type =~ "animated|video")<\n>  }<\n>}<\n>
+ls | where name =~ '\.(gif|webp|apng|mp4|webm|mkv|avi|mov|flv|wmv|m4v)$' | each {|it|<\n>  let file_type = (file -b $it.name | str downcase)<\n>  {<\n>    name: $it.name,<\n>    extension: ($it.name | str split "." | last),<\n>    file_type: $file_type,<\n>    is_animated: ($file_type =~ "animated|video")<\n>  }<\n>}<\n>
+ls | where name =~ '\.(gif|webp|apng|mp4|webm|mkv|avi|mov|flv|wmv|m4v)$' | each {|it|<\n>  let file_type = (file -b $it.name | str downcase)<\n>  {<\n>    name: $it.name,<\n>    extension: ($it.name | path parse | get extension),<\n>    file_type: $file_type,<\n>    is_animated: ($file_type =~ "animated|video")<\n>  }<\n>}<\n>
+exiftool -n -j -ImageWidth -ImageHeight *.jpg <\n>| from json <\n>| where ((($it.ImageWidth | into int)*0.75) | into int) < ($it.ImageHeight | into int) | first 30 <\n>| get SourceFile <\n>| each { |it| <\n>    print $"Файл: ($it)"<\n>    # magick меняет размер до 400 пикселей по ширине и отдает в stdout<\n>    # kitten icat читает это из stdin и выводит в терминал<\n>    magick $it -resize 400 png:- | kitten icat --align left<\n>}
+exiftool -n -j -ImageWidth -ImageHeight *.jpg <\n>| from json <\n>| where (($it.ImageWidth * 0.75) < $it.ImageHeight)<\n>| first 30 <\n>| get SourceFile <\n>| each { |it| <\n>    print $"Файл: ($it)"<\n>    magick $it -resize 400 png:- | kitten icat --align left<\n>}
+exiftool -n -j -ImageWidth -ImageHeight *.jpg <\n>| from json <\n>| where (($it.ImageWidth * 0.75) < $it.ImageHeight)<\n>| first 60 | last 30 <\n>| get SourceFile <\n>| each { |it| <\n>    print $"Файл: ($it)"<\n>    magick $it -resize 400 png:- | kitten icat --align left<\n>}
+exiftool -n -j -ImageWidth -ImageHeight *.jpg <\n>| from json <\n>| where (($it.ImageWidth * 0.75) < $it.ImageHeight)<\n>| first 90 | last 30 <\n>| get SourceFile <\n>| each { |it| <\n>    print $"Файл: ($it)"<\n>    magick $it -resize 400 png:- | kitten icat --align left<\n>}
+exiftool -n -j -ImageWidth -ImageHeight *.jpg <\n>| from json <\n>| where (($it.ImageWidth * 0.75) < $it.ImageHeight)<\n>| first 120 | last 30 <\n>| get SourceFile <\n>| each { |it| <\n>    print $"Файл: ($it)"<\n>    magick $it -resize 400 png:- | kitten icat --align left<\n>}
+exiftool -n -j -ImageWidth -ImageHeight *.jpg <\n>| from json <\n>| where (($it.ImageWidth * 0.75) < $it.ImageHeight)<\n>| first 150 | last 30 <\n>| get SourceFile <\n>| each { |it| <\n>    print $"Файл: ($it)"<\n>    magick $it -resize 400 png:- | kitten icat --align left<\n>}
+exiftool -n -j -ImageWidth -ImageHeight *.jpg <\n>| from json <\n>| where (($it.ImageWidth * 0.75) < $it.ImageHeight)<\n>| first 180 | last 30 <\n>| get SourceFile <\n>| each { |it| <\n>    print $"Файл: ($it)"<\n>    magick $it -resize 400 png:- | kitten icat --align left<\n>}
+exiftool -n -j -ImageWidth -ImageHeight *.jpg <\n>| from json <\n>| where (($it.ImageWidth * 0.75) < $it.ImageHeight)<\n>| first 210 | last 30 <\n>| get SourceFile <\n>| each { |it| <\n>    print $"Файл: ($it)"<\n>    magick $it -resize 400 png:- | kitten icat --align left<\n>}
+exiftool -n -j -ImageWidth -ImageHeight *.jpg <\n>| from json <\n>| where (($it.ImageWidth * 0.75) < $it.ImageHeight)<\n>| first 240 | last 30 <\n>| get SourceFile <\n>| each { |it| <\n>    print $"Файл: ($it)"<\n>    magick $it -resize 400 png:- | kitten icat --align left<\n>}
+exiftool -n -j -ImageWidth -ImageHeight *.jpg <\n>| from json <\n>| where (($it.ImageWidth * 0.75) < $it.ImageHeight)<\n>| first 270 | last 30 <\n>| get SourceFile <\n>| each { |it| <\n>    print $"Файл: ($it)"<\n>    magick $it -resize 400 png:- | kitten icat --align left<\n>}
+exiftool -n -j -ImageWidth -ImageHeight *.jpg <\n>| from json <\n>| where (($it.ImageWidth * 0.75) < $it.ImageHeight)<\n>| get SourceFile<\n>| str join "\n"<\n>| fzf --preview "kitten icat --align left --transfer-mode=memory --stdin=no --place=${FZF_PREVIEW_COLUMNS}x${FZF_PREVIEW_LINES}@0x0 {}"
+exit
+ls
+cd nu
+cd ~/.config/nu
+cd ~/.config/nushell
+ls
+tree
+cat config.nu
+ls
+cd modules/
+yay -R broot
+exit
+cd ~/.config/nushell
+ls
+cat env.nu
+cat config.nu
+n config.nu
+nvim config.nu
+ls
+exit
+cd nu
+ls
+tree
+cd modules
+ls
+cat aliases
+cat aliases.nu
+catall
+cd ..
+zeditor .
+h1 "hello"
+h2 "hello"
+h3 "hello"
+h4 "hello"
+h5 "hello"
+ls
+ls | cat
+ls | concat cat
+ls | get name | cat
+ls | get name | cat $in
+ls | get name | each cat
+ls | get name | each { cat }
+ls | get name | each { |name| cat $name }
+cat modules
+ls | where type == file | get name | each { |name| cat $name }
+cd modules/
+ls
+ls | where type == file | get name | each { |name| cat $name }
+ls <\n>| where type == file <\n>| each { |it|<\n>    {<\n>        path: $it.name<\n>        content: (open $it.name)<\n>    }<\n>}
+ls <\n>| where type == file <\n>| each { |it|<\n>    {<\n>        index: $it.name<\n>        content: (open $it.name)<\n>    }<\n>}
+ls <\n>| where type == file <\n>| each { |it|<\n>    print $"===== ($it.name) ====="<\n>    ^bat $it.name<\n>    print ""<\n>}
+cd nu
+ls <\n>| where type == file <\n>| each { |it|<\n>    print $"===== ($it.name) ====="<\n>    ^bat $it.name<\n>    print ""<\n>}
+ls <\n>| where type == file <\n>| each { |it|<\n>    {<\n>        index: $it.name<\n>        content: (open $it.name)<\n>    }<\n>}
+cd modules/
+ls <\n>| where type == file <\n>| each { |it|<\n>    {<\n>        index: $it.name<\n>        content: (open $it.name)<\n>    }<\n>}
+bat --help
+bat --help | wl-copy
+^bat --style=header,grid,numbers aliases.nu
+^bat --style=full aliases.nu
+bat aliases.nu
+cd tempshell
+ls
+^bat --style=full shell.qml
+ls <\n>| where type == file <\n>| each { |it|<\n>    {<\n>        index: $it.name<\n>        content: (open $it.name)<\n>    }<\n>}
+^bat --style=full shell.qml
+^bat --style=header,grid,numbers shell.qml
+ls <\n>    | where type == file <\n>    | each { |it|<\n>        let width = (term size).columns<\n>        let title = $" ($it.name) "<\n>        <\n>        # верхняя рамка<\n>        print $"╭($title | fill -a center -w ($width - 2) -c '─')╮"<\n>        <\n>        # содержимое<\n>        ^bat --style=plain --color=always $it.name <\n>        | lines <\n>        | each { |line|<\n>            print $"│($line | fill -w ($width - 2))│"<\n>        }<\n><\n>        # нижняя рамка<\n>        print $"╰( '─' * ($width - 2) )╯\n"<\n>    }
+ls | where type == file | get name | each { |name| cat $name }
+ls <\n>| where type == file <\n>| each { |it|<\n>    {<\n>        index: $it.name<\n>        content: (open $it.name)<\n>    }<\n>}
+cat shell.qml
+ls <\n>| where type == file <\n>| each { |it|<\n>    print $"===== ($it.name) ====="<\n>    ^cat $it.name<\n>    print ""<\n>}
+ls <\n>| where type == file <\n>| each { |it|<\n>    print $"===== ($it.name) ====="<\n>    cat $it.name<\n>    print ""<\n>}
+catall
+ls **/*
+cd tempshell
+ls **/*
+walltool index
+walltool --help
+walltool wallpaper --index
+walltool wallpaper index
+walltool wallpaper index /home/pundemia/Pictures/Wallpapers
+n config.nu
+ls
+la
+ls -la
+echo $nu.data-dir
+echo $nu.data-dir | cd
+ls
+echo $nu.data-dir
+cd .local/share/nushell
+ls
+cd vendor
+ls
+cat autoload/
+cd autoload/
+ls
+cat starship.nu
+mkdir ($nu.data-dir | path join "vendor/autoload")<\n>starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
+ls
+cd nu
+ls
+cd nvim
+ls
+git add .
+git commit -m "add"
+git push
+ls
+ls **/*
+ls -r
+ls **/* | where type == "file" | each { |it| open $it.name | lines | length } | math sum<\n>
+yay lazygit
+sudo pacman -S lazygit
+cd ..
+catall
+rm --help
+rm -rf ./*
+exit
+cat compare.txt | wl-copy
+cat RadialSliderIcon.qml | wl-copy
+ls
+exit
+cat RadialSliderIcon.qml | wl-copy
+cd ..
+cd modules/bar/content/components/PowerStatus.qml | wl-copy
+cd modules/bar/content/components
+cat PowerStatus.qml | wl-copy
+cat NetworkStatus.qml | wl-copy
+cat BluetoothStatus.qml | wl-copy
+cd waybar
+ls
+cp config.jsonc config.jsonc.zproger
+ls

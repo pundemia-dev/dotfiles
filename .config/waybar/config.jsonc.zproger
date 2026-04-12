@@ -1,0 +1,114 @@
+{
+  "position": "top",
+    "margin-top" : 5,
+    "margin-left": 10,
+    "margin-right": 10,
+    "height" : 28,
+    "modules-left": [
+      "custom/menu",
+      "hyprland/workspaces",
+    ],
+    "modules-center": [
+      "temperature",
+      "memory",
+      "cpu",
+    ],
+    "modules-right": [
+    "battery",
+    "backlight",
+    "pulseaudio",
+    "hyprland/language",
+    "clock",
+    "network",
+    ],
+    "hyprland/language": {
+	"format": "{}",
+	"format-en": "us",
+	"format-ru": "ru",
+    },
+    "hyprland/window": {
+      "format": "{}",
+      "max-length": 35,
+      "rewrite": {
+        "": "Hyprland"
+      },
+      "separate-outputs": true,
+    },
+    "hyprland/workspaces": {
+      "format": "{icon}",
+      "on-click": "activate",
+      "format-icons": {
+        "active": " ",
+      },
+      "sort-by-number": true,
+      "persistent-workspaces": {
+        "*": 4, // 5 workspaces by default on every monitor
+        "HDMI-A-1": 3 // but only three on HDMI-A-1
+      },
+    },
+    "custom/menu": {
+      "format": "{icon}",
+      "format-icons": "",
+      "on-click": "wofi --show drun",
+      "escape": true,
+      "tooltip": false
+    },
+    "clock": {
+      "format": "  {:%H:%M %p}",
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+      "format-alt": "  {:%Y-%m-%d}"
+    },
+    "cpu": {
+      "format": " {usage}%",
+      "tooltip": false
+    },
+    "memory": {
+      "format": " {used} GiB"
+    },
+    "temperature": {
+      "critical-threshold": 80,
+      "format": "{icon} {temperatureC}°C",
+      "format-icons": ["", "", "", ""]
+    },
+    "backlight": {
+    //"device": "intel_backlight",
+    "format": "<span color='#8aadf4'>{icon}</span> {percent}%",
+    "format-icons": ""
+    },
+    "battery": {
+      "states": {
+        "warning": 30,
+        "critical": 15
+      },
+      "format": "<span color='#a6da95'>{icon}</span> {capacity}%",
+      "format-full": "<span color='#a6da95'>{icon}</span> {capacity}%",
+      "format-charging": "<span color='#a6da95'></span> {capacity}%",
+      "format-plugged": "<span color='#a6da95'></span> {capacity}%",
+      "format-alt": "{time} <span color='#a6da95'>{icon}</span>",
+      "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+      "format-wifi": "  {signalStrength}%",
+      "format-ethernet": "{cidr} ",
+      "tooltip-format": "{ifname} via {gwaddr} ",
+      "format-linked": "{ifname} (No IP) ",
+      "format-disconnected": " 󰖪 ",
+      "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+      "format": "<span color='#ee99a0'>{icon}</span> {volume}%",
+      "format-bluetooth": "{volume}% <span color='#ee99a0'>{icon}</span> {format_source}",
+      "format-bluetooth-muted": "<span color='#ee99a0'> {icon}</span> {format_source}",
+      "format-muted": "<span color='#ee99a0'> </span>{format_source}",
+      "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": ["", "", " "]
+      },
+      "on-click": "pavucontrol"
+    },
+}

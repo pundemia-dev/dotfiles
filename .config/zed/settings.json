@@ -35,10 +35,11 @@
         "model": "gemini-2.5-pro",
       },
     ],
-    "default_profile": "write",
+    "default_profile": "ask",
     "default_model": {
+      "enable_thinking": true,
       "provider": "copilot_chat",
-      "model": "claude-sonnet-4.6",
+      "model": "claude-haiku-4.5",
     },
     "model_parameters": [],
   },
@@ -75,7 +76,7 @@
   },
   "ui_font_size": 17.0,
   "buffer_font_size": 15,
-  "theme": "Kanagawa Dragon",
+  "theme": "Vesper",
   "languages": {
     "Python": {
       "language_servers": ["pyright", "ruff"],
