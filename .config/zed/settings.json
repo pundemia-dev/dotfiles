@@ -12,7 +12,36 @@
   //   "inactive_opacity": 0.0
   // },
   // "bottom_dock_layout": "full",
+  "cli_default_open_behavior": "existing_window",
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry"
+    },
+    "github-copilot-cli": {
+      "type": "registry"
+    }
+  },
   "agent": {
+    "dock": "right",
+    "tool_permissions": {
+      "tools": {
+        "terminal": {
+          "default": "allow"
+        }
+      }
+    },
     "inline_assistant_model": {
       "provider": "copilot_chat",
       "model": "claude-sonnet-4.5",
@@ -35,7 +64,7 @@
         "model": "gemini-2.5-pro",
       },
     ],
-    "default_profile": "ask",
+    "default_profile": "write",
     "default_model": {
       "enable_thinking": true,
       "provider": "copilot_chat",

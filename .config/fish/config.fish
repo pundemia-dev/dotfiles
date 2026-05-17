@@ -1,5 +1,3 @@
-
-
 alias pfetch='clear; printf "\n"; fastfetch --logo ~/Downloads/Untitled\ \(Copy\)@3x.png --logo-width 25 --logo-padding-top 1'
 alias pfetch-float='hyprctl dispatch setfloating; hyprctl dispatch resizeactive exact 687 416; hyprctl dispatch centerwindow; clear; printf "\n"; fastfetch --logo ~/Downloads/Untitled\ \(Copy\)@3x.png --logo-width 25 --logo-padding-top 1'
 alias clock-float='hyprctl dispatch setfloating; hyprctl dispatch resizeactive exact 334 183; hyprctl dispatch centerwindow; tty-clock'
@@ -49,12 +47,12 @@ alias g="git"
 alias n="nvim"
 alias get_idf=". $HOME/esp_idf/esp-idf/export.fish"
 alias cr="cargo run"
-alias walltool="~/.config/quickshell/pShell/utils/scripts/walltool/target/debug/walltool" 
-function "uvpy"
-    echo '{ "venvPath": ".", "venv": ".venv" }' > pyrightconfig.json
+alias walltool="~/.config/quickshell/pShell/utils/scripts/walltool/target/debug/walltool"
+function uvpy
+    echo '{ "venvPath": ".", "venv": ".venv" }' >pyrightconfig.json
 end
 
-function "catall"
+function catall
     find . -type f -print0 | while read -z file
         printf '%s\n' "$file"
         cat -- "$file"
@@ -68,11 +66,10 @@ end
 #     end | wl-copy
 # end
 
-
 function catcur
     set -l exclude_patterns ()
     set -l skip_next false
-    
+
     # Парсим аргументы
     for arg in $argv
         if test "$skip_next" = true
@@ -82,13 +79,13 @@ function catcur
             set skip_next true
         end
     end
-    
+
     # Строим условие для find
     set -l find_cmd "find . -maxdepth 1 -type f"
     for pattern in $exclude_patterns
         set find_cmd "$find_cmd ! -name '$pattern'"
     end
-    
+
     # Выполняем команду
     eval $find_cmd -print0 | while read -z file
         printf '%s\n' "$file"
@@ -102,7 +99,6 @@ end
 #         cat -- "$file"
 #     end | wl-copy
 # end
-
 
 # TODO: Replace journal aliases after switching to OpenRC
 # thefuck --alias | source 
@@ -120,7 +116,7 @@ function zed
 
     # 4. Когда Zed закрылся, возвращаем терминал на текущий активный воркспейс
     hyprctl dispatch movetoworkspace (hyprctl monitors -j | jq -r '.[] | select(.focused==true) | .activeWorkspace.id'),address:$term_address
-    
+
     # 5. Возвращаем фокус на терминал
     hyprctl dispatch focuswindow address:$term_address
 end
@@ -170,7 +166,7 @@ function vpn
             end
 
         case logs
-            if test (count $argv) -ge 2 -a $argv[2] = "new"
+            if test (count $argv) -ge 2 -a $argv[2] = new
                 sudo journalctl -u sing-box --output cat -f
             else
                 sudo journalctl -u sing-box --output cat -e
@@ -181,13 +177,13 @@ function vpn
                 echo "Usage: vpn update '<json_string>'"
                 return 1
             end
-            
+
             if not type -q jq
                 echo (set_color red)"[ WARN ]"(set_color normal) - jq not found, install it: sudo pacman -S jq
                 return 1
             end
 
-            echo "$argv[2..-1]" | jq . > /tmp/vpn_update_tmp.json
+            echo "$argv[2..-1]" | jq . >/tmp/vpn_update_tmp.json
 
             if test $status -ne 0
                 echo (set_color red)"[ WARN ]"(set_color normal) - JSON is not valid
@@ -208,15 +204,15 @@ function vpn
         case status
             set state (systemctl is-active sing-box)
 
-            if test $state = "active"
+            if test $state = active
                 echo (set_color green)"[ INFO ]"(set_color normal) - sing-box is running
-            else if test $state = "inactive"
+            else if test $state = inactive
                 echo (set_color red)"[ WARN ]"(set_color normal) - sing-box is stopped
             else
                 echo (set_color red)"[ WARN ]"(set_color normal) - sing-box state: $state
             end
 
-        case help '-h' '--help'
+        case help -h --help
             echo "vpn <command> [args]"
             echo "Commands:"
             echo "  start                Start sing-box service"
@@ -235,11 +231,11 @@ function vpn
     end
 end
 
-
 alias mymicroscope="mpv av://v4l2:/dev/video2 --profile=low-latency --untimed"
 alias mydualcam="mpv av://v4l2:/dev/video2 --profile=low-latency --untimed --demuxer-lavf-o=video_size=2560x720,input_format=mjpeg"
 
-alias cat="bat --plain --color=always --theme='Catppuccin Macchiato'"
+# alias ocat="cat"
+# alias cat="bat --plain --color=always --theme='Catppuccin Macchiato'"
 
 alias ls="eza --color=always --icons=always -1"
 alias tree="eza -T"
@@ -252,8 +248,8 @@ function show_updates
     set --local pac_updates (checkupdates)
     set --local yay_updates (yay -Qua)
 
-	printf "󰮯 Pacman packages (%d):\n" (count $pac_updates)
-	printf "%s\n" $pac_updates
+    printf "󰮯 Pacman packages (%d):\n" (count $pac_updates)
+    printf "%s\n" $pac_updates
     printf "\n Yay packages (%d):\n" (count $yay_updates)
     printf "%s\n" $yay_updates
 end
@@ -279,7 +275,6 @@ set -U fish_greeting
 set fish_color_command green
 set -gx BROWSER /usr/bin/zen-browser
 set -gx SSL_CERT_FILE /etc/ssl/certs/ca-certificates.crt
-
 
 if status is-interactive
     # Commands to run in interactive sessions can go here

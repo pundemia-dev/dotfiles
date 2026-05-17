@@ -1,7 +1,7 @@
 @import "colors/colors.css";
 
 * {
-    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-family: "JetBrainsMono Nerd Font Propo", monospace;
     font-size: 13px;
     min-height: 0;
     min-width: 0;
@@ -56,7 +56,7 @@ button {
     margin:     3px 7px;
     background: transparent;
     color:      @color1;
-    font-size:  16px;
+    font-size:  18px;
 }
 
 #custom-arch:hover,
@@ -73,7 +73,7 @@ button {
     margin:     3px 7px;
     background: transparent;
     color:      @color2;
-    font-size:  16px;
+    font-size:  18px;
 }
 
 #custom-power:hover {
@@ -85,7 +85,7 @@ button {
 #tray {
     background:    @surface_solid;
     border-radius: 12px;
-    padding:       8px 0;
+    padding:       10px 0;
     margin:        4px 4px;
 }
 
@@ -107,7 +107,7 @@ button {
     margin:        2px 3px;
     padding:       0;
     color:         @ws_inactive;
-    font-size:     14px;
+    font-size:     16px;
     background:    transparent;
 }
 
@@ -144,7 +144,7 @@ button {
     padding:    0;
     margin:     2px 0;
     color:      @color2;
-    font-size:  15px;
+    font-size:  18px;
     background: transparent;
 }
 
@@ -156,7 +156,7 @@ button {
     background:    @surface_solid;
     border-radius: 12px;
     color:         @color1;
-    font-size:     13px;
+    font-size:     16px;
     font-weight:   bold;
     padding:       10px 0;
     margin:        4px 4px;

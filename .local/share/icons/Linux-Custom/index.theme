@@ -1,0 +1,61 @@
+[Icon Theme]
+Name=Linox-Custom
+Comment=My custom icons for Fuzzel
+Inherits=Linox,hicolor
+
+# 1. Добавляем все новые пути в список Directories через запятую
+Directories=apps/scalable,mimetypes/scalable,mimetypes/scalable@2,mimetypes/symbolic,places/scalable,places/scalable@2,places/symbolic
+
+# 2. Оставляем вашу старую секцию для приложений
+[apps/scalable]
+Context=Applications
+Size=128
+MinSize=8
+MaxSize=512
+Type=Scalable
+
+# 3. Добавляем секции для MimeTypes (типы файлов)
+[mimetypes/scalable]
+Context=MimeTypes
+Size=16
+MinSize=8
+MaxSize=512
+Type=Scalable
+
+[mimetypes/scalable@2]
+Context=MimeTypes
+Size=16
+Scale=2
+MinSize=8
+MaxSize=512
+Type=Scalable
+
+[mimetypes/symbolic]
+Context=MimeTypes
+Size=16
+MinSize=8
+MaxSize=512
+Type=Scalable
+
+# 4. Добавляем секции для Places (папки, диски, корзина)
+[places/scalable]
+Context=Places
+Size=16
+MinSize=8
+MaxSize=512
+Type=Scalable
+
+[places/scalable@2]
+Context=Places
+Size=16
+Scale=2
+MinSize=8
+MaxSize=512
+Type=Scalable
+
+[places/symbolic]
+Context=Places
+Size=16
+MinSize=8
+MaxSize=512
+Type=Scalable

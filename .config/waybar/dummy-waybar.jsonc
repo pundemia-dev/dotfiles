@@ -1,0 +1,14 @@
+{
+    "name": "dummy-blur",
+    "layer": "background",
+    "position": "top",
+    "height": 5000,
+    "exclusive": false,
+    "passthrough": true,
+    "modules-center": ["custom/empty"],
+    
+    "custom/empty": {
+        "format": "",
+        "tooltip": false
+    }
+}

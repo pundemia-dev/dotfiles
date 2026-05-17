@@ -48,6 +48,7 @@ apply() {
   save_state
   notify-send -t 2000 "🖼 Обои" "$(basename "$img")" 2>/dev/null
   awww img "$img" -t=any --transition-step=30 --transition-duration=2
+  awww img "$img" -t=any --transition-step=30 --transition-duration=2 -n overview
   pkill -x matugen 2>/dev/null
   matugen --type "$SCHEME" --mode "$MODE" --source-color-index 0 image "$img" &
 }

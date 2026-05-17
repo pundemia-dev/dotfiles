@@ -1,17 +1,17 @@
 /* waybar — color palette */
 /* edit this file to retheme everything */
 
-@define-color bg            #161313;
-@define-color surface       #221f1f;   /* подложки групп/трея/воркспейсов (добавь альфу при желании) */
-@define-color surface_solid #221f1f;
-@define-color hover         #221f1f;
+@define-color bg            #131315;
+@define-color surface       #201f21;   /* подложки групп/трея/воркспейсов (добавь альфу при желании) */
+@define-color surface_solid #201f21;
+@define-color hover         #201f21;
 
-@define-color color1        #e5bdc1;    /* арч, инструменты, часы               */
-@define-color color2        #d7c2c3;    /* батарея, вайфай, блютуз, раскладка,  */
+@define-color color1        #c2c5dd;    /* арч, инструменты, часы               */
+@define-color color2        #c6c5d0;    /* батарея, вайфай, блютуз, раскладка,  */
                                        /* кнопка выкл, подложка активного ws   */
-@define-color color2_dim    #debfc2;    /* подложка активного воркспейса        */
+@define-color color2_dim    #c4c5d6;    /* подложка активного воркспейса        */
 @define-color color2_err    #ffb4ab;    /* низкий заряд / ошибка               */
 
-@define-color ws_inactive   #4a4646;    /* текст неактивного воркспейса         */
-@define-color ws_active     #3f2b2e;    /* текст активного воркспейса           */
+@define-color ws_inactive   #474648;    /* текст неактивного воркспейса         */
+@define-color ws_active     #2d303d;    /* текст активного воркспейса           */
 

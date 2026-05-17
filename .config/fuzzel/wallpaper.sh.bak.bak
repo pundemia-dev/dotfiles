@@ -1,0 +1,431 @@
+#!/usr/bin/env bash
+# wallpaper-picker.sh — fuzzel + matugen wallpaper switcher
+#
+# Usage:
+#   wallpaper-picker.sh                       # интерактивное меню (по умолчанию)
+#   wallpaper-picker.sh menu                  # то же самое
+#   wallpaper-picker.sh random [hidden]       # случайные обои (visible/hidden)
+#   wallpaper-picker.sh find   [hidden]       # сразу открыть поиск
+#   wallpaper-picker.sh reapply               # переприменить последние обои
+#   wallpaper-picker.sh toggle-mode           # dark <-> light + переприменить
+#   wallpaper-picker.sh set-scheme NAME       # сменить схему + переприменить
+#   wallpaper-picker.sh -h | --help           # показать справку
+#
+# Env (необязательные оверрайды):
+#   WALLPAPER_DIR     — каталог с обоями (по умолчанию ~/Pictures/Wallpapers)
+#   WP_FUZZEL_WIDTH   — ширина меню (по умолчанию 44)
+#   WP_PICK_WIDTH     — ширина окна поиска (по умолчанию 60)
+
+set -euo pipefail
+shopt -s nullglob
+
+# ── Config ────────────────────────────────────────────────────────────────────
+
+WALLPAPER_DIR="${WALLPAPER_DIR:-$HOME/Pictures/Wallpapers}"
+STATE_DIR="${XDG_STATE_HOME:-$HOME/.local/state}/wallpaper-picker"
+STATE_FILE="$STATE_DIR/state.conf"
+LOCK_FILE="$STATE_DIR/picker.lock"
+THUMB_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/wallpaper-picker/thumbs"
+
+FUZZEL_WIDTH="${WP_FUZZEL_WIDTH:-44}"
+PICK_WIDTH="${WP_PICK_WIDTH:-60}"
+
+# Поддерживаемые расширения изображений (lowercase)
+IMG_EXTS=(jpg jpeg png webp gif bmp tiff tif avif jxl heic heif)
+
+VALID_SCHEMES=(
+  scheme-content
+  scheme-expressive
+  scheme-fidelity
+  scheme-fruit-salad
+  scheme-monochrome
+  scheme-neutral
+  scheme-rainbow
+  scheme-tonal-spot
+)
+
+VALID_MODES=(dark light)
+
+# Defaults (могут быть перезаписаны state-файлом)
+SCHEME="scheme-neutral"
+MODE="dark"
+LAST_WALLPAPER=""
+
+# ── Helpers ───────────────────────────────────────────────────────────────────
+
+log() { printf '[wallpaper-picker] %s\n' "$*" >&2; }
+notify() { notify-send -t "${3:-2000}" "${1:-🖼 Обои}" "${2:-}" 2>/dev/null || true; }
+
+die() {
+  notify "❌ Wallpaper" "$*" 4000
+  log "Ошибка: $*"
+  exit 1
+}
+
+need() {
+  local missing=()
+  local cmd
+  for cmd in "$@"; do
+    command -v "$cmd" >/dev/null 2>&1 || missing+=("$cmd")
+  done
+  ((${#missing[@]} == 0)) || die "Не найдены команды: ${missing[*]}"
+}
+
+contains() {
+  local needle="$1"
+  shift
+  local item
+  for item in "$@"; do
+    [[ "$item" == "$needle" ]] && return 0
+  done
+  return 1
+}
+
+# ── Single-instance lock ──────────────────────────────────────────────────────
+
+acquire_lock() {
+  mkdir -p "$STATE_DIR"
+  exec 9>"$LOCK_FILE"
+  if ! flock -n 9; then
+    notify "🖼 Обои" "Уже запущено" 1500
+    exit 0
+  fi
+}
+
+# ── State ─────────────────────────────────────────────────────────────────────
+
+load_state() {
+  [[ -f "$STATE_FILE" ]] || return 0
+  # shellcheck disable=SC1090
+  source "$STATE_FILE" || true
+  contains "$SCHEME" "${VALID_SCHEMES[@]}" || SCHEME="scheme-neutral"
+  contains "$MODE" "${VALID_MODES[@]}" || MODE="dark"
+  [[ -n "$LAST_WALLPAPER" && -f "$LAST_WALLPAPER" ]] || LAST_WALLPAPER=""
+}
+
+save_state() {
+  mkdir -p "$STATE_DIR"
+  local tmp
+  tmp="$(mktemp "$STATE_FILE.XXXXXX")"
+  {
+    printf 'SCHEME=%q\n' "$SCHEME"
+    printf 'MODE=%q\n' "$MODE"
+    printf 'LAST_WALLPAPER=%q\n' "$LAST_WALLPAPER"
+  } >"$tmp"
+  mv -f "$tmp" "$STATE_FILE"
+}
+
+# ── Wallpaper enumeration ─────────────────────────────────────────────────────
+
+# get_wallpapers <normal|hidden>
+# Печатает пути по одному в строке, отсортированные по mtime (новые сверху).
+get_wallpapers() {
+  local kind="$1"
+  [[ -d "$WALLPAPER_DIR" ]] || return 0
+
+  local fd_args=(--type f --max-depth 1 --absolute-path)
+  local ext
+  for ext in "${IMG_EXTS[@]}"; do
+    fd_args+=(-e "$ext")
+  done
+
+  if [[ "$kind" == "hidden" ]]; then
+    # Только файлы, начинающиеся с точки
+    fd "${fd_args[@]}" --hidden --no-ignore '^\.' "$WALLPAPER_DIR" 2>/dev/null |
+      filter_sort_by_mtime
+  else
+    fd "${fd_args[@]}" . "$WALLPAPER_DIR" 2>/dev/null |
+      filter_sort_by_mtime
+  fi
+}
+
+# Сортировка stdin (пути, по строке) по mtime, новые сверху.
+filter_sort_by_mtime() {
+  # %Y\t%n — mtime + путь; пути с табами игнорируем (крайне редкий случай).
+  local list
+  list=$(cat) || true
+  [[ -z "$list" ]] && return 0
+  printf '%s\n' "$list" |
+    xargs -d '\n' -I{} stat --printf='%Y\t%n\n' -- "{}" 2>/dev/null |
+    sort -rn -k1,1 |
+    cut -f2-
+}
+
+count_wallpapers() {
+  get_wallpapers "$1" | wc -l | tr -d ' '
+}
+
+# ── Thumbnails (опционально) ──────────────────────────────────────────────────
+
+have_thumb_tool() {
+  command -v vipsthumbnail >/dev/null 2>&1 ||
+    command -v magick >/dev/null 2>&1 ||
+    command -v convert >/dev/null 2>&1
+}
+
+ensure_thumb() {
+  local img="$1"
+  if ! have_thumb_tool; then
+    printf '%s' "$img"
+    return 0
+  fi
+  mkdir -p "$THUMB_DIR"
+  local hash thumb
+  hash=$(printf '%s' "$img" | sha1sum | cut -d' ' -f1)
+  thumb="$THUMB_DIR/$hash.png"
+  if [[ ! -f "$thumb" || "$img" -nt "$thumb" ]]; then
+    if command -v vipsthumbnail >/dev/null 2>&1; then
+      vipsthumbnail "$img" -s 256 -o "${thumb}[Q=80]" >/dev/null 2>&1 ||
+        {
+          printf '%s' "$img"
+          return 0
+        }
+    elif command -v magick >/dev/null 2>&1; then
+      magick "$img" -auto-orient -thumbnail 256x256 "$thumb" 2>/dev/null ||
+        {
+          printf '%s' "$img"
+          return 0
+        }
+    else
+      convert "$img" -auto-orient -thumbnail 256x256 "$thumb" 2>/dev/null ||
+        {
+          printf '%s' "$img"
+          return 0
+        }
+    fi
+  fi
+  printf '%s' "$thumb"
+}
+
+# ── Fuzzel wrappers ───────────────────────────────────────────────────────────
+
+fuzzel_menu() {
+  local prompt="$1"
+  shift
+  printf '%s\n' "$@" | fuzzel --dmenu --prompt="$prompt " --width="$FUZZEL_WIDTH"
+}
+
+# Принимает на stdin список абсолютных путей (по строке) и показывает их в fuzzel
+# с превью-иконками. Печатает выбранный путь в stdout.
+fuzzel_pick_file() {
+  local prompt="$1"
+  local files=() f
+  while IFS= read -r f; do
+    [[ -n "$f" ]] && files+=("$f")
+  done
+
+  ((${#files[@]} == 0)) && return 1
+
+  local picked icon basename_map
+  # Чтобы найти исходный путь по имени быстро — сделаем ассоциативный массив.
+  declare -A basename_map=()
+  for f in "${files[@]}"; do
+    basename_map["$(basename "$f")"]="$f"
+  done
+
+  picked=$(
+    for f in "${files[@]}"; do
+      icon=$(ensure_thumb "$f")
+      printf '%s\0icon\x1f%s\n' "$(basename "$f")" "$icon"
+    done | fuzzel --dmenu --prompt="$prompt " --width="$PICK_WIDTH"
+  ) || return 1
+
+  [[ -z "$picked" ]] && return 1
+  local resolved="${basename_map[$picked]:-}"
+  [[ -n "$resolved" ]] || return 1
+  printf '%s\n' "$resolved"
+}
+
+# ── Apply wallpaper ───────────────────────────────────────────────────────────
+
+apply() {
+  local img="${1:-}"
+  if [[ -z "$img" || ! -f "$img" ]]; then
+    notify "⚠ Обои" "Файл не найден"
+    return 1
+  fi
+
+  LAST_WALLPAPER="$img"
+  save_state
+
+  notify "🖼 Обои" "$(basename "$img")"
+
+  # Сами обои (сохраняем семантику оригинала: основной + namespace overview)
+  awww img "$img" -t=any --transition-step=30 --transition-duration=2 \
+    >/dev/null 2>&1 || log "awww (default) вернул ошибку"
+  awww img "$img" -t=any --transition-step=30 --transition-duration=2 -n overview \
+    >/dev/null 2>&1 || log "awww (overview) вернул ошибку"
+
+  # Заменяем любой запущенный matugen и стартуем новый отсоединённо
+  pkill -x matugen 2>/dev/null || true
+  setsid -f matugen --type "$SCHEME" --mode "$MODE" --source-color-index 0 image "$img" \
+    >/dev/null 2>&1 ||
+    log "matugen завершился с ошибкой"
+}
+
+reapply_last() {
+  if [[ -n "$LAST_WALLPAPER" && -f "$LAST_WALLPAPER" ]]; then
+    apply "$LAST_WALLPAPER"
+  else
+    notify "⚠ Обои" "Нет последних обоев"
+    return 1
+  fi
+}
+
+# ── Sub-menus ─────────────────────────────────────────────────────────────────
+
+_pick_one() {
+  # _pick_one <prompt> <current> <items...>
+  local prompt="$1" current="$2"
+  shift 2
+  local items=() it
+  for it in "$@"; do
+    if [[ "$it" == "$current" ]]; then
+      items+=("● $it")
+    else
+      items+=("  $it")
+    fi
+  done
+  local picked
+  picked=$(fuzzel_menu "$prompt" "${items[@]}") || return 1
+  picked="${picked#● }"
+  picked="${picked#  }"
+  printf '%s' "$picked"
+}
+
+pick_scheme() {
+  local picked
+  picked=$(_pick_one "Схема >" "$SCHEME" "${VALID_SCHEMES[@]}") || return 0
+  if contains "$picked" "${VALID_SCHEMES[@]}"; then
+    SCHEME="$picked"
+    save_state
+    [[ -n "$LAST_WALLPAPER" ]] && reapply_last
+  fi
+}
+
+pick_mode() {
+  local picked
+  picked=$(_pick_one "Режим >" "$MODE" "${VALID_MODES[@]}") || return 0
+  if contains "$picked" "${VALID_MODES[@]}"; then
+    MODE="$picked"
+    save_state
+    [[ -n "$LAST_WALLPAPER" ]] && reapply_last
+  fi
+}
+
+toggle_mode() {
+  case "$MODE" in
+  dark) MODE="light" ;;
+  light) MODE="dark" ;;
+  *) MODE="dark" ;;
+  esac
+  save_state
+  notify "🌙 Режим" "$MODE"
+  [[ -n "$LAST_WALLPAPER" ]] && reapply_last
+}
+
+search_wallpaper() {
+  local kind="$1"
+  local picked
+  if picked=$(get_wallpapers "$kind" | fuzzel_pick_file "Поиск >"); then
+    apply "$picked"
+  fi
+}
+
+random_wallpaper() {
+  local kind="$1"
+  local img
+  img=$(get_wallpapers "$kind" | shuf -n 1 || true)
+  if [[ -n "$img" ]]; then
+    apply "$img"
+  else
+    notify "⚠ Обои" "Файлы не найдены в $WALLPAPER_DIR"
+    return 1
+  fi
+}
+
+# ── Main loop ─────────────────────────────────────────────────────────────────
+
+main_menu() {
+  local n_normal n_hidden last_label
+  n_normal=$(count_wallpapers normal)
+  n_hidden=$(count_wallpapers hidden)
+  last_label="—"
+  [[ -n "$LAST_WALLPAPER" ]] && last_label="$(basename "$LAST_WALLPAPER")"
+
+  local items=(
+    "🎲  rand wall      ($n_normal)"
+    "🎲  rand .wall     ($n_hidden)"
+    "🔍  find wall      ($n_normal)"
+    "🔍  find .wall     ($n_hidden)"
+    "♻   reapply:  $last_label"
+    "🎨  scheme:   $SCHEME"
+    "🌙  mode:     $MODE"
+    "❌  exit"
+  )
+
+  local choice
+  choice=$(fuzzel_menu "Обои >" "${items[@]}") || return 1
+
+  case "$choice" in
+  "🎲  rand wall"*) random_wallpaper normal ;;
+  "🎲  rand .wall"*) random_wallpaper hidden ;;
+  "🔍  find wall"*) search_wallpaper normal ;;
+  "🔍  find .wall"*) search_wallpaper hidden ;;
+  "♻"*) reapply_last ;;
+  "🎨"*) pick_scheme ;;
+  "🌙"*) pick_mode ;;
+  "❌  exit" | "") return 1 ;;
+  *) return 0 ;;
+  esac
+  return 0
+}
+
+# ── Entry point ───────────────────────────────────────────────────────────────
+
+usage() {
+  sed -n '2,20p' "$0" | sed -E 's/^# ?//'
+}
+
+main() {
+  need fuzzel matugen awww fd shuf flock stat sha1sum
+
+  [[ -d "$WALLPAPER_DIR" ]] || die "Каталог обоев не найден: $WALLPAPER_DIR"
+
+  acquire_lock
+  load_state
+
+  case "${1:-}" in
+  "" | menu)
+    while main_menu; do :; done
+    ;;
+  random)
+    random_wallpaper "${2:-normal}"
+    ;;
+  find | search)
+    search_wallpaper "${2:-normal}"
+    ;;
+  reapply)
+    reapply_last
+    ;;
+  toggle-mode)
+    toggle_mode
+    ;;
+  set-scheme)
+    [[ -n "${2:-}" ]] || die "Использование: $0 set-scheme NAME"
+    contains "$2" "${VALID_SCHEMES[@]}" || die "Неизвестная схема: $2 (доступны: ${VALID_SCHEMES[*]})"
+    SCHEME="$2"
+    save_state
+    [[ -n "$LAST_WALLPAPER" ]] && reapply_last
+    ;;
+  -h | --help | help)
+    usage
+    ;;
+  *)
+    usage
+    exit 2
+    ;;
+  esac
+}
+
+main "$@"

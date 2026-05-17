@@ -68,6 +68,14 @@ input {
     focus-follows-mouse max-scroll-amount="0%"
 }
 
+cursor {
+    xcursor-theme "Bibata-Modern-Classic"
+    xcursor-size 24
+
+    hide-when-typing
+    hide-after-inactive-ms 1000
+}
+
 // You can configure outputs by their name, which you can find
 // by running `niri msg outputs` while inside a niri instance.
 // The built-in laptop monitor is usually called "eDP-1".
@@ -75,8 +83,8 @@ input {
 // https://yalter.github.io/niri/Configuration:-Outputs
 // Remember to uncomment the node by removing "/-"!
 output "eDP-1" {
-    mode "1920x1080@60"
-    scale 1
+    mode "1366x768@60"
+    scale 1.0
     transform "normal"
     position x=0 y=0
 }
@@ -245,9 +253,13 @@ include "./colors.kdl"
 // See the binds section below for more spawn examples.
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
-spawn-at-startup "waybar"
-spawn-at-startup "awww-daemon"
-spawn-at-startup "wl-paste --watch cliphist store"
+// spawn-at-startup "waybar"
+spawn-sh-at-startup "qs -c pShell"
+spawn-sh-at-startup "awww-daemon -n overview & sleep 1 && awww-daemon -n glass-overview & sleep 1 && awww-daemon &"
+// spawn-sh-at-startup "awww-daemon -n overview"
+// spawn-sh-at-startup "awww-daemon -n glass-overview"
+// spawn-sh-at-startup "awww-daemon"
+spawn-sh-at-startup "wl-paste --watch cliphist store"
 spawn-at-startup "/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
@@ -338,12 +350,26 @@ workspace "magic"
 
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.
+blur {
+    // off
+    passes 3
+    offset 3.0
+    noise 0.02
+    saturation 1.5
+}
+
 window-rule {
     geometry-corner-radius 10
     clip-to-geometry true
     opacity 0.89
     draw-border-with-background false
+    background-effect {
+        blur true
+        xray true
+    }
 }
+
+
 // window-rule {
 //     match app-id=r#"^flameshot$"#
 //     animations {
@@ -402,6 +428,15 @@ window-rule {
     default-window-height { fixed 0; }
 }
 window-rule {
+    match app-id=r#"^org\.gnome\.Loupe$"#
+    open-floating true
+    // opacity 0.5
+    // background-effect {
+    //   blur false
+    // }
+}
+
+window-rule {
     match app-id=r#"^com\.github\.neithern\.g4music$"#
     open-on-workspace "magic"
     open-floating true
@@ -435,6 +470,42 @@ layer-rule {
     // layer "background"
 }
 
+// Обычный wallpaper на экране — без эффектов
+
+// Wallpaper в овервью — в backdrop + blur
+layer-rule {
+    match namespace="^awww-daemonoverview$"
+    place-within-backdrop true
+    // background-effect {
+    //     blur true
+    // }
+}
+
+layer-rule {
+    match namespace="^awww-daemonglass-overview$" // имя вашей невидимой панели
+    place-within-backdrop true
+    opacity 0.3
+    background-effect {
+        blur true
+        xray true
+    }
+}
+layer-rule {
+  match namespace="^awww-daemon$"
+  // без blur, просто на фоне
+}
+// window-rule {
+//   // Фильтруем конкретно окно Kitty, которое хотим сделать фоновым
+//   match app-id="glass-kitty"
+//
+//   // Выставляем слой
+//   open-on-output layer="background"
+//
+//   // Опционально: заставляем окно занимать весь экран
+//   default-column-width { proportion 1.0; }
+//   draw-border-with-bar false
+// }
+
 window-rule {
     match app-id="zen" title="wallhaven\\.cc"
     opacity 1.0
@@ -463,10 +534,12 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Q hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
-    Mod+R hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    // Mod+R hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    Mod+R hotkey-overlay-title="Run an Application: fuzzel" { spawn "qs" "-c" "pShell" "ipc" "call" "launcher" "activate"; }
     Mod+Z hotkey-overlay-title="Open a browser: Zen" { spawn "zen-browser"; }
     Mod+E hotkey-overlay-title="Open a filemanager: Nautilus" { spawn "nautilus"; }
-    Mod+P hotkey-overlay-title="Open a filemanager: Nautilus" { spawn "~/.config/fuzzel/wallpaper.sh"; }
+    // Mod+P hotkey-overlay-title="Open a filemanager: Nautilus" { spawn "~/.config/fuzzel/wallpaper.sh"; }
+    Mod+P hotkey-overlay-title="Open a filemanager: Nautilus" { spawn-sh "qs -c pShell ipc call stash activate"; }
     Mod+V hotkey-overlay-title="Open a filemanager: Nautilus" { spawn "~/.config/fuzzel/cliphist.sh"; }
     Mod+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "hyprlock"; }
 

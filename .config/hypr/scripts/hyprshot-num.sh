@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIR="$HOME/code/uust/lvl3/operationons_research/assets"
+DIR="$HOME/code/uust/lvl3/spit/lab2/assets"
 mkdir -p "$DIR"
 
 i=1

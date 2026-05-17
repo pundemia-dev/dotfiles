@@ -22,8 +22,8 @@
     },
 
     "tray": {
-        "icon-size": 16,
-        "spacing": 4,
+        "icon-size": 20,
+        "spacing": 12,
         "show-passive-items": true
     },
 
@@ -85,7 +85,7 @@
         "format-wifi":         "{icon}",
         "format-ethernet":     "󰈀",
         "format-disconnected": "󰤭",
-        "format-icons": ["󰤯 ","󰤟 ","󰤢 ","󰤥 ","󰤨 "],
+        "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
         "on-click":       "kitty --hold impala",
         "on-click-right": "nm-connection-editor",
         "tooltip-format": "{essid}  {signalStrength}%",

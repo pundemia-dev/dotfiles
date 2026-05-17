@@ -1408,3 +1408,15 @@ cd waybar
 ls
 cp config.jsonc config.jsonc.zproger
 ls
+ls -la | where type == file | where name =~ .*
+exit
+catall
+ls
+la
+ls
+catall
+ls
+catall
+curl -I -v -k https://docs.forwardersoft.com:8443
+catall
+cd release
